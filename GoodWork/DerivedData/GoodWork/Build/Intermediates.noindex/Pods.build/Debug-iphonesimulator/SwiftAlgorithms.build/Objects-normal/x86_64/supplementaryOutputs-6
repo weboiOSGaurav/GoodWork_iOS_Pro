@@ -1,0 +1,30 @@
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/SwiftAlgorithms/Sources/Algorithms/Suffix.swift":
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Suffix.dia"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Suffix.d"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Suffix.o"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Suffix.swiftdeps"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/SwiftAlgorithms/Sources/Algorithms/Unique.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Unique.swiftdeps"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Unique.o"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Unique.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Unique.dia"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/SwiftAlgorithms/Sources/Algorithms/Windows.swift":
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Windows.o"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Windows.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Windows.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Windows.dia"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/SwiftAlgorithms/Sources/Algorithms/Stride.swift":
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Stride.d"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Stride.o"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Stride.dia"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Stride.swiftdeps"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/SwiftAlgorithms/Sources/Algorithms/Trim.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Trim.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Trim.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Trim.dia"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Trim.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/SwiftAlgorithms/Sources/Algorithms/Split.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Split.swiftdeps"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Split.dia"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Split.d"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/SwiftAlgorithms.build/Objects-normal/x86_64/Split.o"

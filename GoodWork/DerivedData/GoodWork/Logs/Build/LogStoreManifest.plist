@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>02706C54-DDCB-4E3F-8D01-3CF181D23029</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>02706C54-DDCB-4E3F-8D01-3CF181D23029.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GoodWork project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GoodWork</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build GoodWork</string>
+			<key>timeStartedRecording</key>
+			<real>708238632.91637301</real>
+			<key>timeStoppedRecording</key>
+			<real>708238638.26266301</real>
+			<key>title</key>
+			<string>Build GoodWork</string>
+			<key>uniqueIdentifier</key>
+			<string>02706C54-DDCB-4E3F-8D01-3CF181D23029</string>
+		</dict>
+		<key>0987EF1F-539A-46A9-AE3E-741B5F3F8027</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0987EF1F-539A-46A9-AE3E-741B5F3F8027.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GoodWork project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GoodWork</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build GoodWork</string>
+			<key>timeStartedRecording</key>
+			<real>708094407.54330301</real>
+			<key>timeStoppedRecording</key>
+			<real>708094417.71875405</real>
+			<key>title</key>
+			<string>Build GoodWork</string>
+			<key>uniqueIdentifier</key>
+			<string>0987EF1F-539A-46A9-AE3E-741B5F3F8027</string>
+		</dict>
+		<key>2C98235C-B3B7-43C2-A8BB-87D3A484DD67</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2C98235C-B3B7-43C2-A8BB-87D3A484DD67.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GoodWork project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GoodWork</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build GoodWork</string>
+			<key>timeStartedRecording</key>
+			<real>708238638.36903203</real>
+			<key>timeStoppedRecording</key>
+			<real>708238643.97003198</real>
+			<key>title</key>
+			<string>Build GoodWork</string>
+			<key>uniqueIdentifier</key>
+			<string>2C98235C-B3B7-43C2-A8BB-87D3A484DD67</string>
+		</dict>
+		<key>5502461E-0FC5-41B6-9CB4-C1D4203A1724</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>5502461E-0FC5-41B6-9CB4-C1D4203A1724.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GoodWork project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GoodWork</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build GoodWork</string>
+			<key>timeStartedRecording</key>
+			<real>708238906.67896998</real>
+			<key>timeStoppedRecording</key>
+			<real>708238919.87439799</real>
+			<key>title</key>
+			<string>Build GoodWork</string>
+			<key>uniqueIdentifier</key>
+			<string>5502461E-0FC5-41B6-9CB4-C1D4203A1724</string>
+		</dict>
+		<key>78C45E65-30B0-4091-9718-E48F85C08283</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>78C45E65-30B0-4091-9718-E48F85C08283.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GoodWork project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GoodWork</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build GoodWork</string>
+			<key>timeStartedRecording</key>
+			<real>708242435.60417295</real>
+			<key>timeStoppedRecording</key>
+			<real>708242485.76018906</real>
+			<key>title</key>
+			<string>Build GoodWork</string>
+			<key>uniqueIdentifier</key>
+			<string>78C45E65-30B0-4091-9718-E48F85C08283</string>
+		</dict>
+		<key>7C0A2A3C-FAEB-45B0-B812-B14DB346CC3C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7C0A2A3C-FAEB-45B0-B812-B14DB346CC3C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GoodWork project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GoodWork</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build GoodWork</string>
+			<key>timeStartedRecording</key>
+			<real>708240820.16578603</real>
+			<key>timeStoppedRecording</key>
+			<real>708240843.25889397</real>
+			<key>title</key>
+			<string>Build GoodWork</string>
+			<key>uniqueIdentifier</key>
+			<string>7C0A2A3C-FAEB-45B0-B812-B14DB346CC3C</string>
+		</dict>
+		<key>8C025218-E3AC-4315-8B41-48E78FF40A08</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8C025218-E3AC-4315-8B41-48E78FF40A08.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GoodWork project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GoodWork</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build GoodWork</string>
+			<key>timeStartedRecording</key>
+			<real>708238657.96111798</real>
+			<key>timeStoppedRecording</key>
+			<real>708238663.05226302</real>
+			<key>title</key>
+			<string>Build GoodWork</string>
+			<key>uniqueIdentifier</key>
+			<string>8C025218-E3AC-4315-8B41-48E78FF40A08</string>
+		</dict>
+		<key>96FA14D2-FE1A-4AAD-B491-FC0719C29A53</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>96FA14D2-FE1A-4AAD-B491-FC0719C29A53.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GoodWork project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GoodWork</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build GoodWork</string>
+			<key>timeStartedRecording</key>
+			<real>708238667.594823</real>
+			<key>timeStoppedRecording</key>
+			<real>708238682.52409899</real>
+			<key>title</key>
+			<string>Build GoodWork</string>
+			<key>uniqueIdentifier</key>
+			<string>96FA14D2-FE1A-4AAD-B491-FC0719C29A53</string>
+		</dict>
+		<key>A012F0DD-BF19-4431-BCE4-7B8B0AE51D46</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A012F0DD-BF19-4431-BCE4-7B8B0AE51D46.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GoodWork project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GoodWork</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build GoodWork</string>
+			<key>timeStartedRecording</key>
+			<real>708237358.593503</real>
+			<key>timeStoppedRecording</key>
+			<real>708237361.08489799</real>
+			<key>title</key>
+			<string>Build GoodWork</string>
+			<key>uniqueIdentifier</key>
+			<string>A012F0DD-BF19-4431-BCE4-7B8B0AE51D46</string>
+		</dict>
+		<key>ACB98DC6-A168-4D5F-82BF-D302A38B2325</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>ACB98DC6-A168-4D5F-82BF-D302A38B2325.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GoodWork project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GoodWork</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build GoodWork</string>
+			<key>timeStartedRecording</key>
+			<real>708238647.09200096</real>
+			<key>timeStoppedRecording</key>
+			<real>708238652.66256201</real>
+			<key>title</key>
+			<string>Build GoodWork</string>
+			<key>uniqueIdentifier</key>
+			<string>ACB98DC6-A168-4D5F-82BF-D302A38B2325</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

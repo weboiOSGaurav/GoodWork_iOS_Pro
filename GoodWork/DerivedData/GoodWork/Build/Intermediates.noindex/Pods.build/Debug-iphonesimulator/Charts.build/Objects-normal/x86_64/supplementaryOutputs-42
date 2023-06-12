@@ -1,0 +1,115 @@
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Renderers/YAxisRendererHorizontalBarChart.swift":
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxisRendererHorizontalBarChart.dia"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxisRendererHorizontalBarChart.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxisRendererHorizontalBarChart.d"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxisRendererHorizontalBarChart.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Components/XAxis.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxis.swiftdeps"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxis.o"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxis.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxis.dia"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Utils/Transformer.swift":
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/Transformer.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/Transformer.dia"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/Transformer.swiftdeps"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/Transformer.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Renderers/XAxisRenderer.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxisRenderer.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxisRenderer.d"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxisRenderer.o"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxisRenderer.dia"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Renderers/XAxisRendererRadarChart.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxisRendererRadarChart.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxisRendererRadarChart.d"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxisRendererRadarChart.o"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxisRendererRadarChart.dia"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Renderers/ScatterChartRenderer.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartRenderer.swiftdeps"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartRenderer.dia"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartRenderer.d"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartRenderer.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Jobs/ViewPortJob.swift":
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ViewPortJob.dia"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ViewPortJob.swiftdeps"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ViewPortJob.o"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ViewPortJob.d"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Utils/Sequence+KeyPath.swift":
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/Sequence+KeyPath.dia"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/Sequence+KeyPath.d"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/Sequence+KeyPath.swiftdeps"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/Sequence+KeyPath.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Utils/TransformerHorizontalBarChart.swift":
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/TransformerHorizontalBarChart.d"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/TransformerHorizontalBarChart.o"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/TransformerHorizontalBarChart.swiftdeps"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/TransformerHorizontalBarChart.dia"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Renderers/Scatter/XShapeRenderer.swift":
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XShapeRenderer.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XShapeRenderer.dia"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XShapeRenderer.o"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XShapeRenderer.swiftdeps"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Renderers/Scatter/TriangleShapeRenderer.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/TriangleShapeRenderer.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/TriangleShapeRenderer.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/TriangleShapeRenderer.dia"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/TriangleShapeRenderer.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Components/YAxis.swift":
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxis.dia"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxis.swiftdeps"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxis.o"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxis.d"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Renderers/Scatter/SquareShapeRenderer.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/SquareShapeRenderer.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/SquareShapeRenderer.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/SquareShapeRenderer.dia"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/SquareShapeRenderer.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Data/Interfaces/ScatterChartDataSetProtocol.swift":
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartDataSetProtocol.dia"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartDataSetProtocol.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartDataSetProtocol.d"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartDataSetProtocol.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Renderers/XAxisRendererHorizontalBarChart.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxisRendererHorizontalBarChart.swiftdeps"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxisRendererHorizontalBarChart.o"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxisRendererHorizontalBarChart.dia"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/XAxisRendererHorizontalBarChart.d"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Charts/ScatterChartView.swift":
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartView.o"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartView.dia"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartView.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartView.d"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Utils/ViewPortHandler.swift":
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ViewPortHandler.d"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ViewPortHandler.swiftdeps"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ViewPortHandler.dia"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ViewPortHandler.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Renderers/YAxisRenderer.swift":
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxisRenderer.d"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxisRenderer.swiftdeps"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxisRenderer.dia"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxisRenderer.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Renderers/YAxisRendererRadarChart.swift":
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxisRendererRadarChart.o"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxisRendererRadarChart.dia"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxisRendererRadarChart.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/YAxisRendererRadarChart.d"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Formatters/ValueFormatter.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ValueFormatter.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ValueFormatter.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ValueFormatter.dia"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ValueFormatter.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Renderers/Scatter/ShapeRenderer.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ShapeRenderer.swiftdeps"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ShapeRenderer.dia"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ShapeRenderer.d"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ShapeRenderer.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Jobs/ZoomViewJob.swift":
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ZoomViewJob.dia"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ZoomViewJob.o"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ZoomViewJob.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ZoomViewJob.d"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Data/Implementations/Standard/ScatterChartDataSet.swift":
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartDataSet.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartDataSet.dia"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartDataSet.swiftdeps"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/Objects-normal/x86_64/ScatterChartDataSet.o"
