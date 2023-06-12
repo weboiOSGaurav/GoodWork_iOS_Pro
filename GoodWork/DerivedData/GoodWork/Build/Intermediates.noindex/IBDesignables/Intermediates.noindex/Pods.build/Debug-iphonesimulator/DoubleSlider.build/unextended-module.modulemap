@@ -1,0 +1,10 @@
+framework module DoubleSlider {
+  umbrella header "DoubleSlider-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module DoubleSlider.__Swift {
+  exclude header "DoubleSlider-Swift.h"
+}

@@ -1,0 +1,11 @@
+framework module DoubleSlider {
+  umbrella header "DoubleSlider-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module DoubleSlider.Swift {
+  header "DoubleSlider-Swift.h"
+  requires objc
+}

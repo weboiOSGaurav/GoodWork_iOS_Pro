@@ -1,0 +1,23 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "bf8a66b168c55c6fc84599568804c1ef6a29862c4e05e6a923f0934064e921f6"
+build_start_time: [1686544501, 928391933]
+build_end_time: [1686544502, 387424945]
+inputs:
+  ? "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/DoubleSlider/DoubleSlider/DoubleSlider/CALayers/DoubleSliderLayerProtocol.swift"
+  : [1682077072, 492444515]
+  ? "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/DoubleSlider/DoubleSlider/DoubleSlider/CALayers/DoubleSliderThumbLayer.swift"
+  : [1682077072, 491871833]
+  ? "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/DoubleSlider/DoubleSlider/DoubleSlider/CALayers/DoubleSliderTrackLayer.swift"
+  : [1682077072, 493002414]
+  ? "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/DoubleSlider/DoubleSlider/DoubleSlider/DoubleSlider/DoubleSliderColors.swift"
+  : [1682077072, 496792316]
+  ? "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/DoubleSlider/DoubleSlider/DoubleSlider/DoubleSlider/DoubleSliderDelegates.swift"
+  : [1682077072, 497615337]
+  ? "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/DoubleSlider/DoubleSlider/DoubleSlider/DoubleSlider/DoubleSliderMain.swift"
+  : [1682077072, 494940280]
+  ? "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/DoubleSlider/DoubleSlider/DoubleSlider/DoubleSlider/DoubleSliderTouchTracking.swift"
+  : [1682077072, 495461463]
+  ? "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/DoubleSlider/DoubleSlider/DoubleSlider/DoubleSlider/DoubleSliderUpdateFunctions.swift"
+  : [1682077072, 494444131]
+  ? "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/DoubleSlider/DoubleSlider/DoubleSlider/Extensions/Extensions.swift"
+  : [1682077072, 493724346]
