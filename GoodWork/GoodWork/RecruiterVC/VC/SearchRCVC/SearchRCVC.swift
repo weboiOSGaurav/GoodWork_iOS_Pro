@@ -8,7 +8,7 @@
 import UIKit
 import SwiftyAttributes
 
-class SearchRCVC: UIViewController {
+class SearchRCVC: BaseVC {
     
     static let storyBoardIdentifier = "SearchRCVC"
     
@@ -27,6 +27,8 @@ class SearchRCVC: UIViewController {
     @IBOutlet weak var applicationTypeTableView: UITableView!
     
     let appTypeArray = ["New", "Screening", "Submitted", "Offered", "Onboarding", "Working", "Done", "Rejected", "Blocked"]
+    
+    var applicationList : ApplicantTypeList?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,14 +54,16 @@ class SearchRCVC: UIViewController {
         let finalString = (log + inn)
         
         self.helpYourTitleLabel.attributedText = finalString
+        self.updateProfileData()
+        self.applicationTypeListAPI()
     }
     
     func setUPUI(){
         
         self.view.backgroundColor =  GoodWorkAppColor.appBGPink
         
-        self.profileImageView.image = UIImage(named: "profile")
-        
+        self.profileImageView.image = UIImage(named: "profileDemo")
+        self.profileImageView.addBorderCornerRadius(Int(self.profileImageView.frame.height) / 2, 0, .clear)
         self.appJourneyLabel.addTitleColorAndFont(title: "Applications Journey", fontName: GoodWorkAppFontName.NeueKabelMedium, fontSize: 18, tintColor: GoodWorkAppColor.appDarkPurple)
         
         self.filterTitleLabel.addTitleColorAndFont(title: "Filters", fontName: GoodWorkAppFontName.NeueKabelRegular, fontSize: 12, tintColor: GoodWorkAppColor.appLavender)
@@ -70,6 +74,15 @@ class SearchRCVC: UIViewController {
         
         self.buttonActions()
         self.loadTableView()
+    }
+    
+    func updateProfileData(){
+        if appDelegate.recruiterProfile?.data?.count != 0 {
+            
+            guard let imgUrlString = appDelegate.recruiterProfile?.data?[0].image ?? "".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
+           
+            self.profileImageView.sd_setImage(with: URL(string: imgUrlString), placeholderImage: UIImage(named: "profileDemo"))
+        }
     }
 }
 
@@ -192,21 +205,16 @@ extension SearchRCVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         
-        return self.appTypeArray.count
+        return self.applicationList?.data?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ApplicationAdvanceTableViewCell.reuseCellIdentifier, for: indexPath) as! ApplicationAdvanceTableViewCell
         
-        cell.appTitlefoLabel.text = self.appTypeArray[indexPath.row]
-        if indexPath.row == 1{
-            cell.appDescriptionInfoLabel.text = "12 Applicants"
-        }else if indexPath.row == 2{
-            cell.appDescriptionInfoLabel.text = "12 Applicants"
-        }else{
-            cell.appDescriptionInfoLabel.text = "15 Applicants"
-        }
+        cell.appTitlefoLabel.text = self.applicationList?.data?[indexPath.row].name ?? ""
+        
+        cell.appDescriptionInfoLabel.text = "\(self.applicationList?.data?[indexPath.row].applicants ?? 0) Applicants"
         
         return  cell
     }
@@ -260,6 +268,51 @@ extension SearchRCVC : UITableViewDelegate, UITableViewDataSource {
             
         default:
             print("default")
+        }
+    }
+}
+
+
+extension SearchRCVC {
+    
+    func applicationTypeListAPI(){
+        
+        self.startLoading()
+        
+        var mdl = AboutMeRequestRC()
+        mdl.user_id = _userDefault.string(forKey: UserDefaultKeys.user_id.rawValue) ?? ""
+    
+        print("mdl: \(mdl)")
+        
+        LoginDataManager.shared.applicationTypeListRCAPI(rqst: mdl) { (dict, error) in
+            
+            DispatchQueue.main.async {
+                
+                let response = dict as? [String : Any] ??  [String : Any]()
+                
+                if response["api_status"] as? String ?? "" == "1" {
+                    print("response:: \(response)")
+                    
+                    do {
+                        
+                        let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+                        
+                        let homeResp = try JSONDecoder().decode(ApplicantTypeList.self, from: jsonData)
+                        
+                        self.applicationList = homeResp
+                        DispatchQueue.main.async {
+                            self.applicationTypeTableView.reloadData()
+                        }
+                    }catch{
+                        print("catch:: \(error)")
+                       // self.notificationBanner(response["message"] as? String ?? "")
+                    }
+                }else{
+                    print("False")
+                    self.notificationBanner(response["message"] as? String ?? "")
+                }
+                self.stopLoading()
+            }
         }
     }
 }

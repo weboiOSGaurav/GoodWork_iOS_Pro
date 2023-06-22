@@ -16,6 +16,7 @@ class ChatVC: UIViewController {
     @IBOutlet weak var leftSideTopImageView: UIImageView!
     
     @IBOutlet weak var backButtonImageView: UIImageView!
+  
     
     @IBOutlet weak var userProfilePicImageView: UIImageView!
     @IBOutlet weak var isUserOnlineImageView: UIImageView!
@@ -54,7 +55,6 @@ class ChatVC: UIViewController {
         self.userType.addTitleColorAndFont(title: "Recruiter #01", fontName: GoodWorkAppFontName.NeueKabelMedium, fontSize: 14, tintColor: GoodWorkAppColor.appDarkPurple)
         self.typeDescription.addTitleColorAndFont(title: "Travel Nurse CRNA/.....", fontName: GoodWorkAppFontName.NeueKabelMedium, fontSize: 10, tintColor: GoodWorkAppColor.appDarkPurple)
         
-        
         self.messageTextBGView.addBorderWidthColour(2, GoodWorkAppColor.appColour, 16)
         self.messageTextShadowBGView.shadowWithRadiusAndColour(16,GoodWorkAppColor.appArsenic)
         
@@ -72,7 +72,6 @@ extension ChatVC {
     func buttonActions(){
         self.backButton.addTarget(self, action: #selector(self.backButtonPressed(_:)), for: .touchUpInside)
         self.shareMediaButton.addTarget(self, action: #selector(self.shareMediaButtonPressed(_:)), for: .touchUpInside)
-        
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton){
@@ -82,7 +81,6 @@ extension ChatVC {
     
     @IBAction func shareMediaButtonPressed(_ sender: UIButton){
         print("shareMediaButtonPressed")
-        
     }
 }
 
@@ -94,7 +92,6 @@ extension ChatVC : UITableViewDelegate, UITableViewDataSource {
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
         
-
         self.chatTableView.register(UINib(nibName: UserTableViewCell.reuseCellIdentifier, bundle: nil), forCellReuseIdentifier: UserTableViewCell.reuseCellIdentifier)
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self

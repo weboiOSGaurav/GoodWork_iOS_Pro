@@ -172,23 +172,24 @@ extension PersonalInfomationVC {
         mdl.driving_license = self.driverLicenseTextField.text ?? ""
         mdl.security_number = self.socialSecurityTextField.text ?? ""
         
-        
         print("mdl: \(mdl)")
         
         self.startLoading()
         
-        let (dict, error) = await LoginDataManager.shared.updatePersonalInfoAPI(rqst: mdl)
-        DispatchQueue.main.async {
-            self.stopLoading()
-            let response = dict as? [String : Any] ??  [String : Any]()
+        LoginDataManager.shared.updatePersonalInfoAPI(rqst: mdl) { (dict, error) in
             
-            self.notificationBanner(response["message"] as? String ?? "")
-            
-            if response["api_status"] as? String ?? "" == "1" {
+            DispatchQueue.main.async {
+                self.stopLoading()
+                let response = dict as? [String : Any] ??  [String : Any]()
                 
-                self.navigationController?.popViewController(animated: true)
-            }else{
-                print("False")
+                self.notificationBanner(response["message"] as? String ?? "")
+                
+                if response["api_status"] as? String ?? "" == "1" {
+                    
+                    self.navigationController?.popViewController(animated: true)
+                }else{
+                    print("False")
+                }
             }
         }
     }

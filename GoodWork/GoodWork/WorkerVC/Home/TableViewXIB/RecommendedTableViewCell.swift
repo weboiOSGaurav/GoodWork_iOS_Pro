@@ -34,7 +34,10 @@ class RecommendedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var recentlyAddedLable: UILabel!
     
-    @IBOutlet weak var applyButton: UIButton!
+ //   @IBOutlet weak var applyButton: UIButton!
+    @IBOutlet weak var applyNewButton: UIButton!
+    @IBOutlet weak var learnMoreButton: UIButton!
+    @IBOutlet weak var appliedButton: UIButton!
     
     @IBOutlet weak var saveJobButton: UIButton!
     
@@ -94,34 +97,155 @@ class RecommendedTableViewCell: UITableViewCell {
         
         self.recentlyAddedLable.addTitleColorAndFont(title: "Recently Added", fontName: GoodWorkAppFontName.NeueKabelItalic, fontSize: 10, tintColor: GoodWorkAppColor.appColour)
         
-        self.applyButton.addRadiusAndBGColour(21,  GoodWorkAppColor.appColour)
+       //self.applyButton.addRadiusAndBGColour(21,  GoodWorkAppColor.appColour)
+        self.applyNewButton.addRadiusAndBGColour(21,  GoodWorkAppColor.appColour)
+        self.learnMoreButton.addRadiusAndBGColour(21,  GoodWorkAppColor.appColour)
+        self.appliedButton.addRadiusAndBGColour(21,  GoodWorkAppColor.appColour)
+        
+        
         self.offeredMainBgView.isHidden = true
         self.acceptImageview.image = UIImage(named: "accepet")
         self.cancelImageview.image = UIImage(named: "cancel")
         
         self.messageMainBgView.isHidden = true
         self.messageNotificationImageview.image = UIImage(named: "messageNotification")
+        self.learnMoreButton.isHidden = true
+        self.applyNewButton.isHidden = true
+        self.appliedButton.isHidden = true
     }
     
     func selectedJobType(_ typeNo : Int){
         self.offeredMainBgView.isHidden = true
-        self.applyButton.isHidden = true
+        self.applyNewButton.isHidden = true
         self.messageMainBgView.isHidden = true
         
         if typeNo == 0 {
-            self.applyButton.setTitle("Apply Now", for: .normal)
-            self.applyButton.isHidden = false
+            //self.applyNewButton.setTitle("Apply Now", for: .normal)
+            self.applyNewButton.isHidden = false
         }else if typeNo == 1 {
-            self.applyButton.setTitle("Applied", for: .normal)
-            self.applyButton.isHidden = false
+            //self.applyNewButton.setTitle("Applied", for: .normal)
+            self.applyNewButton.isHidden = false
         }else if typeNo == 2 {
-            self.applyButton.isHidden = true
+            self.applyNewButton.isHidden = true
             self.offeredMainBgView.isHidden = false
         }else if typeNo == 3 {
             self.messageMainBgView.isHidden = false
         }else if typeNo == 4 {
-            self.applyButton.setTitle("Apply Now", for: .normal)
-            self.applyButton.isHidden = false
+           // self.applyNewButton.setTitle("Apply Now", for: .normal)
+            self.applyNewButton.isHidden = false
+        }
+    }
+    
+    func updateCellPopularJobHomeData(_ objNEW : Popular_jobs?){
+        
+        if objNEW?.job_title ?? "" == "" {
+            self.jobTypeLable.text = "Travel"
+        }else{
+            self.jobTypeLable.text = objNEW?.job_title ?? ""
+        }
+        
+//        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
+        self.appliedNumberLable.isHidden = true
+        self.jobTitleLable.text = objNEW?.job_name ?? ""
+        self.jobDescriptionLable.text = objNEW?.name ?? ""
+        
+        self.jobLocationLable.text = objNEW?.job_location ?? ""
+        
+        self.jobCalanderWksLable.text = "\(objNEW?.hours_per_week ?? 0) wks"
+        
+        self.jobAmountLable.text = "\(objNEW?.weekly_pay ?? 0)/wks"
+        
+        self.recentlyAddedLable.text = objNEW?.created_at_definition ?? ""
+        
+      //  print("objNEW?.is_saved:: \(objNEW?.is_saved ?? 0)")
+        
+        if objNEW?.is_saved ?? "0" == "1"{
+            self.saveJobImageView.image = UIImage(named: "saveJob")
+            print("saveJob image")
+        }else{
+            self.saveJobImageView.image = UIImage(named: "unSaveJob")
+            print("unSaveJob")
+        }
+    }
+    
+    
+    func updateCellRecentlyJobData(_ objNEW : Recently_added?){
+        
+        if objNEW?.keyword_title ?? "" == "" {
+            self.jobTypeLable.text = "Travel"
+        }else{
+            self.jobTypeLable.text = objNEW?.keyword_title ?? ""
+        }
+        
+//        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
+        self.appliedNumberLable.isHidden = true
+        self.jobTitleLable.text = objNEW?.job_name ?? ""
+        self.jobDescriptionLable.text = objNEW?.name ?? ""
+        
+        self.jobLocationLable.text = objNEW?.job_location ?? ""
+        
+        self.jobCalanderWksLable.text = "\(objNEW?.hours_per_week ?? 0) wks"
+        
+        self.jobAmountLable.text = "\(objNEW?.weekly_pay ?? 0)/wks"
+        
+        self.recentlyAddedLable.text = objNEW?.created_at_definition ?? ""
+        
+      //  print("objNEW?.is_saved:: \(objNEW?.is_saved ?? 0)")
+        
+        if objNEW?.is_saved ?? "0" == "1"{
+            self.saveJobImageView.image = UIImage(named: "saveJob")
+            print("saveJob image")
+        }else{
+            self.saveJobImageView.image = UIImage(named: "unSaveJob")
+            print("unSaveJob")
+        }
+    }
+    
+    func updateCellRecommendedJobData(_ objNEW : Recommended_jobs?){
+        
+        if objNEW?.keyword_title ?? "" == "" {
+            self.jobTypeLable.text = "Travel"
+        }else{
+            self.jobTypeLable.text = objNEW?.keyword_title ?? ""
+        }
+        
+//        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
+        self.appliedNumberLable.isHidden = true
+        self.jobTitleLable.text = objNEW?.job_name ?? ""
+        self.jobDescriptionLable.text = objNEW?.name ?? ""
+        
+        self.jobLocationLable.text = objNEW?.job_location ?? ""
+        
+        self.jobCalanderWksLable.text = "\(objNEW?.hours_per_week ?? 0) wks"
+        
+        self.jobAmountLable.text = "\(objNEW?.weekly_pay ?? 0)/wks"
+        
+        self.recentlyAddedLable.text = objNEW?.created_at_definition ?? ""
+        
+        //print("objNEW?.is_saved:: \(objNEW?.is_saved ?? 0)")
+        
+        if objNEW?.is_saved ?? "0" == "1"{
+            self.saveJobImageView.image = UIImage(named: "saveJob")
+            print("saveJob image")
+        }else{
+            self.saveJobImageView.image = UIImage(named: "unSaveJob")
+            print("unSaveJob")
         }
     }
     
@@ -133,7 +257,13 @@ class RecommendedTableViewCell: UITableViewCell {
             self.jobTypeLable.text = objNEW?.keyword_title ?? ""
         }
         
-        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+//        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
         self.jobTitleLable.text = objNEW?.job_name ?? ""
         self.jobDescriptionLable.text = objNEW?.name ?? ""
         
@@ -157,7 +287,14 @@ class RecommendedTableViewCell: UITableViewCell {
     }
     
     func updateCellDataMySavedJobListJobs(_ objNEW : MySavedJobListData?){
-        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+//        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
+        
         self.jobTitleLable.text = objNEW?.job_name ?? ""
         self.jobDescriptionLable.text = objNEW?.name ?? ""
 
@@ -183,7 +320,14 @@ class RecommendedTableViewCell: UITableViewCell {
     }
     
     func updateCellDataMyAppliedJobs(_ objNEW : MyAppliedJobListData?){
-        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        
+//        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
         self.jobTitleLable.text = objNEW?.job_name ?? ""
         self.jobDescriptionLable.text = objNEW?.name ?? ""
         
@@ -193,7 +337,7 @@ class RecommendedTableViewCell: UITableViewCell {
         
         self.jobAmountLable.text = "\(objNEW?.weekly_pay ?? 0)/wks"
         
-        self.recentlyAddedLable.text = objNEW?.created_at_definition ?? ""
+        self.recentlyAddedLable.text = "Applied On: \(objNEW?.updated_at ?? "")"
         
         print("objNEW?.is_saved:: \(objNEW?.is_saved ?? 0)")
         
@@ -207,7 +351,13 @@ class RecommendedTableViewCell: UITableViewCell {
     }
     
     func updateCellDataMyHiredJobs(_ objNEW : MyHiredJobsData?){
-        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+//        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
         self.jobTitleLable.text = objNEW?.job_name ?? ""
         
         if objNEW?.name == "" {
@@ -222,7 +372,7 @@ class RecommendedTableViewCell: UITableViewCell {
         
         self.jobAmountLable.text = "\(objNEW?.weekly_pay ?? "0")/wks"
         
-        self.recentlyAddedLable.text = objNEW?.created_at_definition ?? ""
+        self.recentlyAddedLable.text = "Start Date: \(objNEW?.updated_at ?? "")"
         
         print("objNEW?.is_saved:: \(objNEW?.is_saved ?? 0)")
         
@@ -238,9 +388,14 @@ class RecommendedTableViewCell: UITableViewCell {
     }
     
     func updateCellDataMyPastJobs(_ objNEW : MyPastJobsData?){
-        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+//        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
         self.jobTitleLable.text = objNEW?.job_name ?? ""
         
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
         if objNEW?.name == "" {
             self.jobDescriptionLable.text = "Medical Solutions Recruiter"
         }else{
@@ -253,7 +408,7 @@ class RecommendedTableViewCell: UITableViewCell {
         
         self.jobAmountLable.text = "\(objNEW?.weekly_pay ?? "0")/wks"
         
-        self.recentlyAddedLable.text = objNEW?.created_at_definition ?? ""
+//        self.recentlyAddedLable.text = objNEW?.created_at_definition ?? "
         
         print("objNEW?.is_saved:: \(objNEW?.is_saved ?? 0)")
         

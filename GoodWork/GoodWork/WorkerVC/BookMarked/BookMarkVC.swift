@@ -15,6 +15,7 @@ class BookMarkVC: BaseVC {
     @IBOutlet weak var rightSideTopImageView: UIImageView!
     
     @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var notificationButton: UIButton!
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var myWorkTitleLabel: UILabel!
@@ -76,8 +77,6 @@ class BookMarkVC: BaseVC {
         }
         
         self.profileImageView.addBorderCornerRadius(Int(self.profileImageView.frame.height) / 2, 0, .clear)
-        
-        self.profileImageView.image = UIImage(named: "profileDemo")
     }
     
     func setUPUI(){
@@ -129,6 +128,10 @@ extension BookMarkVC {
     
     func buttonActions(){
         self.profileButton.addTarget(self, action: #selector(self.profileButtonPressed(_:)), for: .touchUpInside)
+        self.notificationButton.addTarget(self, action: #selector(self.notificationButtonPressed(_:)), for: .touchUpInside)
+        
+        
+        
         self.labelButtonActions()
     }
     
@@ -219,6 +222,13 @@ extension BookMarkVC {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func notificationButtonPressed(_ sender: UIButton){
+        print("notificationButtonPressed")
+//        self.notificationBanner(AlertMassage.comingSoon.rawValue)
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: NotificationsVC.storyBoardIdentifier) as? NotificationsVC else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func clearButtonColour(){
         self.savedLabel.addTitleColorAndFont(title: "Saved", fontName: GoodWorkAppFontName.NeueKabelMedium, fontSize: 13, tintColor: GoodWorkAppColor.appDustyGray)
         
@@ -256,15 +266,18 @@ extension BookMarkVC : UITableViewDelegate, UITableViewDataSource {
             return self.myPastJobsList?.data?.count ?? 0
         }
         
-        return 1
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: RecommendedTableViewCell.reuseCellIdentifier, for: indexPath) as! RecommendedTableViewCell
         
-        cell.applyButton.tag = indexPath.row
-        cell.applyButton.addTarget(self, action: #selector(self.applyJobCellButtonAction(sender:)), for: .touchUpInside)
+        cell.applyNewButton.tag = indexPath.row
+        cell.applyNewButton.addTarget(self, action: #selector(self.applyJobCellButtonAction(sender:)), for: .touchUpInside)
+        
+        cell.appliedButton.tag = indexPath.row
+        cell.appliedButton.addTarget(self, action: #selector(self.appliedJobCellButtonAction(sender:)), for: .touchUpInside)
         
         cell.saveJobButton.tag = indexPath.row
         cell.saveJobButton.addTarget(self, action: #selector(self.saveJobButtonAction(sender:)), for: .touchUpInside)
@@ -273,12 +286,15 @@ extension BookMarkVC : UITableViewDelegate, UITableViewDataSource {
         cell.messageNotificationButton.addTarget(self, action: #selector(self.chatCellButtonAction(sender:)), for: .touchUpInside)
         
         cell.selectedJobType(self.selectedJobTypeNumber)
+        cell.learnMoreButton.isHidden = true
+        cell.applyNewButton.isHidden = true
+        cell.appliedButton.isHidden = true
         
         if self.selectedJobTypeNumber == 0{
-            
+            cell.applyNewButton.isHidden = false
             cell.updateCellDataMySavedJobListJobs(self.mySavedJobList?.data?[indexPath.row])
         }else if self.selectedJobTypeNumber == 1{
-            
+            cell.appliedButton.isHidden = false
             cell.updateCellDataMyAppliedJobs(self.myAppliedJobList?.data?[indexPath.row])
         }else if self.selectedJobTypeNumber == 3{
             
@@ -318,7 +334,7 @@ extension BookMarkVC : UITableViewDelegate, UITableViewDataSource {
             job_id = obj?.job_id ?? ""
         }else if self.selectedJobTypeNumber == 1{
             let obj = self.myAppliedJobList?.data?[sender.tag]
-            if obj?.is_liked ?? "0" == "0"{
+            if obj?.is_saved ?? 0 == 0{
                 isJobLike = 1
             }else{
                 isJobLike = 0
@@ -380,11 +396,11 @@ extension BookMarkVC : UITableViewDelegate, UITableViewDataSource {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }else if self.selectedJobTypeNumber == 1 {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: AppliedJobDetailsVC.storyBoardIdentifier) as! AppliedJobDetailsVC
-            vc.selectedJobTypeNo = self.selectedJobTypeNumber
-            vc.myAppliedJobOBJ = self.myAppliedJobList?.data?[sender.tag]
-            vc.selectedJobID = self.myAppliedJobList?.data?[sender.tag].job_id ?? ""
-            self.navigationController?.pushViewController(vc, animated: true)
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: AppliedJobDetailsVC.storyBoardIdentifier) as! AppliedJobDetailsVC
+//            vc.selectedJobTypeNo = self.selectedJobTypeNumber
+//            vc.myAppliedJobOBJ = self.myAppliedJobList?.data?[sender.tag]
+//            vc.selectedJobID = self.myAppliedJobList?.data?[sender.tag].job_id ?? ""
+//            self.navigationController?.pushViewController(vc, animated: true)
         } else if self.selectedJobTypeNumber == 4 {
             guard let vc = self.storyboard?.instantiateViewController(withIdentifier: JobDetailsVC.storyBoardIdentifier) as? JobDetailsVC else { return }
             vc.selectedJobID = self.myPastJobsList?.data?[sender.tag].job_id ?? ""
@@ -396,10 +412,23 @@ extension BookMarkVC : UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    @objc func chatCellButtonAction(sender: UIButton){
-        print("chatCellButtonAction")
+    @objc func appliedJobCellButtonAction(sender: UIButton){
+        print("appliedJobCellButtonAction")
         let vc = self.storyboard?.instantiateViewController(withIdentifier: AppliedJobDetailsVC.storyBoardIdentifier) as! AppliedJobDetailsVC
         vc.selectedJobTypeNo = self.selectedJobTypeNumber
+        vc.myAppliedJobOBJ = self.myAppliedJobList?.data?[sender.tag]
+        vc.selectedJobID = self.myAppliedJobList?.data?[sender.tag].job_id ?? ""
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    
+    @objc func chatCellButtonAction(sender: UIButton){
+        print("chatCellButtonAction")
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: AppliedJobDetailsVC.storyBoardIdentifier) as! AppliedJobDetailsVC
+//        vc.selectedJobTypeNo = self.selectedJobTypeNumber
+//        self.navigationController?.pushViewController(vc, animated: true)
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: ChatVC.storyBoardIdentifier) as? ChatVC else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -537,6 +566,7 @@ extension BookMarkVC{
                     //                    }else{
                     //                        self.noDataLabel.isHidden = false
                     //                    }
+                    self.noDataLabel.isHidden = false
                     
                 }else{
                     print("False")
@@ -601,9 +631,9 @@ extension BookMarkVC{
         self.noDataLabel.isHidden = true
         self.startLoading()
         var mdl = MyHiredJobsRequest()
-        //        mdl.user_id = _userDefault.string(forKey: UserDefaultKeys.user_id.rawValue) ?? ""
+        mdl.user_id = _userDefault.string(forKey: UserDefaultKeys.user_id.rawValue) ?? ""
         
-        mdl.user_id = "d3acc9f3-5032-4009-b7a8-4c53e978cb80"
+//        mdl.user_id = "d3acc9f3-5032-4009-b7a8-4c53e978cb80"
         
         LoginDataManager.shared.myHiredJobsAPI(rqst: mdl) { (dict, error) in
             
@@ -650,8 +680,8 @@ extension BookMarkVC{
         self.noDataLabel.isHidden = true
         self.startLoading()
         var mdl = MyPastJobsRequest()
-        //        mdl.user_id = _userDefault.string(forKey: UserDefaultKeys.user_id.rawValue) ?? ""
-        mdl.user_id = "d3acc9f3-5032-4009-b7a8-4c53e978cb80"
+        mdl.user_id = _userDefault.string(forKey: UserDefaultKeys.user_id.rawValue) ?? ""
+//        mdl.user_id = "d3acc9f3-5032-4009-b7a8-4c53e978cb80"
         LoginDataManager.shared.myPastJobAPI(rqst: mdl) { (dict, error) in
             
             DispatchQueue.main.async {

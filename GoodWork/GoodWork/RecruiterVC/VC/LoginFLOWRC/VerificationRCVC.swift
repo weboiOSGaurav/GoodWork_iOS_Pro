@@ -294,7 +294,7 @@ extension VerificationRCVC {
         
         var mdl = SendOTPRequest()
         mdl.id = self.registerMobileNo
-        
+        mdl.role = "recruiter"
         self.startLoading()
         
         LoginDataManager.shared.sendOTP(rqst: mdl) { (dict, error) in
@@ -310,9 +310,13 @@ extension VerificationRCVC {
                     
                     print("api_status True")
                     
+                    self.resendOTPSeconds = 90
                     self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateResendOTPTime), userInfo: nil, repeats: true)
                     
                     self.loginUserID = dicResp["user_id"] as? String ?? ""
+                    _userDefault.set(self.loginUserID, forKey: UserDefaultKeys.user_id.rawValue)
+                    _userDefault.synchronize()
+                    
                     if self.isFromSignUP{
                         self.isFromSignUP = false
                     }else{
@@ -343,16 +347,29 @@ extension VerificationRCVC {
             
             DispatchQueue.main.async {
                 
-                print("dic: \(dict)")
-                
                 let response = dict as? [String : Any] ??  [String : Any]()
                 
                 if response["api_status"] as? String ?? "" == "1" {
+                    let dicResp = response["data"] as? [String : Any] ??  [String : Any]()
+                    let user_details  = dicResp["user_details"] as? [String : Any] ??  [String : Any]()
                     
-                    print("api_status True")
-                    _userDefault.set(true, forKey: UserDefaultKeys.isUserLogin.rawValue)
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: TabBarCV.storyBoardIdentifier) as! TabBarCV
+                    self.loginUserID = user_details["id"] as? String ?? ""
+                    
+                    print("self.loginUserID \(self.loginUserID)")
+                    
+                    _userDefault.set(false, forKey: UserDefaultKeys.isUserLogin.rawValue)
+                    _userDefault.set(true, forKey: UserDefaultKeys.isRecruiterUserLogin.rawValue)
+                    
+                    _userDefault.set(self.loginUserID, forKey: UserDefaultKeys.user_id.rawValue)
+                    _userDefault.synchronize()
+                    
+//                    _userDefault.set("62964b94-35f8-4487-971a-ec105f2bb7b5", forKey: UserDefaultKeys.user_id.rawValue)
+                    
+                    //            print("Recruiter")
+                    let vc = recruiterStoryboard.instantiateViewController(withIdentifier: TabBarRCVCViewController.storyBoardIdentifier) as! TabBarRCVCViewController
                     self.navigationController?.pushViewController(vc, animated: true)
+                    
+                    
                 }else{
                     print("False")
                     self.notificationBanner(response["message"] as? String ?? "")

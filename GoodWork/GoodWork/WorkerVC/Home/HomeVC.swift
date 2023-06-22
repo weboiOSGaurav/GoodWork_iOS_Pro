@@ -32,6 +32,8 @@ class HomeVC: BaseVC {
     @IBOutlet weak var popularJobsLable: UILabel!
     
     @IBOutlet weak var popularJobsCollectionView: UICollectionView!
+    
+    @IBOutlet weak var popularJobsTableView: UITableView!
     @IBOutlet weak var recommendedForYouTableView: UITableView!
     
     @IBOutlet weak var recommendedForYouTableViewHeight: NSLayoutConstraint!
@@ -41,6 +43,8 @@ class HomeVC: BaseVC {
     @IBOutlet weak var noDataLabel: UILabel!
     
     var exploreNEW : Json4Swift_Base?
+    
+    var jobTypeIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +56,8 @@ class HomeVC: BaseVC {
         
         self.setUPUI()
         //self.nurseProfileAPI()
-        self.exploreAPI(false)
+        self.recommendedForYouTableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+      //  self.exploreAPI(false)
     }
     
     func setUPUI(){
@@ -108,6 +113,18 @@ class HomeVC: BaseVC {
             self.exploreAPI(false)
         }
      }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if(keyPath == "contentSize"){
+            if let newvalue = change?[.newKey]
+            {
+                DispatchQueue.main.async {
+                    let newsize  = newvalue as! CGSize
+                    self.recommendedForYouTableViewHeight.constant = (newsize.height + 60)
+                }
+            }
+        }
+    }
 }
 
 extension HomeVC : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
@@ -135,9 +152,9 @@ extension HomeVC : UICollectionViewDataSource, UICollectionViewDelegate, UIColle
         cell.appliedNumberLable.isHidden = true
         cell.saveJobButton.tag = indexPath.row
         cell.saveJobButton.addTarget(self, action: #selector(self.saveJobButtonPress), for: .touchUpInside)
-        
-        cell.applyButton.tag = indexPath.row
-        cell.applyButton.addTarget(self, action: #selector(self.learnMoreButtonPress), for: .touchUpInside)
+        cell.moreButton.isHidden = false
+        cell.moreButton.tag = indexPath.row
+        cell.moreButton.addTarget(self, action: #selector(self.learnMoreButtonPress), for: .touchUpInside)
         
         return cell
     }
@@ -145,6 +162,8 @@ extension HomeVC : UICollectionViewDataSource, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let collectionViewWidth = (self.popularJobsCollectionView.frame.width * 0.8)
+        
+//        let collectionViewWidth = (self.popularJobsCollectionView.frame.width * 1)
         print("self.popularJobsCollectionView.frame.width \(self.popularJobsCollectionView.frame.width)")
         return CGSize(width: collectionViewWidth, height: 178)
     }
@@ -172,17 +191,33 @@ extension HomeVC : UICollectionViewDataSource, UICollectionViewDelegate, UIColle
     
     @objc func saveJobButtonPress(_ sender: UIButton){
         
-        var obj = self.exploreNEW?.data?.popular_jobs?[sender.tag]
+//        self.jobTypeIndex = 0
+//        var obj = self.exploreNEW?.data?.popular_jobs?[sender.tag]
+//
+//        var isSaved = 0
+//
+//        if obj?.is_saved ?? "" == "0"{
+//            isSaved = 1
+//        }else{
+//            isSaved = 0
+//        }
+        self.saveJobPopularTable(sender.tag)
+       // self.saveJobAPI(obj?.job_id ?? "", isSaved: isSaved, tagNo: sender.tag)
+    }
+    
+    func saveJobPopularTable(_ tag : Int){
+        self.jobTypeIndex = 0
+        var obj = self.exploreNEW?.data?.popular_jobs?[tag]
         
         var isSaved = 0
         
-        if obj?.is_saved ?? 0 == 0{
+        if obj?.is_saved ?? "" == "0"{
             isSaved = 1
         }else{
             isSaved = 0
         }
         
-        self.saveJobAPI(obj?.job_id ?? "", isSaved: isSaved, tagNo: sender.tag)
+        self.saveJobAPI(obj?.job_id ?? "", isSaved: isSaved, tagNo: tag)
     }
 }
 
@@ -199,46 +234,237 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.recommendedForYouTableViewHeight.constant = self.recommendedForYouTableView.contentSize.height + 130
         }
+        
+        self.popularJobsTableView.register(UINib(nibName: RecommendedTableViewCell.reuseCellIdentifier, bundle: nil), forCellReuseIdentifier: RecommendedTableViewCell.reuseCellIdentifier)
+        self.popularJobsTableView.delegate = self
+        self.popularJobsTableView.dataSource = self
+        
+        self.popularJobsTableView.reloadData()
+        
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int{
+        
+        if self.popularJobsTableView == tableView {
+            
+            return 1
+        }else{
+            if self.exploreNEW?.data?.recommended_jobs?.count ?? 0 == 0 && self.exploreNEW?.data?.recently_added?.count ?? 0 == 0{
+
+                print(" return 0")
+                return 0
+            }else if self.exploreNEW?.data?.recommended_jobs?.count ?? 0 != 0 && self.exploreNEW?.data?.recently_added?.count ?? 0 != 0{
+
+                print("return 2")
+                return 2
+            }
+
+             print("return 1")
+             return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        if self.exploreNEW?.data?.recommended_jobs?.count ?? 0 == 0 {
+        if self.popularJobsTableView == tableView {
             
             return UIView()
+        }else{
+            let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 30))
+            
+            let  headerTitleLabel = UILabel()
+            headerTitleLabel.frame = CGRect.init(x: 5, y: 0, width: headerView.frame.width-10, height: 30)
+            
+            headerTitleLabel.addTitleColorAndFont(title: "", fontName: GoodWorkAppFontName.NeueKabelBold, fontSize: 20, tintColor: GoodWorkAppColor.appDarkPurple)
+            headerView.backgroundColor = .clear
+            
+            if section == 0 {
+                
+                if self.exploreNEW?.data?.recently_added?.count ?? 0 != 0 {
+                    headerTitleLabel.text = "Recently added"
+                }else if self.exploreNEW?.data?.recommended_jobs?.count ?? 0 != 0 {
+                    headerTitleLabel.text = "Recommended for you"
+                }
+            }else if section == 1 {
+                
+                headerTitleLabel.text = "Recommended for you"
+            }
+            
+            headerView.addSubview(headerTitleLabel)
+            
+            return headerView
         }
-        
-        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 30))
-        
-        let  headerTitleLabel = UILabel()
-        headerTitleLabel.frame = CGRect.init(x: 5, y: 0, width: headerView.frame.width-10, height: 30)
-        
-        headerTitleLabel.addTitleColorAndFont(title: "Recommended for you", fontName: GoodWorkAppFontName.NeueKabelBold, fontSize: 20, tintColor: GoodWorkAppColor.appDarkPurple)
-        headerView.backgroundColor = .clear
-        headerView.addSubview(headerTitleLabel)
-        
-        return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 35
+        
+        if self.popularJobsTableView == tableView {
+            return 0
+        }else{
+            return 35
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return self.exploreNEW?.data?.recommended_jobs?.count ?? 0
+        if self.popularJobsTableView == tableView {
+            
+            return self.exploreNEW?.data?.popular_jobs?.count ?? 0
+        }else{
+            if section == 0 {
+                if self.exploreNEW?.data?.recently_added?.count ?? 0 != 0 {
+                    return self.exploreNEW?.data?.recently_added?.count ?? 0
+                }else{
+                    return self.exploreNEW?.data?.recommended_jobs?.count ?? 0
+                }
+            }else if section == 1{
+                return self.exploreNEW?.data?.recommended_jobs?.count ?? 0
+            }
+            
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: RecommendedTableViewCell.reuseCellIdentifier, for: indexPath) as! RecommendedTableViewCell
         
-        return  cell
+        if self.popularJobsTableView == tableView {
+            cell.shadowBgView.shadow(16)
+            cell.updateCellPopularJobHomeData(self.exploreNEW?.data?.popular_jobs?[indexPath.row])
+            cell.saveJobImageView.isHidden = true
+            cell.saveJobButton.isHidden = true
+            return cell
+        }else{
+            if indexPath.section == 0 {
+                if self.exploreNEW?.data?.recently_added?.count ?? 0 != 0 {
+                    cell.updateCellRecentlyJobData(self.exploreNEW?.data?.recently_added?[indexPath.row])
+                }else{
+                    cell.updateCellRecommendedJobData(self.exploreNEW?.data?.recommended_jobs?[indexPath.row])
+                }
+            }else{
+                cell.updateCellRecommendedJobData(self.exploreNEW?.data?.recommended_jobs?[indexPath.row])
+            }
+            
+            cell.saveJobButton.tag = indexPath.row
+            cell.contentView.superview?.tag = indexPath.section
+            cell.saveJobButton.addTarget(self, action: #selector(self.saveJobRecentButtonPress(sender:)), for: .touchUpInside)
+            
+            cell.applyNewButton.isHidden = true
+            
+            cell.learnMoreButton.tag = indexPath.row
+            cell.learnMoreButton.addTarget(self, action: #selector(self.recentJobApplyButtonPress(sender:)), for: .touchUpInside)
+            cell.learnMoreButton.isHidden = false
+            return  cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         
         print("didSelectRowAt \(indexPath.row)")
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{
+        
+        if self.popularJobsTableView == tableView {
+            let closeAction = UIContextualAction(style: .normal, title:  "", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+                print("OK, marked as Closed")
+                self.startLoading()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    if self.exploreNEW?.data?.popular_jobs?.count ?? 0 > 0{
+                        self.exploreNEW?.data?.popular_jobs?.remove(at: 0)
+                        self.popularJobsTableView.reloadData()
+                        self.stopLoading()
+                        self.notificationBanner("Job hidden successfully.")
+                        
+                    }
+                }
+                success(true)
+            })
+            closeAction.image = UIImage(named: "deleteSwipe")
+            closeAction.backgroundColor =  GoodWorkAppColor.appBGPink
+
+            return UISwipeActionsConfiguration(actions: [closeAction])
+        }else{
+            return nil
+        }
+    }
+
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{
+        
+        if self.popularJobsTableView == tableView {
+            let modifyAction = UIContextualAction(style: .normal, title:  "", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+                self.startLoading()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    if self.exploreNEW?.data?.popular_jobs?.count ?? 0 > 0{
+                        self.exploreNEW?.data?.popular_jobs?.remove(at: 0)
+                        self.popularJobsTableView.reloadData()
+                        self.saveJobPopularTable(indexPath.row)
+                    }
+                }
+                success(true)
+            })
+            modifyAction.image = UIImage(named: "swipeSavePost")
+            modifyAction.backgroundColor = GoodWorkAppColor.appBGPink
+
+            return UISwipeActionsConfiguration(actions: [modifyAction])
+        }else{
+            
+            return nil
+        }
+    }
+    
+    @objc func saveJobRecentButtonPress(sender: UIButton){
+        let row = sender.tag
+        let section = sender.superview?.tag
+        
+        if section == 0 {
+            self.jobTypeIndex = 1
+            let obj = self.exploreNEW?.data?.recently_added?[sender.tag]
+            
+            var isSaved = 0
+            
+            if obj?.is_saved ?? "0" == "0"{
+                isSaved = 1
+            }else{
+                isSaved = 0
+            }
+            
+            self.saveJobAPI(obj?.job_id ?? "", isSaved: isSaved, tagNo: sender.tag)
+        }else{
+            self.jobTypeIndex = 2
+            
+            let obj = self.exploreNEW?.data?.recommended_jobs?[sender.tag]
+            
+            var isSaved = 0
+            
+            if obj?.is_saved ?? "0" == "0"{
+                isSaved = 1
+            }else{
+                isSaved = 0
+            }
+            
+            self.saveJobAPI(obj?.job_id ?? "", isSaved: isSaved, tagNo: sender.tag)
+        }
+    }
+    
+    @objc func recentJobApplyButtonPress(sender: UIButton){
+        print("recentJobApplyButtonPress")
+        let row = sender.tag
+        let section = sender.superview?.tag
+        
+        if section == 0 {
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: JobDetailsVC.storyBoardIdentifier) as? JobDetailsVC else { return }
+            vc.selectedJobID = self.exploreNEW?.data?.recently_added?[sender.tag].job_id ?? ""
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: JobDetailsVC.storyBoardIdentifier) as? JobDetailsVC else { return }
+            vc.selectedJobID = self.exploreNEW?.data?.recommended_jobs?[sender.tag].job_id ?? ""
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
@@ -261,7 +487,9 @@ extension HomeVC {
     
     @IBAction func notificationButtonPressed(_ sender: UIButton){
         print("notificationButtonPressed")
-        self.notificationBanner(AlertMassage.comingSoon.rawValue)
+//        self.notificationBanner(AlertMassage.comingSoon.rawValue)
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: NotificationsVC.storyBoardIdentifier) as? NotificationsVC else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -272,12 +500,11 @@ extension HomeVC{
         self.noDataLabel.isHidden = true
         var mdl = HomeRequest()
         mdl.user_id = _userDefault.string(forKey: UserDefaultKeys.user_id.rawValue) ?? ""
-        
+//        mdl.user_id = "2d403b1a-cca6-4d8a-b23f-11c55428490f"
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             if !isFromApplyJob{
                 self.startLoading()
             }
-            
         }
         
         LoginDataManager.shared.explore(rqst: mdl) { (dict, error) in
@@ -315,8 +542,11 @@ extension HomeVC{
                             self.popularJobsLable.isHidden = false
                         }
                         
-                    }catch{
+                        print("self.exploreNEW?.data:: \(self.exploreNEW?.data?.recently_added?.count ?? 0)")
                         
+                        print("recommended_jobs:: \(self.exploreNEW?.data?.recommended_jobs?.count ?? 0)")
+                        
+                     }catch{
                         print("error \(error)")
                         print("catch \(error.localizedDescription)")
                     }
@@ -325,7 +555,11 @@ extension HomeVC{
                     self.notificationBanner(response["message"] as? String ?? "")
                 }
                 
-                self.popularJobsCollectionView.reloadData()
+                DispatchQueue.main.async {
+//                    self.popularJobsCollectionView.reloadData()
+                    self.popularJobsTableView.reloadData()
+                    self.recommendedForYouTableView.reloadData()
+                }
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.stopLoading()
@@ -352,11 +586,29 @@ extension HomeVC{
                 
                 if response["api_status"] as? String ?? "" == "1" {
                     
-                    self.exploreNEW?.data?.popular_jobs?[tagNo].is_saved = isSaved
-                    
-                    print("isSaved: \(isSaved)")
-//                    self.notificationBanner(response["message"] as? String ?? "")
-                    self.popularJobsCollectionView.reloadData()
+                    if self.jobTypeIndex == 0 {
+//                        self.exploreNEW?.data?.popular_jobs?[tagNo].is_saved = "\(isSaved)"
+                        
+                        print("isSaved: \(isSaved)")
+    //                    self.notificationBanner(response["message"] as? String ?? "")
+//                        self.popularJobsCollectionView.reloadData()
+//                        self.popularJobsTableView.reloadData()
+                    }else if self.jobTypeIndex == 1 {
+                        
+                        self.exploreNEW?.data?.recently_added?[tagNo].is_saved = "\(isSaved)"
+                        
+                        print("isSaved: \(isSaved)")
+    //                    self.notificationBanner(response["message"] as? String ?? "")
+                        self.recommendedForYouTableView.reloadData()
+                        
+                    }else if self.jobTypeIndex == 2 {
+                        
+                        self.exploreNEW?.data?.recommended_jobs?[tagNo].is_saved = "\(isSaved)"
+                        
+                        print("isSaved: \(isSaved)")
+    //                    self.notificationBanner(response["message"] as? String ?? "")
+                        self.recommendedForYouTableView.reloadData()
+                     }
                     
                     if isSaved == 1{
                         self.saveJobAlertView()
@@ -368,7 +620,6 @@ extension HomeVC{
                     self.notificationBanner(response["message"] as? String ?? "")
                 }
                 
-                self.popularJobsCollectionView.reloadData()
                 self.stopLoading()
             }
         }

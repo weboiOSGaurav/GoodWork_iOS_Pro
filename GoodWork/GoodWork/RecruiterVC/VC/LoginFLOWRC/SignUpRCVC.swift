@@ -109,8 +109,6 @@ class SignUpRCVC: BaseVC {
     @objc func textFieldDidChange(_ textField: UITextField) {
         print("textFieldDidChange")
         
-        
-        
         if textField == self.mobileNumberTextField {
             
             

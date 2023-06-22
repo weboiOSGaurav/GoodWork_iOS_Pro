@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import ExpandableLabel
 
-class JobDetailsVC: BaseVC, ExpandableLabelDelegate {
+
+class JobDetailsVC: BaseVC{
     
     static let storyBoardIdentifier = "JobDetailsVC"
     
@@ -46,7 +46,7 @@ class JobDetailsVC: BaseVC, ExpandableLabelDelegate {
     
     @IBOutlet weak var descriptionTitleLabel: UILabel!
     
-    @IBOutlet weak var jobDetailsLabel: ExpandableLabel!
+    @IBOutlet weak var jobDetailsLabel: UILabel!
     
     @IBOutlet weak var aboutJobLabel: UILabel!
     @IBOutlet weak var preferredShiftTitleLabel: UILabel!
@@ -63,7 +63,6 @@ class JobDetailsVC: BaseVC, ExpandableLabelDelegate {
     
     @IBOutlet weak var epicLabel: UILabel!
     @IBOutlet weak var epicExperiLabel: UILabel!
-    
     
     @IBOutlet weak var recruterLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -175,48 +174,8 @@ class JobDetailsVC: BaseVC, ExpandableLabelDelegate {
         self.recentlyAddedLable.addTitleColorAndFont(title: "", fontName: GoodWorkAppFontName.NeueKabelMediumItalic, fontSize: 10, tintColor: GoodWorkAppColor.appColour)
         
         self.applyButton.addRadiusAndBGColour(21,  GoodWorkAppColor.appColour)
-        self.jobDetailsLabel.delegate = self
-    }
-    
-    func readMore(){
-        let currentSource = preparedSources()[0]
-        
-        self.jobDetailsLabel.setLessLinkWith(lessLink: "Read Less", attributes: [.foregroundColor: GoodWorkAppColor.appDarkPurple], position: currentSource.textAlignment)
-        
-        self.jobDetailsLabel.shouldCollapse = true
-        self.jobDetailsLabel.textReplacementType = currentSource.textReplacementType
-        self.jobDetailsLabel.numberOfLines = currentSource.numberOfLines
-        self.jobDetailsLabel.collapsed = states
-        self.jobDetailsLabel.text = currentSource.text
-        
+        self.jobDetailsLabel.text = ""
         self.jobDetailsLabel.font = GoodWorkApp.goodWorkAppFont(GoodWorkAppFontName.NeueKabelRegular, 13)
-    }
-    
-    func preparedSources() -> [(text: String, textReplacementType: ExpandableLabel.TextReplacementType, numberOfLines: Int, textAlignment: NSTextAlignment)] {
-        
-        return [(loremIpsumText(), .word, 5, .left)]
-    }
-    
-    func loremIpsumText() -> String {
-        return self.jobDetails?.data?[0].description ?? ""
-    }
-    
-    func didExpandLabel(_ label: ExpandableLabel) {
-        self.states = false
-        readMore()
-    }
-    
-    func didCollapseLabel(_ label: ExpandableLabel) {
-        self.states = true
-        readMore()
-    }
-    
-    func willExpandLabel(_ label: ExpandableLabel) {
-        
-    }
-    
-    func willCollapseLabel(_ label: ExpandableLabel) {
-        
     }
 }
 
@@ -244,7 +203,7 @@ extension JobDetailsVC {
     @IBAction func applyJobButtonPressed(_ sender: UIButton){
         print("backButtonPressed")
        
-        if appDelegate.nurseProfile?.data?.isUserProfile ?? "" != "true"{
+        if appDelegate.nurseProfile?.data?.isUserProfile ?? "" == "true"{
             guard let vc = self.storyboard?.instantiateViewController(withIdentifier: ApplyJobWithProfileVC.storyBoardIdentifier) as? ApplyJobWithProfileVC else { return }
           
 //            vc.selectedJobID = self.selectedJobID
@@ -287,7 +246,14 @@ extension JobDetailsVC {
                 self.jobTypeLable.text = "Travel"
             }
             
-            self.appliedNumberLable.text =  "+\(self.jobDetails?.data?[0].applied_nurses ?? "") Applied"
+//            self.appliedNumberLable.text =  "+\(self.jobDetails?.data?[0].applied_nurses ?? "") Applied"
+            
+            if self.jobDetails?.data?[0].applied_nurses ?? "" == "0"{
+                self.appliedNumberLable.text =  "\(self.jobDetails?.data?[0].applied_nurses ?? "") Applied"
+            }else{
+                self.appliedNumberLable.text =  "+\(self.jobDetails?.data?[0].applied_nurses ?? "") Applied"
+            }
+            
             self.jobTitleLable.text = self.jobDetails?.data?[0].job_name ?? ""
             self.jobDescriptionLable.text = self.jobDetails?.data?[0].name ?? ""
             
@@ -320,7 +286,7 @@ extension JobDetailsVC {
                 print("unSaveJob")
             }
             
-            self.readMore()
+            self.jobDetailsLabel.text = self.jobDetails?.data?[0].description ?? ""
         }
     }
 }
@@ -364,8 +330,7 @@ extension JobDetailsVC{
                     }catch{
                         print("catch \(error.localizedDescription)")
                     }
-                    
-                }else{
+                 }else{
                     print("False")
                     self.notificationBanner(response["message"] as? String ?? "")
                 }

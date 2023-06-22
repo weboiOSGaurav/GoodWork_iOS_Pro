@@ -177,6 +177,12 @@ extension ApplyJobWithoutProfileUpdateVC {
         self.jobTypeLable.text = "Travel"
         self.appliedNumberLable.text =  "+\(self.jobDetails?.data?[0].applied_nurses ?? "") Applied"
         
+        if self.jobDetails?.data?[0].applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text =  "\(self.jobDetails?.data?[0].applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text =  "+\(self.jobDetails?.data?[0].applied_nurses ?? "") Applied"
+        }
+        
         self.jobTitleLable.text = self.jobDetails?.data?[0].job_name ?? ""
         
         self.jobDescriptionLable.text = self.jobDetails?.data?[0].name ?? ""
@@ -244,7 +250,8 @@ extension ApplyJobWithoutProfileUpdateVC {
         var mdl = ApplyJobRequest()
         mdl.nurse_id = appDelegate.nurseProfile?.data?.nurse_id ?? ""
         mdl.job_id = self.selectedJobID
-        
+        mdl.user_id = _userDefault.string(forKey: UserDefaultKeys.user_id.rawValue) ?? ""
+        mdl.start_date = Date.getCurrentDate()
         print("mdl: \(mdl)")
         
         self.startLoading()
@@ -262,12 +269,12 @@ extension ApplyJobWithoutProfileUpdateVC {
                     
                     self.notificationBanner(response["message"] as? String ?? "")
                 }
+                
                 self.stopLoading()
             }
         }
     }
 }
-
 
 extension UINavigationController {
     
@@ -280,3 +287,14 @@ extension UINavigationController {
     }
 }
 
+extension Date {
+
+ static func getCurrentDate() -> String {
+
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+
+        return dateFormatter.string(from: Date())
+    }
+}

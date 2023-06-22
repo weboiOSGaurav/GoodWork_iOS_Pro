@@ -319,11 +319,13 @@ extension MyProfileVC {
 }
 
 extension MyProfileVC {
+    
     func nurseProfileAPI(){
         
         var mdl = NurseProfileRequest()
         mdl.user_id = _userDefault.string(forKey: UserDefaultKeys.user_id.rawValue) ?? ""
         mdl.role = "nurse"
+        mdl.nurse_id = appDelegate.nurseProfile?.data?.nurse_id ?? ""
         
         print("mdl: \(mdl)")
         
@@ -355,7 +357,6 @@ extension MyProfileVC {
 //                                self.profileImageView.image = UIImage(named: "profileDemo")
                                 self.updateNurseProfileData()
                             }
-                            
                         }else{
                             print("falsee")
                             self.notificationBanner(response["message"] as? String ?? "")
@@ -371,6 +372,7 @@ extension MyProfileVC {
                     print("False")
                     self.notificationBanner(response["message"] as? String ?? "")
                 }
+                self.updateNurseProfileData()
                 self.stopLoading()
                 self.profileInfoTableview.reloadData()
             }

@@ -30,6 +30,7 @@ class MessageRCVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+        self.updateProfileData()
     }
     
     func setUPUI(){
@@ -38,14 +39,26 @@ class MessageRCVC: UIViewController {
         
         self.rightSideTopImageView.image = UIImage(named: "homeRightSideTop")
         self.profileImageView.image = UIImage(named: "profile")
-        
-        self.userNameLabel.addTitleColorAndFont(title: "Emna Watson", fontName: GoodWorkAppFontName.NeueKabelMedium, fontSize: 18, tintColor: GoodWorkAppColor.appDarkPurple)
+        self.profileImageView.addBorderCornerRadius(Int(self.profileImageView.frame.height) / 2, 0, .clear)
+        self.userNameLabel.addTitleColorAndFont(title: "", fontName: GoodWorkAppFontName.NeueKabelMedium, fontSize: 18, tintColor: GoodWorkAppColor.appDarkPurple)
         
         self.notificationImageView.image = UIImage(named: "notification")
         self.notificationBGView.addRadiusAndBGColour((self.notificationBGView.frame.height / 2), GoodWorkAppColor.appDarkPurple)
         
         self.loadTableView()
         self.buttonActions()
+    }
+    
+    func updateProfileData(){
+        if appDelegate.recruiterProfile?.data?.count != 0 {
+            
+            
+            self.userNameLabel.text = (appDelegate.recruiterProfile?.data?[0].first_name?.capitalized ?? "") + " " + (appDelegate.recruiterProfile?.data?[0].last_name?.capitalized ?? "")
+            
+            guard let imgUrlString = appDelegate.recruiterProfile?.data?[0].image ?? "".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
+            
+            self.profileImageView.sd_setImage(with: URL(string: imgUrlString), placeholderImage: UIImage(named: "profileDemo"))
+        }
     }
 }
 

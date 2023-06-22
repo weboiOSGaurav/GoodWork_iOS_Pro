@@ -59,8 +59,8 @@ struct Data11 : Codable {
 	let profile_detail_flag : String?
 	let hourly_rate_and_avail_flag : String?
 	let unavailable_dates : [String]?
-	let experience : [String]?
-	let certitficate : [String]?
+	//let experience : [String]?
+	//let certitficate : [String]?
 	let resume : String?
 	let role_interest : Role_interest11?
 
@@ -112,8 +112,8 @@ struct Data11 : Codable {
 		case profile_detail_flag = "profile_detail_flag"
 		case hourly_rate_and_avail_flag = "hourly_rate_and_avail_flag"
 		case unavailable_dates = "unavailable_dates"
-		case experience = "experience"
-		case certitficate = "certitficate"
+		//case experience = "experience"
+		//case certitficate = "certitficate"
 		case resume = "resume"
 		case role_interest = "role_interest"
 	}
@@ -166,8 +166,8 @@ struct Data11 : Codable {
 		profile_detail_flag = try values.decodeIfPresent(String.self, forKey: .profile_detail_flag)
 		hourly_rate_and_avail_flag = try values.decodeIfPresent(String.self, forKey: .hourly_rate_and_avail_flag)
 		unavailable_dates = try values.decodeIfPresent([String].self, forKey: .unavailable_dates)
-		experience = try values.decodeIfPresent([String].self, forKey: .experience)
-		certitficate = try values.decodeIfPresent([String].self, forKey: .certitficate)
+		//experience = try values.decodeIfPresent([String].self, forKey: .experience)
+		//certitficate = try values.decodeIfPresent([String].self, forKey: .certitficate)
 		resume = try values.decodeIfPresent(String.self, forKey: .resume)
 		role_interest = try values.decodeIfPresent(Role_interest11.self, forKey: .role_interest)
 	}

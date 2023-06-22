@@ -82,5 +82,6 @@ class GoodWorkAppColor: UIColor {
     static let appSail = #colorLiteral(red: 0.6823529412, green: 0.8235294118, blue: 0.9764705882, alpha: 1) // #AED2F9
     static let appHalfBaked = #colorLiteral(red: 0.4509803922, green: 0.6901960784, blue: 0.8039215686, alpha: 1) // #73B0CD
     static let appMalibu = #colorLiteral(red: 0.4, green: 0.6980392157, blue: 1, alpha: 1) // #73B0CD
+    static let appSliderBg = #colorLiteral(red: 0.9137254902, green: 0.9294117647, blue: 0.937254902, alpha: 1) // #E9EDEF
     
 }

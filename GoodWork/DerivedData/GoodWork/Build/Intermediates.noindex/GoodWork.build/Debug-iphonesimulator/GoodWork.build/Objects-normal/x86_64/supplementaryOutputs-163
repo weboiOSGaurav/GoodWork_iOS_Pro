@@ -1,0 +1,40 @@
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/HelpAndSupport/HelpAndSupportRCVC.swift":
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/HelpAndSupportRCVC.o"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/HelpAndSupportRCVC.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/HelpAndSupportRCVC.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/HelpAndSupportRCVC.dia"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/HelpAndSupport/HelpAndSupportVC.swift":
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/HelpAndSupportVC.o"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/HelpAndSupportVC.d"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/HelpAndSupportVC.swiftdeps"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/HelpAndSupportVC.dia"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/SearchRCVC/SearchRCVC.swift":
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/SearchRCVC.o"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/SearchRCVC.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/SearchRCVC.dia"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/SearchRCVC.swiftdeps"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Licenses/LicensesVC.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/LicensesVC.swiftdeps"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/LicensesVC.dia"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/LicensesVC.d"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/LicensesVC.o"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/ApplyJob/ApplyJobWithProfileVC.swift":
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/ApplyJobWithProfileVC.d"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/ApplyJobWithProfileVC.swiftdeps"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/ApplyJobWithProfileVC.o"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/ApplyJobWithProfileVC.dia"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/CreatJobReques/CreatJobRequestRCVC.swift":
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/CreatJobRequestRCVC.swiftdeps"
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/CreatJobRequestRCVC.d"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/CreatJobRequestRCVC.o"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/CreatJobRequestRCVC.dia"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Setting/SettingsVC.swift":
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/SettingsVC.d"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/SettingsVC.swiftdeps"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/SettingsVC.o"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/SettingsVC.dia"
+"/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/AppliedJobDetails/AppliedJobDetailsVC.swift":
+  dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/AppliedJobDetailsVC.d"
+  diagnostics: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/AppliedJobDetailsVC.dia"
+  swift-dependencies: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/AppliedJobDetailsVC.swiftdeps"
+  object: "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/DerivedData/GoodWork/Build/Intermediates.noindex/GoodWork.build/Debug-iphonesimulator/GoodWork.build/Objects-normal/x86_64/AppliedJobDetailsVC.o"

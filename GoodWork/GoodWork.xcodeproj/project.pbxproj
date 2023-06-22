@@ -32,6 +32,8 @@
 		BA19F67F29F290C7000B09B0 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA19F67D29F290C7000B09B0 /* TagCollectionViewCell.swift */; };
 		BA19F68029F290C7000B09B0 /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA19F67E29F290C7000B09B0 /* TagCollectionViewCell.xib */; };
 		BA19F68229F2915D000B09B0 /* TagFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA19F68129F2915D000B09B0 /* TagFlowLayout.swift */; };
+		BA263FF32A431C1000EE6F44 /* PublishedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA263FF12A431C0F00EE6F44 /* PublishedList.swift */; };
+		BA263FF42A431C1000EE6F44 /* PublishedListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA263FF22A431C0F00EE6F44 /* PublishedListData.swift */; };
 		BA2D6F7829DAB51E00EF404A /* AppliedJobAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2D6F7729DAB51E00EF404A /* AppliedJobAlertVC.swift */; };
 		BA2E51F729D2CF3900806764 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2E51F629D2CF3900806764 /* BaseVC.swift */; };
 		BA2E51F929D2D52000806764 /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2E51F829D2D52000806764 /* VerificationVC.swift */; };
@@ -77,6 +79,9 @@
 		BA4E98CD2A0CD42500875075 /* MyAppliedJobList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E98CA2A0CD42400875075 /* MyAppliedJobList.swift */; };
 		BA4E98CE2A0CD42500875075 /* MyAppliedPopularJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E98CB2A0CD42400875075 /* MyAppliedPopularJob.swift */; };
 		BA4E98CF2A0CD42500875075 /* MyAppliedJobData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E98CC2A0CD42500875075 /* MyAppliedJobData.swift */; };
+		BA4EC7F52A3C7BEF002921C7 /* HomeNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4EC7F42A3C7BEE002921C7 /* HomeNotification.swift */; };
+		BA4EC7F92A3CA0CD002921C7 /* ApplicantTypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4EC7F72A3CA0CC002921C7 /* ApplicantTypeData.swift */; };
+		BA4EC7FA2A3CA0CD002921C7 /* ApplicantTypeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4EC7F82A3CA0CC002921C7 /* ApplicantTypeList.swift */; };
 		BA4F41FE29F783E600EA87A4 /* AboutUSRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F41FD29F783E600EA87A4 /* AboutUSRCVC.swift */; };
 		BA4F420129F7841A00EA87A4 /* PrivacyPolicyRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F420029F7841A00EA87A4 /* PrivacyPolicyRCVC.swift */; };
 		BA4FE8EE29F6B03B00E5C225 /* JobTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4FE8EC29F6B03B00E5C225 /* JobTypeCollectionViewCell.swift */; };
@@ -85,13 +90,20 @@
 		BA50EB2D29F94BAA00E0CFFD /* SubmittedRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50EB2C29F94BAA00E0CFFD /* SubmittedRCVC.swift */; };
 		BA50EB3029F954AB00E0CFFD /* MoveToSubmitRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50EB2F29F954AB00E0CFFD /* MoveToSubmitRCVC.swift */; };
 		BA54425D29E8015F00AF2747 /* BookMarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54425C29E8015F00AF2747 /* BookMarkVC.swift */; };
+		BA5488292A3AE36400B7C945 /* AboutMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5488272A3AE36300B7C945 /* AboutMe.swift */; };
+		BA54882A2A3AE36400B7C945 /* AboutMeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5488282A3AE36300B7C945 /* AboutMeData.swift */; };
+		BA54882D2A3AED0100B7C945 /* Employers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54882C2A3AED0000B7C945 /* Employers.swift */; };
 		BA55E1442A04ED86000DD724 /* JobDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55E1422A04ED86000DD724 /* JobDetailsData.swift */; };
 		BA55E1452A04ED86000DD724 /* JobDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55E1432A04ED86000DD724 /* JobDetails.swift */; };
+		BA566B902A3B2AAC00C6FFC6 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA566B8E2A3B2AAC00C6FFC6 /* NotificationTableViewCell.swift */; };
+		BA566B912A3B2AAC00C6FFC6 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA566B8F2A3B2AAC00C6FFC6 /* NotificationTableViewCell.xib */; };
 		BA5766892A149FDC00BA5770 /* LatestNotiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5766872A149FDC00BA5770 /* LatestNotiesTableViewCell.swift */; };
 		BA57668A2A149FDC00BA5770 /* LatestNotiesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA5766882A149FDC00BA5770 /* LatestNotiesTableViewCell.xib */; };
 		BA57668C2A14A9D400BA5770 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA57668B2A14A9D400BA5770 /* DMSans-Regular.ttf */; };
 		BA57668E2A14B9DE00BA5770 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA57668D2A14B9DD00BA5770 /* DMSans-Medium.ttf */; };
 		BA5792D729E7DC300028F181 /* ExploreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5792D629E7DC300028F181 /* ExploreVC.swift */; };
+		BA59CE762A375D8400E068BB /* SubjectTypesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA59CE742A375D8400E068BB /* SubjectTypesList.swift */; };
+		BA59CE772A375D8400E068BB /* SubjectTypesListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA59CE752A375D8400E068BB /* SubjectTypesListData.swift */; };
 		BA5C9D5A29FA7B0E00D769CF /* CreatingJobPostRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C9D5929FA7B0E00D769CF /* CreatingJobPostRCVC.swift */; };
 		BA5E43D829F6CE6D0005295E /* ProfileRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5E43D729F6CE6D0005295E /* ProfileRCVC.swift */; };
 		BA5E43DB29F6D5F30005295E /* EmployersRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5E43DA29F6D5F30005295E /* EmployersRCVC.swift */; };
@@ -151,11 +163,11 @@
 		BA84DBCE2A12069900A73D3C /* UpdateJobStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA84DBCD2A12069900A73D3C /* UpdateJobStatusViewController.swift */; };
 		BA86AF3F29F96FBF0044873E /* MoveToOfferedRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA86AF3E29F96FBF0044873E /* MoveToOfferedRCVC.swift */; };
 		BA86AF4229F9791E0044873E /* OfferedEmployeesRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA86AF4129F9791D0044873E /* OfferedEmployeesRCVC.swift */; };
-		BA8D2DFF29F2BB84003DC713 /* DoubleSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8D2DFE29F2BB84003DC713 /* DoubleSlider.framework */; };
 		BA90A20429D2C10C002E6A22 /* NeueKabel-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA90A20329D2C10C002E6A22 /* NeueKabel-Medium.ttf */; };
 		BA90A20629D2C1D8002E6A22 /* NeueKabel-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA90A20529D2C1D8002E6A22 /* NeueKabel-Bold.ttf */; };
 		BA920CE02A0A14AF00F82CA3 /* CertificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA920CDE2A0A14AF00F82CA3 /* CertificationData.swift */; };
 		BA920CE12A0A14AF00F82CA3 /* Certification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA920CDF2A0A14AF00F82CA3 /* Certification.swift */; };
+		BA96FD332A3B1FFA00AEC7D6 /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA96FD322A3B1FFA00AEC7D6 /* NotificationsVC.swift */; };
 		BA9C2EE729E5677700BA3B0C /* HelpAndSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C2EE629E5677700BA3B0C /* HelpAndSupportVC.swift */; };
 		BAA27CDE29D1D20200A80210 /* NeueKabel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAA27CDD29D1D20200A80210 /* NeueKabel.ttf */; };
 		BAA5D05929F8083000BC922D /* MessageRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA5D05829F8083000BC922D /* MessageRCVC.swift */; };
@@ -180,6 +192,8 @@
 		BAAECF8529FB859C00C8ABDC /* EditJobRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAECF8429FB859C00C8ABDC /* EditJobRCVC.swift */; };
 		BAAECF8829FB897D00C8ABDC /* HoldAndPublishedRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAECF8729FB897D00C8ABDC /* HoldAndPublishedRCVC.swift */; };
 		BAAECF8B29FBAA6500C8ABDC /* NurseAppliedListRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAECF8A29FBAA6500C8ABDC /* NurseAppliedListRCVC.swift */; };
+		BAB1709D2A3730B800D98C4E /* Recommended_jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1709C2A3730B800D98C4E /* Recommended_jobs.swift */; };
+		BAB1709F2A3730C900D98C4E /* Recently_added.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1709E2A3730C800D98C4E /* Recently_added.swift */; };
 		BAB322162A0A2FBA00AABF95 /* ExperienceTypeList Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB322142A0A2FB900AABF95 /* ExperienceTypeList Data.swift */; };
 		BAB322172A0A2FBA00AABF95 /* ExperienceTypeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB322152A0A2FB900AABF95 /* ExperienceTypeList.swift */; };
 		BABA532429D59B9F004555F0 /* RecommendedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABA532229D59B9E004555F0 /* RecommendedTableViewCell.swift */; };
@@ -192,12 +206,18 @@
 		BAC0E45629DD314B00E8379C /* ResumeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0E45529DD314B00E8379C /* ResumeVC.swift */; };
 		BAC49D842A31A08200EEE766 /* PopularJobList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC49D822A31A08200EEE766 /* PopularJobList.swift */; };
 		BAC49D852A31A08200EEE766 /* PopularJobListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC49D832A31A08200EEE766 /* PopularJobListData.swift */; };
+		BAC625442A39913C0027B1C9 /* AssignmentDurationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC625422A39913C0027B1C9 /* AssignmentDurationData.swift */; };
+		BAC625452A39913C0027B1C9 /* AssignmentDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC625432A39913C0027B1C9 /* AssignmentDuration.swift */; };
 		BAC7BC252A177DE200D1501A /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC7BC1E2A177DE000D1501A /* DateValueFormatter.swift */; };
 		BAC7BC262A177DE200D1501A /* DemoBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC7BC1F2A177DE100D1501A /* DemoBaseViewController.swift */; };
 		BAC7BC292A177DE200D1501A /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC7BC222A177DE100D1501A /* DayAxisValueFormatter.swift */; };
+		BAD3609B2A39E7E9004256A1 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD360992A39E7E9004256A1 /* HomeData.swift */; };
+		BAD3609C2A39E7EA004256A1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3609A2A39E7E9004256A1 /* Home.swift */; };
 		BAD51D2929D4045C000A4845 /* TabBarCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD51D2829D4045C000A4845 /* TabBarCV.swift */; };
 		BAD51D3129D41158000A4845 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD51D3029D41158000A4845 /* SearchVC.swift */; };
 		BAD51D3529D41182000A4845 /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD51D3429D41182000A4845 /* MessageVC.swift */; };
+		BAD521F72A42DAEF00C8F717 /* DraftApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD521F52A42DAEE00C8F717 /* DraftApplicationData.swift */; };
+		BAD521F82A42DAEF00C8F717 /* DraftApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD521F62A42DAEE00C8F717 /* DraftApplication.swift */; };
 		BADDB6B229D3079F0031A063 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADDB6B129D3079F0031A063 /* SignUpVC.swift */; };
 		BAE7C1D729FBE4B400E58701 /* FullDetailsNurseRCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE7C1D629FBE4B400E58701 /* FullDetailsNurseRCVC.swift */; };
 		BAF5790629F6892B0045D018 /* RecruitersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF5790529F6892B0045D018 /* RecruitersStoryboard.storyboard */; };
@@ -257,6 +277,8 @@
 		BA19F67D29F290C7000B09B0 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA19F67E29F290C7000B09B0 /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
 		BA19F68129F2915D000B09B0 /* TagFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFlowLayout.swift; sourceTree = "<group>"; };
+		BA263FF12A431C0F00EE6F44 /* PublishedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedList.swift; sourceTree = "<group>"; };
+		BA263FF22A431C0F00EE6F44 /* PublishedListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedListData.swift; sourceTree = "<group>"; };
 		BA2D6F7729DAB51E00EF404A /* AppliedJobAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliedJobAlertVC.swift; sourceTree = "<group>"; };
 		BA2E51F629D2CF3900806764 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		BA2E51F829D2D52000806764 /* VerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
@@ -302,6 +324,9 @@
 		BA4E98CA2A0CD42400875075 /* MyAppliedJobList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppliedJobList.swift; sourceTree = "<group>"; };
 		BA4E98CB2A0CD42400875075 /* MyAppliedPopularJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppliedPopularJob.swift; sourceTree = "<group>"; };
 		BA4E98CC2A0CD42500875075 /* MyAppliedJobData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppliedJobData.swift; sourceTree = "<group>"; };
+		BA4EC7F42A3C7BEE002921C7 /* HomeNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNotification.swift; sourceTree = "<group>"; };
+		BA4EC7F72A3CA0CC002921C7 /* ApplicantTypeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicantTypeData.swift; sourceTree = "<group>"; };
+		BA4EC7F82A3CA0CC002921C7 /* ApplicantTypeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicantTypeList.swift; sourceTree = "<group>"; };
 		BA4F41FD29F783E600EA87A4 /* AboutUSRCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUSRCVC.swift; sourceTree = "<group>"; };
 		BA4F420029F7841A00EA87A4 /* PrivacyPolicyRCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyRCVC.swift; sourceTree = "<group>"; };
 		BA4FE8EC29F6B03B00E5C225 /* JobTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTypeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -310,13 +335,20 @@
 		BA50EB2C29F94BAA00E0CFFD /* SubmittedRCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmittedRCVC.swift; sourceTree = "<group>"; };
 		BA50EB2F29F954AB00E0CFFD /* MoveToSubmitRCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveToSubmitRCVC.swift; sourceTree = "<group>"; };
 		BA54425C29E8015F00AF2747 /* BookMarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkVC.swift; sourceTree = "<group>"; };
+		BA5488272A3AE36300B7C945 /* AboutMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMe.swift; sourceTree = "<group>"; };
+		BA5488282A3AE36300B7C945 /* AboutMeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeData.swift; sourceTree = "<group>"; };
+		BA54882C2A3AED0000B7C945 /* Employers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employers.swift; sourceTree = "<group>"; };
 		BA55E1422A04ED86000DD724 /* JobDetailsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetailsData.swift; sourceTree = "<group>"; };
 		BA55E1432A04ED86000DD724 /* JobDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetails.swift; sourceTree = "<group>"; };
+		BA566B8E2A3B2AAC00C6FFC6 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		BA566B8F2A3B2AAC00C6FFC6 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		BA5766872A149FDC00BA5770 /* LatestNotiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNotiesTableViewCell.swift; sourceTree = "<group>"; };
 		BA5766882A149FDC00BA5770 /* LatestNotiesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestNotiesTableViewCell.xib; sourceTree = "<group>"; };
 		BA57668B2A14A9D400BA5770 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		BA57668D2A14B9DD00BA5770 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		BA5792D629E7DC300028F181 /* ExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreVC.swift; sourceTree = "<group>"; };
+		BA59CE742A375D8400E068BB /* SubjectTypesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectTypesList.swift; sourceTree = "<group>"; };
+		BA59CE752A375D8400E068BB /* SubjectTypesListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectTypesListData.swift; sourceTree = "<group>"; };
 		BA5C9D5929FA7B0E00D769CF /* CreatingJobPostRCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingJobPostRCVC.swift; sourceTree = "<group>"; };
 		BA5E43D729F6CE6D0005295E /* ProfileRCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRCVC.swift; sourceTree = "<group>"; };
 		BA5E43DA29F6D5F30005295E /* EmployersRCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployersRCVC.swift; sourceTree = "<group>"; };
@@ -381,6 +413,7 @@
 		BA90A20529D2C1D8002E6A22 /* NeueKabel-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeueKabel-Bold.ttf"; sourceTree = "<group>"; };
 		BA920CDE2A0A14AF00F82CA3 /* CertificationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificationData.swift; sourceTree = "<group>"; };
 		BA920CDF2A0A14AF00F82CA3 /* Certification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Certification.swift; sourceTree = "<group>"; };
+		BA96FD322A3B1FFA00AEC7D6 /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
 		BA9C2EE629E5677700BA3B0C /* HelpAndSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpAndSupportVC.swift; sourceTree = "<group>"; };
 		BAA27CDD29D1D20200A80210 /* NeueKabel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeueKabel.ttf; sourceTree = "<group>"; };
 		BAA5D05829F8083000BC922D /* MessageRCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRCVC.swift; sourceTree = "<group>"; };
@@ -405,6 +438,8 @@
 		BAAECF8429FB859C00C8ABDC /* EditJobRCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJobRCVC.swift; sourceTree = "<group>"; };
 		BAAECF8729FB897D00C8ABDC /* HoldAndPublishedRCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldAndPublishedRCVC.swift; sourceTree = "<group>"; };
 		BAAECF8A29FBAA6500C8ABDC /* NurseAppliedListRCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseAppliedListRCVC.swift; sourceTree = "<group>"; };
+		BAB1709C2A3730B800D98C4E /* Recommended_jobs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommended_jobs.swift; sourceTree = "<group>"; };
+		BAB1709E2A3730C800D98C4E /* Recently_added.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recently_added.swift; sourceTree = "<group>"; };
 		BAB322142A0A2FB900AABF95 /* ExperienceTypeList Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExperienceTypeList Data.swift"; sourceTree = "<group>"; };
 		BAB322152A0A2FB900AABF95 /* ExperienceTypeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceTypeList.swift; sourceTree = "<group>"; };
 		BABA532229D59B9E004555F0 /* RecommendedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTableViewCell.swift; sourceTree = "<group>"; };
@@ -417,12 +452,18 @@
 		BAC0E45529DD314B00E8379C /* ResumeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeVC.swift; sourceTree = "<group>"; };
 		BAC49D822A31A08200EEE766 /* PopularJobList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularJobList.swift; sourceTree = "<group>"; };
 		BAC49D832A31A08200EEE766 /* PopularJobListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularJobListData.swift; sourceTree = "<group>"; };
+		BAC625422A39913C0027B1C9 /* AssignmentDurationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDurationData.swift; sourceTree = "<group>"; };
+		BAC625432A39913C0027B1C9 /* AssignmentDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDuration.swift; sourceTree = "<group>"; };
 		BAC7BC1E2A177DE000D1501A /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		BAC7BC1F2A177DE100D1501A /* DemoBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoBaseViewController.swift; sourceTree = "<group>"; };
 		BAC7BC222A177DE100D1501A /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
+		BAD360992A39E7E9004256A1 /* HomeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		BAD3609A2A39E7E9004256A1 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		BAD51D2829D4045C000A4845 /* TabBarCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCV.swift; sourceTree = "<group>"; };
 		BAD51D3029D41158000A4845 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		BAD51D3429D41182000A4845 /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
+		BAD521F52A42DAEE00C8F717 /* DraftApplicationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftApplicationData.swift; sourceTree = "<group>"; };
+		BAD521F62A42DAEE00C8F717 /* DraftApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftApplication.swift; sourceTree = "<group>"; };
 		BADDB6B129D3079F0031A063 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		BAE7C1D629FBE4B400E58701 /* FullDetailsNurseRCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDetailsNurseRCVC.swift; sourceTree = "<group>"; };
 		BAF5790529F6892B0045D018 /* RecruitersStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecruitersStoryboard.storyboard; sourceTree = "<group>"; };
@@ -441,7 +482,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8D2DFF29F2BB84003DC713 /* DoubleSlider.framework in Frameworks */,
 				EC8F75A59CE8F663F73FD725 /* Pods_GoodWork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +551,7 @@
 		BA0B8E6F29F69A5400BA91AC /* HomeRC */ = {
 			isa = PBXGroup;
 			children = (
+				BAD360982A39E7D4004256A1 /* Model */,
 				BA4FE8EB29F6B02200E5C225 /* XIB */,
 				BA0B8E7029F69A7400BA91AC /* HomeRCVC.swift */,
 			);
@@ -616,6 +657,15 @@
 			path = TagListXIB;
 			sourceTree = "<group>";
 		};
+		BA263FF02A431C0200EE6F44 /* Published */ = {
+			isa = PBXGroup;
+			children = (
+				BA263FF12A431C0F00EE6F44 /* PublishedList.swift */,
+				BA263FF22A431C0F00EE6F44 /* PublishedListData.swift */,
+			);
+			path = Published;
+			sourceTree = "<group>";
+		};
 		BA2D6F7929DABA9400EF404A /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,6 +687,7 @@
 		BA3393BF29F7A70800D14761 /* SearchRCVC */ = {
 			isa = PBXGroup;
 			children = (
+				BA4EC7F62A3CA06F002921C7 /* Model */,
 				BA702E702A0E6FEF0000A324 /* TableXIB */,
 				BA3393C229F7B10300D14761 /* XIB */,
 				BA3393C029F7A74300D14761 /* SearchRCVC.swift */,
@@ -831,6 +882,15 @@
 			path = MyAppliedJobList;
 			sourceTree = "<group>";
 		};
+		BA4EC7F62A3CA06F002921C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA4EC7F72A3CA0CC002921C7 /* ApplicantTypeData.swift */,
+				BA4EC7F82A3CA0CC002921C7 /* ApplicantTypeList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BA4F41FC29F783CB00EA87A4 /* AboutUsRC */ = {
 			isa = PBXGroup;
 			children = (
@@ -879,6 +939,8 @@
 				BABD91602A1B5A8800F91B9F /* Data.swift */,
 				BABD91612A1B5A8800F91B9F /* Json4Swift_Base.swift */,
 				BABD91622A1B5A8C00F91B9F /* Popular_jobs.swift */,
+				BAB1709C2A3730B800D98C4E /* Recommended_jobs.swift */,
+				BAB1709E2A3730C800D98C4E /* Recently_added.swift */,
 			);
 			path = Explore_Model;
 			sourceTree = "<group>";
@@ -903,6 +965,23 @@
 			path = BookMarked;
 			sourceTree = "<group>";
 		};
+		BA5488262A3AE30900B7C945 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA5488272A3AE36300B7C945 /* AboutMe.swift */,
+				BA5488282A3AE36300B7C945 /* AboutMeData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA54882B2A3AECD700B7C945 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA54882C2A3AED0000B7C945 /* Employers.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BA55E13A2A04D73A000DD724 /* NurseProfile_Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -925,6 +1004,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BA566B8D2A3B2A6200C6FFC6 /* XIBCell */ = {
+			isa = PBXGroup;
+			children = (
+				BA566B8E2A3B2AAC00C6FFC6 /* NotificationTableViewCell.swift */,
+				BA566B8F2A3B2AAC00C6FFC6 /* NotificationTableViewCell.xib */,
+			);
+			path = XIBCell;
+			sourceTree = "<group>";
+		};
 		BA5766862A149FC500BA5770 /* LatestNoties */ = {
 			isa = PBXGroup;
 			children = (
@@ -943,9 +1031,19 @@
 			path = Explore;
 			sourceTree = "<group>";
 		};
+		BA59CE732A375D3700E068BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA59CE742A375D8400E068BB /* SubjectTypesList.swift */,
+				BA59CE752A375D8400E068BB /* SubjectTypesListData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BA5C9D5829FA7AC200D769CF /* CreatingJobPost */ = {
 			isa = PBXGroup;
 			children = (
+				BAD521F42A42DADB00C8F717 /* Model */,
 				BA4973D329FA8F8300FEACEC /* XIB */,
 				BA5C9D5929FA7B0E00D769CF /* CreatingJobPostRCVC.swift */,
 			);
@@ -972,6 +1070,7 @@
 		BA5E43D929F6D5DB0005295E /* Employers */ = {
 			isa = PBXGroup;
 			children = (
+				BA54882B2A3AECD700B7C945 /* Model */,
 				BA5E43DA29F6D5F30005295E /* EmployersRCVC.swift */,
 			);
 			path = Employers;
@@ -989,6 +1088,7 @@
 		BA608B592A0E2A1A00B9BC71 /* AboutMe */ = {
 			isa = PBXGroup;
 			children = (
+				BA5488262A3AE30900B7C945 /* Model */,
 				BA608B5A2A0E2A3800B9BC71 /* AboutMeRCVC.swift */,
 			);
 			path = AboutMe;
@@ -1188,6 +1288,7 @@
 		BA7771DE29FAA2760087B65A /* CreatJobReques */ = {
 			isa = PBXGroup;
 			children = (
+				BAC625402A39911D0027B1C9 /* Model */,
 				BA7771DF29FAA2A40087B65A /* CreatJobRequestRCVC.swift */,
 				BA7771E129FAB18B0087B65A /* EditCreatJobRequestRCVC.swift */,
 			);
@@ -1265,9 +1366,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BA96FD312A3B1FE200AEC7D6 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				BA566B8D2A3B2A6200C6FFC6 /* XIBCell */,
+				BA96FD322A3B1FFA00AEC7D6 /* NotificationsVC.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		BA9C2EE529E5675700BA3B0C /* HelpAndSupport */ = {
 			isa = PBXGroup;
 			children = (
+				BA59CE732A375D3700E068BB /* Model */,
 				BA9C2EE629E5677700BA3B0C /* HelpAndSupportVC.swift */,
 			);
 			path = HelpAndSupport;
@@ -1416,6 +1527,7 @@
 		BAB5E5A629D1619000FFFF3D /* WorkerVC */ = {
 			isa = PBXGroup;
 			children = (
+				BA96FD312A3B1FE200AEC7D6 /* Notifications */,
 				BA4BDAD929F175AF00B9C54F /* Filter */,
 				BA166E8229EAAEEF0087842E /* AppliedJobDetails */,
 				BA54425B29E8013200AF2747 /* BookMarked */,
@@ -1478,6 +1590,23 @@
 			path = Resume;
 			sourceTree = "<group>";
 		};
+		BAC625402A39911D0027B1C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAC625412A3991290027B1C9 /* AssignMentDuration */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BAC625412A3991290027B1C9 /* AssignMentDuration */ = {
+			isa = PBXGroup;
+			children = (
+				BAC625432A39913C0027B1C9 /* AssignmentDuration.swift */,
+				BAC625422A39913C0027B1C9 /* AssignmentDurationData.swift */,
+			);
+			path = AssignMentDuration;
+			sourceTree = "<group>";
+		};
 		BAC7BC1C2A177CC100D1501A /* Graph */ = {
 			isa = PBXGroup;
 			children = (
@@ -1486,6 +1615,16 @@
 				BAC7BC1F2A177DE100D1501A /* DemoBaseViewController.swift */,
 			);
 			path = Graph;
+			sourceTree = "<group>";
+		};
+		BAD360982A39E7D4004256A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAD3609A2A39E7E9004256A1 /* Home.swift */,
+				BAD360992A39E7E9004256A1 /* HomeData.swift */,
+				BA4EC7F42A3C7BEE002921C7 /* HomeNotification.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BAD51D2E29D4111F000A4845 /* Home */ = {
@@ -1517,6 +1656,24 @@
 				BA47977B29ED0041000B3BF7 /* ChatVC.swift */,
 			);
 			path = Message;
+			sourceTree = "<group>";
+		};
+		BAD521F42A42DADB00C8F717 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA263FF02A431C0200EE6F44 /* Published */,
+				BAD521F92A42DAF500C8F717 /* DraftApplication */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BAD521F92A42DAF500C8F717 /* DraftApplication */ = {
+			isa = PBXGroup;
+			children = (
+				BAD521F62A42DAEE00C8F717 /* DraftApplication.swift */,
+				BAD521F52A42DAEE00C8F717 /* DraftApplicationData.swift */,
+			);
+			path = DraftApplication;
 			sourceTree = "<group>";
 		};
 		BAE7C1D529FBE49400E58701 /* FullDetailsNurse */ = {
@@ -1673,6 +1830,7 @@
 				BA57668E2A14B9DE00BA5770 /* DMSans-Medium.ttf in Resources */,
 				BA57668A2A149FDC00BA5770 /* LatestNotiesTableViewCell.xib in Resources */,
 				BA45320129DAE98D0048AD2C /* PersonalInfoDetailsTableViewCell.xib in Resources */,
+				BA566B912A3B2AAC00C6FFC6 /* NotificationTableViewCell.xib in Resources */,
 				BA4531F629DAD3010048AD2C /* Quicksand-SemiBold.ttf in Resources */,
 				BA78C13C2A1200CA00B69DB6 /* UpdateJobStatusTableViewCell.xib in Resources */,
 				BA3393C629F7B12F00D14761 /* ApplicationAdvanceCollectionViewCell.xib in Resources */,
@@ -1819,6 +1977,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA613FB22A1E1233006EE9E8 /* Role_interest11.swift in Sources */,
+				BAD521F82A42DAEF00C8F717 /* DraftApplication.swift in Sources */,
 				BAA5D05B29F808F700BC922D /* ChatRCVC.swift in Sources */,
 				BA86AF4229F9791E0044873E /* OfferedEmployeesRCVC.swift in Sources */,
 				BA5C9D5A29FA7B0E00D769CF /* CreatingJobPostRCVC.swift in Sources */,
@@ -1831,18 +1990,25 @@
 				BABA532A29D5AD6F004555F0 /* JobDetailsVC.swift in Sources */,
 				BA6D95A029DD7ECF0092F8A0 /* SettingsTableViewCell.swift in Sources */,
 				BA4D06052A272CEC00217DCD /* PastJobs.swift in Sources */,
+				BAD3609C2A39E7EA004256A1 /* Home.swift in Sources */,
+				BA566B902A3B2AAC00C6FFC6 /* NotificationTableViewCell.swift in Sources */,
 				BA45320029DAE98D0048AD2C /* PersonalInfoDetailsTableViewCell.swift in Sources */,
 				BA4667CD29D6F20300CAC442 /* ApplyJobWithoutProfileUpdateVC.swift in Sources */,
+				BA96FD332A3B1FFA00AEC7D6 /* NotificationsVC.swift in Sources */,
 				BA5E43D829F6CE6D0005295E /* ProfileRCVC.swift in Sources */,
+				BA4EC7FA2A3CA0CD002921C7 /* ApplicantTypeList.swift in Sources */,
 				BA14EB2029F9354600CD5720 /* ScreeningRCVC.swift in Sources */,
 				BA50EB3029F954AB00E0CFFD /* MoveToSubmitRCVC.swift in Sources */,
 				BAA64F5F2A0B7734007F632B /* NurseSpecialities.swift in Sources */,
 				BA772FD12A0BA36B00EC3BE3 /* BrowseJobs.swift in Sources */,
+				BAD521F72A42DAEF00C8F717 /* DraftApplicationData.swift in Sources */,
 				BA84DBCE2A12069900A73D3C /* UpdateJobStatusViewController.swift in Sources */,
 				BA66E14E29FA384300AB4E7F /* WorkingRCVC.swift in Sources */,
 				BA0B8E6E29F6992700BA91AC /* TabBarRCVCViewController.swift in Sources */,
 				BA5E43DE29F6DE430005295E /* AccountInfoRCVC.swift in Sources */,
+				BA4EC7F52A3C7BEF002921C7 /* HomeNotification.swift in Sources */,
 				BA4F420129F7841A00EA87A4 /* PrivacyPolicyRCVC.swift in Sources */,
+				BA54882A2A3AE36400B7C945 /* AboutMeData.swift in Sources */,
 				BA76079A2A1C7BE5001158E6 /* MySavedJobListData.swift in Sources */,
 				BADDB6B229D3079F0031A063 /* SignUpVC.swift in Sources */,
 				BAA64F652A0B7CC9007F632B /* NurseLocationData.swift in Sources */,
@@ -1853,12 +2019,16 @@
 				BA63CE9C29F8F33A007AC136 /* ApplicationDetailsRCVC.swift in Sources */,
 				BA4F41FE29F783E600EA87A4 /* AboutUSRCVC.swift in Sources */,
 				BA625B1029FBCD1400F05B0E /* NuseDetailsRCVC.swift in Sources */,
+				BA59CE772A375D8400E068BB /* SubjectTypesListData.swift in Sources */,
 				BAA64F642A0B7CC9007F632B /* NurseWorkLocation.swift in Sources */,
 				BAAECF8B29FBAA6500C8ABDC /* NurseAppliedListRCVC.swift in Sources */,
 				BA4D06002A271ADD00217DCD /* MyHiredJobsData.swift in Sources */,
 				BA4E254B29FC149A008CF71A /* CertListTableViewCell.swift in Sources */,
 				BABD91642A1B5A8D00F91B9F /* Json4Swift_Base.swift in Sources */,
 				BA3E693D29D16A6C0013816A /* ConstantString.swift in Sources */,
+				BAB1709D2A3730B800D98C4E /* Recommended_jobs.swift in Sources */,
+				BA59CE762A375D8400E068BB /* SubjectTypesList.swift in Sources */,
+				BAD3609B2A39E7E9004256A1 /* HomeData.swift in Sources */,
 				BA4531FC29DADCD60048AD2C /* ProfileInfoTableViewCell.swift in Sources */,
 				BA5E43DB29F6D5F30005295E /* EmployersRCVC.swift in Sources */,
 				BA702E732A0E70070000A324 /* ApplicationAdvanceTableViewCell.swift in Sources */,
@@ -1872,11 +2042,13 @@
 				BAF9A44629F1450C0069C0CE /* LogInDataModel.swift in Sources */,
 				BA4FE8EE29F6B03B00E5C225 /* JobTypeCollectionViewCell.swift in Sources */,
 				BA45320429DAEB510048AD2C /* PersonalInfomationVC.swift in Sources */,
+				BAB1709F2A3730C900D98C4E /* Recently_added.swift in Sources */,
 				BA4E98CE2A0CD42500875075 /* MyAppliedPopularJob.swift in Sources */,
 				BAA5D05929F8083000BC922D /* MessageRCVC.swift in Sources */,
 				BA7771E229FAB18B0087B65A /* EditCreatJobRequestRCVC.swift in Sources */,
 				BABD91652A1B5A8D00F91B9F /* Popular_jobs.swift in Sources */,
 				BAC0E45629DD314B00E8379C /* ResumeVC.swift in Sources */,
+				BA54882D2A3AED0100B7C945 /* Employers.swift in Sources */,
 				BA3E694329D16B8C0013816A /* LoginVC.swift in Sources */,
 				BA13F04929DD5B4E0024EA55 /* ExperienceVC.swift in Sources */,
 				BA3393C529F7B12F00D14761 /* ApplicationAdvanceCollectionViewCell.swift in Sources */,
@@ -1894,8 +2066,10 @@
 				BA50EB2D29F94BAA00E0CFFD /* SubmittedRCVC.swift in Sources */,
 				BAA64F6A2A0B86A9007F632B /* NurseJobTypes.swift in Sources */,
 				BA4AF81C29F68AD30047074A /* LoginRCVC.swift in Sources */,
+				BAC625442A39913C0027B1C9 /* AssignmentDurationData.swift in Sources */,
 				BA920CE12A0A14AF00F82CA3 /* Certification.swift in Sources */,
 				BA130B7E29D1584600496986 /* ViewController.swift in Sources */,
+				BA5488292A3AE36400B7C945 /* AboutMe.swift in Sources */,
 				BA0B8E6829F691BB00BA91AC /* VerificationRCVC.swift in Sources */,
 				BA7607982A1C7BE5001158E6 /* MySavedJobList.swift in Sources */,
 				BAB322162A0A2FBA00AABF95 /* ExperienceTypeList Data.swift in Sources */,
@@ -1903,6 +2077,7 @@
 				BA5792D729E7DC300028F181 /* ExploreVC.swift in Sources */,
 				BA54425D29E8015F00AF2747 /* BookMarkVC.swift in Sources */,
 				BA772FD02A0BA36B00EC3BE3 /* BrowseJobsData.swift in Sources */,
+				BA263FF42A431C1000EE6F44 /* PublishedListData.swift in Sources */,
 				BA6BF91E29ED48F4008B2112 /* UserTableViewCell.swift in Sources */,
 				BA613FB12A1E1233006EE9E8 /* Data11.swift in Sources */,
 				BA2E51F929D2D52000806764 /* VerificationVC.swift in Sources */,
@@ -1927,6 +2102,7 @@
 				BA13F04C29DD61DA0024EA55 /* EducationVC.swift in Sources */,
 				BAAECF8829FB897D00C8ABDC /* HoldAndPublishedRCVC.swift in Sources */,
 				BA66E15429FA436900AB4E7F /* MoveToDoneRCVC.swift in Sources */,
+				BA4EC7F92A3CA0CD002921C7 /* ApplicantTypeData.swift in Sources */,
 				BA78C13B2A1200CA00B69DB6 /* UpdateJobStatusTableViewCell.swift in Sources */,
 				BAF9A44829F145230069C0CE /* APIDataHandler.swift in Sources */,
 				BAAD4D842A0D29F90014A48A /* NurseProfiRoleinte.swift in Sources */,
@@ -1953,6 +2129,7 @@
 				BA6676592A09102700732DCD /* LicenseTypesData.swift in Sources */,
 				BA47978029ED08D3000B3BF7 /* LoginUserTableViewCell.swift in Sources */,
 				BABA532429D59B9F004555F0 /* RecommendedTableViewCell.swift in Sources */,
+				BAC625452A39913C0027B1C9 /* AssignmentDuration.swift in Sources */,
 				BA5EE1DE2A092A1700FB6787 /* LicenseStatusData.swift in Sources */,
 				BA0B8E7129F69A7400BA91AC /* HomeRCVC.swift in Sources */,
 				BAA64F5E2A0B7734007F632B /* NurseSpecialitiesData.swift in Sources */,
@@ -1970,6 +2147,7 @@
 				BA6D959D29DD7D310092F8A0 /* SettingsVC.swift in Sources */,
 				BA66E15729FA446500AB4E7F /* DoneEmployeesRCVC.swift in Sources */,
 				BA166E8429EAAF2B0087842E /* AppliedJobDetailsVC.swift in Sources */,
+				BA263FF32A431C1000EE6F44 /* PublishedList.swift in Sources */,
 				BA86AF3F29F96FBF0044873E /* MoveToOfferedRCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2146,11 +2324,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H38RRH22MU;
+				DEVELOPMENT_TEAM = A3GG5MW5AW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoodWork/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Goodwork;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -2163,6 +2343,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Gaurav-Jani.GoodWork";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2175,11 +2356,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H38RRH22MU;
+				DEVELOPMENT_TEAM = A3GG5MW5AW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoodWork/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Goodwork;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -2192,6 +2375,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Gaurav-Jani.GoodWork";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

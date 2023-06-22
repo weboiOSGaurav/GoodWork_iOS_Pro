@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DropDown
 
 class HelpAndSupportVC: BaseVC {
     
@@ -29,6 +30,14 @@ class HelpAndSupportVC: BaseVC {
     
     @IBOutlet weak var sendNowButton: UIButton!
     
+   
+    
+    var subjectTypes : SubjectTypesList?
+    
+    var issueTypeID = 0
+    
+    let issueTypeDropDown = DropDown()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,8 +45,8 @@ class HelpAndSupportVC: BaseVC {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         self.tabBarController?.tabBar.isHidden = true
+        self.getSubjectTypesAPI()
     }
     
     func setUPUI(){
@@ -91,8 +100,12 @@ extension HelpAndSupportVC {
             self.helpAndSupportAPI()
         }
     }
+    
+    @IBAction func selectIssueTypeButtonPressed(_ sender: UIButton){
+        print("selectIssueTypeButtonPressed")
+        self.setUpDropDownType()
+    }
 }
-
 
 extension HelpAndSupportVC {
     
@@ -100,7 +113,7 @@ extension HelpAndSupportVC {
         
         var mdl = HelpSupportRequest()
         mdl.user_id  = _userDefault.string(forKey: UserDefaultKeys.user_id.rawValue) ?? ""
-        mdl.subject = 418
+        mdl.subject =  self.issueTypeID ?? 0
         mdl.issue = self.issueDescriptionTextView.text ?? ""
         
         print("mdl: \(mdl)")
@@ -121,6 +134,96 @@ extension HelpAndSupportVC {
                 
                 self.notificationBanner(response["message"] as? String ?? "")
             }
+        }
+    }
+    
+    func getSubjectTypesAPI(){
+        
+        var mdl = SubjectTypesRequest()
+        
+        print("mdl: \(mdl)")
+        
+        self.startLoading()
+        
+        LoginDataManager.shared.getSubjectTypesAPI(rqst: mdl) { (dict, error) in
+            
+            DispatchQueue.main.async {
+                
+                let response = dict as? [String : Any] ??  [String : Any]()
+                self.stopLoading()
+                if response["api_status"] as? String ?? "" == "1" {
+                    
+                    DispatchQueue.main.async {
+                        
+                        let response = dict as? [String : Any] ??  [String : Any]()
+                        
+                        if response["api_status"] as? String ?? "" == "1" {
+                            
+                            do {
+                                let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+                                
+                                let subjectResp = try JSONDecoder().decode(SubjectTypesList.self, from: jsonData)
+                                
+                                self.subjectTypes = subjectResp
+                                
+                                if self.subjectTypes?.api_status == "1"{
+                                    print("if self.exploreNEW?.api_status")
+                                }else{
+                                    print("falsee")
+                                }
+                            }catch{
+                                print("error \(error)")
+                                print("catch \(error.localizedDescription)")
+                            }
+                        }else{
+                            print("False")
+                            self.notificationBanner(response["message"] as? String ?? "")
+                        }
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            self.stopLoading()
+                        }
+                    }
+                }else{
+                    print("False")
+                    self.notificationBanner(response["message"] as? String ?? "")
+                }
+            }
+        }
+    }
+}
+
+extension HelpAndSupportVC {
+    func setUpDropDownType(){
+        
+        if self.subjectTypes?.data?.count ?? 0 == 0 {
+            return
+        }
+        
+        var strName = [String]()
+        
+        self.issueTypeDropDown.anchorView = self.dropDownImageView
+        
+        var indNo = 0
+        
+        for _ in 1...(self.subjectTypes?.data?.count ?? 0){
+            strName.append(self.subjectTypes?.data?[indNo].name ?? "")
+            indNo += 1
+        }
+        
+        self.issueTypeDropDown.direction = .bottom
+        self.issueTypeDropDown.bottomOffset = CGPoint(x: -115, y: 22)
+        self.issueTypeDropDown.dataSource = strName
+        self.issueTypeDropDown.width = 150
+        self.issueTypeDropDown.show()
+        
+        self.dropDownImageView.transform =   self.dropDownImageView.transform.rotated(by: .pi)
+        
+        self.issueTypeDropDown.selectionAction = { [weak self] (index: Int, item: String) in
+            self?.dropDownImageView.transform =   (self?.dropDownImageView.transform.rotated(by: .pi))!
+            print("item \(item)")
+            self?.subjectTypeLabel.text = item
+            self?.issueTypeID = self?.subjectTypes?.data?[index].id ?? 0
         }
     }
 }

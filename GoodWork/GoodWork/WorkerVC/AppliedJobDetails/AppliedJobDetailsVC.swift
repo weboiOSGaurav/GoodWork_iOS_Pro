@@ -6,9 +6,8 @@
 //
 
 import UIKit
-import ExpandableLabel
 
-class AppliedJobDetailsVC: BaseVC, ExpandableLabelDelegate {
+class AppliedJobDetailsVC: BaseVC{
     
     static let storyBoardIdentifier = "AppliedJobDetailsVC"
     
@@ -46,7 +45,7 @@ class AppliedJobDetailsVC: BaseVC, ExpandableLabelDelegate {
     @IBOutlet weak var bottomLeftImageView: UIImageView!
     
     @IBOutlet weak var descriptionLable: UILabel!
-    @IBOutlet weak var jobDetailsLabel: ExpandableLabel!
+    @IBOutlet weak var jobDetailsLabel: UILabel!
     
     @IBOutlet weak var aboutJobLable: UILabel!
     
@@ -112,9 +111,20 @@ class AppliedJobDetailsVC: BaseVC, ExpandableLabelDelegate {
         
         self.popularJobsCollectionView.reloadData()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-            self.popularJobAPI()
+       
+        
+        if appDelegate.isFromApplyJob{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.popularJobAPI(false)
+            }
+            self.appliedJobAlertView()
+            appDelegate.isFromApplyJob = false
+            
+        }else{
+            self.popularJobAPI(true)
         }
+        
+        
     }
     
     func setUPUI(){
@@ -169,7 +179,7 @@ class AppliedJobDetailsVC: BaseVC, ExpandableLabelDelegate {
         
         self.descriptionLable.addTitleColorAndFont(title: "Description", fontName: GoodWorkAppFontName.NeueKabelRegular, fontSize: 14, tintColor: GoodWorkAppColor.appLightPink)
         
-        self.jobDetailsLabel.delegate = self
+      
         
         self.aboutJobLable.addTitleColorAndFont(title: "About job", fontName: GoodWorkAppFontName.NeueKabelRegular, fontSize: 14, tintColor: GoodWorkAppColor.appLightPink)
         
@@ -177,50 +187,52 @@ class AppliedJobDetailsVC: BaseVC, ExpandableLabelDelegate {
         
         self.alreadyAppliedButton.addRadiusBGColorTitleColorFont(title: "Already Applied", fontName: GoodWorkAppFontName.PoppinsRegular, fontSize: 16, radius: self.alreadyAppliedButton.frame.height / 2, bgColor: GoodWorkAppColor.appColour, tintColor: GoodWorkAppColor.appDustyGray)
         
-        self.readMore()
-        
-    }
-    
-    func readMore(){
-        let currentSource = preparedSources()[0]
-        
-        self.jobDetailsLabel.setLessLinkWith(lessLink: "Read Less", attributes: [.foregroundColor: GoodWorkAppColor.appDarkPurple], position: currentSource.textAlignment)
-        
-        self.jobDetailsLabel.shouldCollapse = true
-        self.jobDetailsLabel.textReplacementType = currentSource.textReplacementType
-        self.jobDetailsLabel.numberOfLines = currentSource.numberOfLines
-        self.jobDetailsLabel.collapsed = states
-        self.jobDetailsLabel.text = currentSource.text
         self.jobDetailsLabel.font = GoodWorkApp.goodWorkAppFont(GoodWorkAppFontName.NeueKabelRegular, 13)
-    }
-    
-    func preparedSources() -> [(text: String, textReplacementType: ExpandableLabel.TextReplacementType, numberOfLines: Int, textAlignment: NSTextAlignment)] {
-        
-        return [(loremIpsumText(), .word, 3, .left)]
-    }
-    
-    func loremIpsumText() -> String {
-        return self.myAppliedJobOBJ?.description ?? ""
-    }
-    
-    func didExpandLabel(_ label: ExpandableLabel) {
-        self.states = false
-        readMore()
-    }
-    
-    
-    func didCollapseLabel(_ label: ExpandableLabel) {
-        self.states = true
-        readMore()
-    }
-    
-    func willExpandLabel(_ label: ExpandableLabel) {
+        self.jobDetailsLabel.numberOfLines = 0
+      //  self.readMore()
         
     }
     
-    func willCollapseLabel(_ label: ExpandableLabel) {
-        
-    }
+//    func readMore(){
+//        let currentSource = preparedSources()[0]
+//
+//        self.jobDetailsLabel.setLessLinkWith(lessLink: "Read Less", attributes: [.foregroundColor: GoodWorkAppColor.appDarkPurple], position: currentSource.textAlignment)
+//
+//        self.jobDetailsLabel.shouldCollapse = true
+//        self.jobDetailsLabel.textReplacementType = currentSource.textReplacementType
+//        self.jobDetailsLabel.numberOfLines = currentSource.numberOfLines
+//        self.jobDetailsLabel.collapsed = states
+//        self.jobDetailsLabel.text = currentSource.text
+//        self.jobDetailsLabel.font = GoodWorkApp.goodWorkAppFont(GoodWorkAppFontName.NeueKabelRegular, 13)
+//    }
+    
+//    func preparedSources() -> [(text: String, textReplacementType: ExpandableLabel.TextReplacementType, numberOfLines: Int, textAlignment: NSTextAlignment)] {
+//
+//        return [(loremIpsumText(), .word, 3, .left)]
+//    }
+//
+//    func loremIpsumText() -> String {
+//        return self.myAppliedJobOBJ?.description ?? ""
+//    }
+//
+//    func didExpandLabel(_ label: ExpandableLabel) {
+//        self.states = false
+//        readMore()
+//    }
+    
+    
+//    func didCollapseLabel(_ label: ExpandableLabel) {
+//        self.states = true
+//        readMore()
+//    }
+//
+//    func willExpandLabel(_ label: ExpandableLabel) {
+//
+//    }
+//
+//    func willCollapseLabel(_ label: ExpandableLabel) {
+//
+//    }
 }
 
 //MARK:- Button Actions
@@ -271,11 +283,11 @@ extension AppliedJobDetailsVC : UICollectionViewDataSource, UICollectionViewDele
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularJobsCollectionCell.reuseCellIdentifier, for: indexPath) as! PopularJobsCollectionCell
         cell.updateAppliedJobCellData(self.popularJob?.data?[indexPath.row])
-        cell.applyButton.setTitle("Apply Now", for: .normal)
+//        cell.applyButton.setTitle("Apply Now", for: .normal)
         
         cell.saveJobButton.tag = indexPath.row
         cell.saveJobButton.addTarget(self, action: #selector(self.savePopularJobButtonAction(sender:)), for: .touchUpInside)
-        
+        cell.applyButton.isHidden = false
         cell.applyButton.tag = indexPath.row
         cell.applyButton.addTarget(self, action: #selector(self.applyJobButtonAction(sender:)), for: .touchUpInside)
         
@@ -317,7 +329,12 @@ extension AppliedJobDetailsVC {
     
     
     func updateAppliedJObdetails(_ objNEW : MyAppliedJobListData?){
-        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        if objNEW?.applied_nurses ?? "" == "0" {
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
+        
         self.jobTitleLable.text = objNEW?.job_name ?? ""
         self.jobDescriptionLable.text = objNEW?.name ?? ""
         
@@ -338,12 +355,18 @@ extension AppliedJobDetailsVC {
             self.saveJobImageView.image = UIImage(named: "unSaveJob")
             print("unSaveJob")
         }
-        
-        self.readMore()
+        self.jobDetailsLabel.text =  objNEW?.description ?? ""
     }
     
     func updateAppliedJObdetailsExplore(_ objNEW : Popular_jobs?){
-        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
+            
+        
         self.jobTitleLable.text = objNEW?.job_name ?? ""
         self.jobDescriptionLable.text = objNEW?.name ?? ""
         
@@ -355,9 +378,9 @@ extension AppliedJobDetailsVC {
         
         self.recentlyAddedLable.text = objNEW?.created_at_definition ?? ""
         
-        print("objNEW?.is_saved:: \(objNEW?.is_saved ?? 0)")
+    //    print("objNEW?.is_saved:: \(objNEW?.is_saved ?? 0)")
         
-        if objNEW?.is_saved ?? 0 == 1{
+        if objNEW?.is_saved ?? "0" == "1"{
             self.saveJobImageView.image = UIImage(named: "saveJob")
             print("saveJob image")
         }else{
@@ -365,11 +388,17 @@ extension AppliedJobDetailsVC {
             print("unSaveJob")
         }
         
-        self.readMore()
+        self.jobDetailsLabel.text =  objNEW?.description ?? ""
     }
     
     func updateAppliedJObdetailsBrows(_ objNEW : BrowseJobsData?){
-        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+//        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
         self.jobTitleLable.text = objNEW?.job_name ?? ""
         self.jobDescriptionLable.text = objNEW?.name ?? ""
         
@@ -390,12 +419,19 @@ extension AppliedJobDetailsVC {
             self.saveJobImageView.image = UIImage(named: "unSaveJob")
             print("unSaveJob")
         }
-        
-        self.readMore()
+        self.jobDetailsLabel.text =  objNEW?.description ?? ""
+       
     }
     
     func updateJobdetailsSavedJob(_ objNEW : MySavedJobListData?){
-        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+//        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
+        
         self.jobTitleLable.text = objNEW?.job_name ?? ""
         self.jobDescriptionLable.text = objNEW?.name ?? ""
         
@@ -416,8 +452,8 @@ extension AppliedJobDetailsVC {
             self.saveJobImageView.image = UIImage(named: "unSaveJob")
             print("unSaveJob")
         }
-        
-        self.readMore()
+        self.jobDetailsLabel.text =  objNEW?.description ?? ""
+       
     }
 }
 
@@ -442,11 +478,11 @@ extension AppliedJobDetailsVC {
                 if response["api_status"] as? String ?? "" == "1" {
                     
                     if self.isFromExplore {
-                        if self.exploreJobOBJ?.is_saved == 0 {
-                            self.exploreJobOBJ?.is_saved = 1
+                        if self.exploreJobOBJ?.is_saved == "0" {
+                            self.exploreJobOBJ?.is_saved = "1"
                             self.saveJobAlertView()
                         }else{
-                            self.exploreJobOBJ?.is_saved = 0
+                            self.exploreJobOBJ?.is_saved = "0"
                             self.notificationBanner(response["message"] as? String ?? "")
                         }
                         self.updateAppliedJObdetailsExplore(self.exploreJobOBJ)
@@ -501,9 +537,11 @@ extension AppliedJobDetailsVC {
 
 extension AppliedJobDetailsVC {
     
-    func popularJobAPI(){
+    func popularJobAPI(_ isLoader : Bool){
         
-        self.startLoading()
+        if isLoader{
+            self.startLoading()
+        }
         
         var mdl = PopularJobRequest()
         mdl.job_id = self.selectedJobID
@@ -531,20 +569,21 @@ extension AppliedJobDetailsVC {
                             print("falsee")
                         }
                     }catch{
-                        
                         print("error \(error)")
                         print("catch \(error.localizedDescription)")
+                        self.navigationController?.popViewController(animated: true)
+                        self.notificationBanner("Something went wrong please try again")
                     }
                 }else{
                     print("False")
-                    self.notificationBanner(response["message"] as? String ?? "")
+//                    self.notificationBanner(response["message"] as? String ?? "")
+                    self.navigationController?.popViewController(animated: true)
+                    self.notificationBanner("Something went wrong please try again")
                 }
                 
                 self.popularJobsCollectionView.reloadData()
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    self.stopLoading()
-                }
+                self.stopLoading()
             }
         }
     }

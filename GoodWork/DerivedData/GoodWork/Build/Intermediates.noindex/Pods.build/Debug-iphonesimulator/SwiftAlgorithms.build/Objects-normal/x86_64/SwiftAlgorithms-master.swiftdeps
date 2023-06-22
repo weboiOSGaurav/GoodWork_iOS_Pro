@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
 options: "6cda5ca29a4d2d620c8700107a6c9be1f2a60b010a0f0522906932cac08e66b5"
-build_start_time: [1686397530, 270533084]
-build_end_time: [1686397547, 462852001]
+build_start_time: [1687349072, 409122943]
+build_end_time: [1687349072, 604223966]
 inputs:
   "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/SwiftAlgorithms/Sources/Algorithms/AdjacentPairs.swift": [1684489687, 967545509]
   "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/SwiftAlgorithms/Sources/Algorithms/Chain.swift": [1684489687, 961581707]

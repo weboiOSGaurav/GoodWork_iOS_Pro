@@ -190,7 +190,7 @@
                                             <constraint firstItem="5TD-fT-hm8" firstAttribute="top" secondItem="ivg-O4-alQ" secondAttribute="top" constant="18" id="zsT-xG-Qic"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uef-ND-D1G">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uef-ND-D1G">
                                         <rect key="frame" x="358" y="136" width="110" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="BQ7-Y6-gho"/>
@@ -198,8 +198,32 @@
                                         </constraints>
                                         <color key="tintColor" red="1" green="0.93333333330000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Apply  Now">
-                                            <fontDescription key="titleFontDescription" name="NeueKabel-Medium" family="Neue Kabel" pointSize="15"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Applied">
+                                            <fontDescription key="titleFontDescription" name="NeueKabel-Medium" family="Neue Kabel" pointSize="14"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-8s-pay">
+                                        <rect key="frame" x="358" y="136" width="110" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="8yV-4d-I3x"/>
+                                            <constraint firstAttribute="height" constant="40" id="HHP-Ry-RLS"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.93333333330000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Apply Now">
+                                            <fontDescription key="titleFontDescription" name="NeueKabel-Medium" family="Neue Kabel" pointSize="14"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMR-Ph-4XU">
+                                        <rect key="frame" x="358" y="136" width="110" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="8vF-gf-I2r"/>
+                                            <constraint firstAttribute="height" constant="40" id="EVz-Xk-QvA"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.93333333330000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Learn More">
+                                            <fontDescription key="titleFontDescription" name="NeueKabel-Medium" family="Neue Kabel" pointSize="14"/>
                                         </buttonConfiguration>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Foh-o7-vPW">
@@ -286,13 +310,21 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="SID-l0-3vS" firstAttribute="top" secondItem="ivg-O4-alQ" secondAttribute="top" constant="10" id="5g7-MJ-reV"/>
+                                    <constraint firstItem="tMR-Ph-4XU" firstAttribute="bottom" secondItem="Jfb-8s-pay" secondAttribute="bottom" id="6x0-L1-qUe"/>
+                                    <constraint firstItem="Jfb-8s-pay" firstAttribute="leading" secondItem="uef-ND-D1G" secondAttribute="leading" id="8BH-Ku-fr9"/>
+                                    <constraint firstItem="Jfb-8s-pay" firstAttribute="trailing" secondItem="uef-ND-D1G" secondAttribute="trailing" id="8BO-A7-UlL"/>
                                     <constraint firstItem="Foh-o7-vPW" firstAttribute="trailing" secondItem="ivg-O4-alQ" secondAttribute="trailing" id="Bow-35-J1v"/>
                                     <constraint firstItem="uef-ND-D1G" firstAttribute="bottom" secondItem="ivg-O4-alQ" secondAttribute="bottom" constant="24" id="HCy-xu-e2h"/>
                                     <constraint firstItem="ivg-O4-alQ" firstAttribute="top" secondItem="b1I-eL-Njd" secondAttribute="top" constant="4" id="I9X-tA-fx8"/>
+                                    <constraint firstItem="tMR-Ph-4XU" firstAttribute="top" secondItem="Jfb-8s-pay" secondAttribute="top" id="JvE-1M-WRu"/>
+                                    <constraint firstItem="Jfb-8s-pay" firstAttribute="top" secondItem="uef-ND-D1G" secondAttribute="top" id="Mlz-4f-hGL"/>
                                     <constraint firstItem="yDB-7q-6iH" firstAttribute="height" secondItem="Foh-o7-vPW" secondAttribute="height" id="N29-QP-kAf"/>
                                     <constraint firstItem="Foh-o7-vPW" firstAttribute="bottom" secondItem="SID-l0-3vS" secondAttribute="bottom" constant="13" id="ON0-ew-ugA"/>
                                     <constraint firstItem="yDB-7q-6iH" firstAttribute="trailing" secondItem="Foh-o7-vPW" secondAttribute="trailing" id="Q5A-js-xtY"/>
+                                    <constraint firstItem="tMR-Ph-4XU" firstAttribute="trailing" secondItem="Jfb-8s-pay" secondAttribute="trailing" id="S2e-9Y-xVl"/>
                                     <constraint firstAttribute="trailing" secondItem="SID-l0-3vS" secondAttribute="trailing" constant="10" id="TUb-3o-MNo"/>
+                                    <constraint firstItem="tMR-Ph-4XU" firstAttribute="leading" secondItem="Jfb-8s-pay" secondAttribute="leading" id="ZqJ-Zp-VIC"/>
+                                    <constraint firstItem="Jfb-8s-pay" firstAttribute="bottom" secondItem="uef-ND-D1G" secondAttribute="bottom" id="a3o-C9-nmt"/>
                                     <constraint firstItem="SID-l0-3vS" firstAttribute="leading" secondItem="ivg-O4-alQ" secondAttribute="leading" constant="10" id="dlj-hl-cFY"/>
                                     <constraint firstAttribute="bottom" secondItem="SID-l0-3vS" secondAttribute="bottom" id="dr2-h7-Cu1"/>
                                     <constraint firstItem="yDB-7q-6iH" firstAttribute="bottom" secondItem="Foh-o7-vPW" secondAttribute="bottom" id="f2x-D8-z05"/>
@@ -324,8 +356,9 @@
                 <outlet property="acceptImageview" destination="13t-VM-wpc" id="K6D-nG-Qvu"/>
                 <outlet property="acceptJobButton" destination="D23-f6-lL0" id="uTR-Uv-zPX"/>
                 <outlet property="amountBgView" destination="9L6-Mo-2fg" id="bnb-J4-ggw"/>
+                <outlet property="appliedButton" destination="uef-ND-D1G" id="Yaz-fW-6bw"/>
                 <outlet property="appliedNumberLable" destination="9G0-bd-el3" id="GU6-bK-2tf"/>
-                <outlet property="applyButton" destination="uef-ND-D1G" id="kBj-u5-beb"/>
+                <outlet property="applyNewButton" destination="Jfb-8s-pay" id="Atm-KI-xe7"/>
                 <outlet property="calendarBgView" destination="zjG-qz-Jfa" id="HYL-Vn-Tb3"/>
                 <outlet property="calendarImageView" destination="ewH-Ak-WWR" id="TXL-Av-sO7"/>
                 <outlet property="cancelImageview" destination="fVD-2R-5KQ" id="Fxj-kK-Hit"/>
@@ -338,6 +371,7 @@
                 <outlet property="jobLocationLable" destination="z5c-wk-b8F" id="IlY-Jt-5kf"/>
                 <outlet property="jobTitleLable" destination="HuJ-KB-1K3" id="dno-1h-Bqq"/>
                 <outlet property="jobTypeLable" destination="TUb-Dt-4sr" id="WLD-sd-CXz"/>
+                <outlet property="learnMoreButton" destination="tMR-Ph-4XU" id="flV-yD-9Hx"/>
                 <outlet property="locationImageView" destination="ofz-MO-YYY" id="klG-nM-0xw"/>
                 <outlet property="messageMainBgView" destination="yDB-7q-6iH" id="NSa-4u-xgZ"/>
                 <outlet property="messageNotificationButton" destination="Egb-yD-ckZ" id="FkT-Uo-pV0"/>

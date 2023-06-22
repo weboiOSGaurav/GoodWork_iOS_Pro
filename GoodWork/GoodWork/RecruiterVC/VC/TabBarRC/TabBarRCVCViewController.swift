@@ -37,24 +37,31 @@ class TabBarRCVCViewController: UITabBarController {
         myTabBarItem1.imageInsets = UIEdgeInsets(top: 34, left: 0, bottom: -34, right: 0)
         
         let myTabBarItem2 = (self.tabBar.items?[1])! as UITabBarItem
-        myTabBarItem2.image = UIImage(named: "exploreUnSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        myTabBarItem2.image = UIImage(named: "searchUnSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         
-        myTabBarItem2.selectedImage = UIImage(named: "exploreSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal).withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        myTabBarItem2.selectedImage = UIImage(named: "searchSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         
-        myTabBarItem2.imageInsets = UIEdgeInsets(top: 34, left: 0, bottom: -34, right: 0)
+        myTabBarItem2.imageInsets = UIEdgeInsets(top: 32, left: 0, bottom: -34, right: 0)
         
         let myTabBarItem3 = (self.tabBar.items?[2])! as UITabBarItem
-        myTabBarItem3.image = UIImage(named: "OpportunitiesManager")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        myTabBarItem3.image = UIImage(named: "exploreUnSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         
-        myTabBarItem3.selectedImage = UIImage(named: "OpportunitiesManagerSelec")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        myTabBarItem3.selectedImage = UIImage(named: "exploreSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal).withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         
-        myTabBarItem3.imageInsets = UIEdgeInsets(top: 32, left: 0, bottom: -34, right: 0)
+        myTabBarItem3.imageInsets = UIEdgeInsets(top: 34, left: 0, bottom: -34, right: 0)
         
         let myTabBarItem4 = (self.tabBar.items?[3])! as UITabBarItem
-        myTabBarItem4.image = UIImage(named: "messageUnSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        myTabBarItem4.image = UIImage(named: "OpportunitiesManager")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         
-        myTabBarItem4.selectedImage = UIImage(named: "messageSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        myTabBarItem4.selectedImage = UIImage(named: "OpportunitiesManagerSelec")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         
         myTabBarItem4.imageInsets = UIEdgeInsets(top: 32, left: 0, bottom: -34, right: 0)
+        
+        let myTabBarItem5 = (self.tabBar.items?[4])! as UITabBarItem
+        myTabBarItem5.image = UIImage(named: "messageUnSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        
+        myTabBarItem5.selectedImage = UIImage(named: "messageSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        
+        myTabBarItem5.imageInsets = UIEdgeInsets(top: 32, left: 0, bottom: -34, right: 0)
     }
 }

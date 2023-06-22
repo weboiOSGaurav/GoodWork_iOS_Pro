@@ -7,6 +7,8 @@
 
 import UIKit
 import DropDown
+import RangeSeekSlider
+
 
 class FilterVC: BaseVC {
     
@@ -49,12 +51,12 @@ class FilterVC: BaseVC {
     @IBOutlet weak var startDateLable: UILabel!
     @IBOutlet weak var startDateBgView: UIView!
     @IBOutlet weak var startDateShadow: UIView!
-
+    
     
     @IBOutlet weak var endDateLable: UILabel!
     @IBOutlet weak var endDateBgView: UIView!
     @IBOutlet weak var endDateShadow: UIView!
-   
+    
     
     @IBOutlet weak var WeeklyPayTitleLable: UILabel!
     @IBOutlet weak var WeeklyPayStartAmountLable: UILabel!
@@ -67,8 +69,6 @@ class FilterVC: BaseVC {
     @IBOutlet weak var hoursPerWeekLable: UILabel!
     @IBOutlet weak var hoursPerWeekStartAmountLable: UILabel!
     @IBOutlet weak var hoursPerWeekMaxAmountLable: UILabel!
-    
-    
     
     @IBOutlet weak var assignmentLenghtLable: UILabel!
     @IBOutlet weak var assignmentLenghtStartLable: UILabel!
@@ -89,7 +89,26 @@ class FilterVC: BaseVC {
     
     @IBOutlet weak var startDateTextField: UITextField!
     @IBOutlet weak var endDateTextField: UITextField!
-   
+    
+    //@IBOutlet weak var redDoubleSlider: DoubleSlider!
+    
+    @IBOutlet fileprivate weak var weeklyPaySlider: RangeSeekSlider!
+    @IBOutlet fileprivate weak var hoursePerShiftSlider: RangeSeekSlider!
+    @IBOutlet fileprivate weak var hoursePerWeekSlider: RangeSeekSlider!
+    @IBOutlet fileprivate weak var assignMentLenghtSlider: RangeSeekSlider!
+    
+    
+    var weeklyPayMin = 0.0
+    var weeklyPayMax = 0.0
+    
+    var hoursePerShiftMin = 0.0
+    var hoursePerShiftMax = 0.0
+    
+    var hoursePerWeekMin = 0.0
+    var hoursePerWeekMax = 0.0
+    
+    var assignMentLenghtMin = 0.0
+    var assignMentLenghtMax = 0.0
     
     private var jobTypeSelected = [String]()
     private var shiftTypeSelected = [String]()
@@ -97,7 +116,6 @@ class FilterVC: BaseVC {
     private var jobType = ""
     private var shiftType = ""
     
-   
     let shiftTypesTagArray = ["Day", "Nights", "Mid", "Evening","Rotating","Variable"]
     
     var objExp : PassFilterData?
@@ -145,6 +163,9 @@ class FilterVC: BaseVC {
     var selectedJobTypeID = 0
     var selectedShiftTypeID = 0
     
+    var labels: [String] = []
+    //var doubleSlider: DoubleSlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -153,6 +174,27 @@ class FilterVC: BaseVC {
     
     override func viewWillAppear(_ animated: Bool) {
         self.getCertificatTypesAPI()
+        
+        //        redDoubleSlider.labelDelegate = self
+        //        redDoubleSlider.numberOfSteps = labels.count
+        //        redDoubleSlider.labelsAreHidden = false
+        //        redDoubleSlider.smoothStepping = true
+        
+        
+        //        doubleSlider.lowerValueStepIndex = 0
+        //        doubleSlider.upperValueStepIndex = labels.count - 1
+        
+        
+        // You can use traditional notifications
+        //doubleSlider.addTarget(self, action: #selector(printVal(_:)), for: .valueChanged)
+        // Or Swifty delegates
+        //doubleSlider.editingDidEndDelegate = self
+        
+        self.setupWeeklyPaySliderFilterView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
     }
     
     func setUPUI(){
@@ -212,7 +254,6 @@ class FilterVC: BaseVC {
         self.assignmentLenghtStartLable.addTitleColorAndFont(title: "50", fontName: GoodWorkAppFontName.NeueKabelMedium, fontSize: 16, tintColor: GoodWorkAppColor.appAuroMetalSaurus)
         self.assignmentLenghtMaxLable.addTitleColorAndFont(title: "100", fontName: GoodWorkAppFontName.NeueKabelMedium, fontSize: 16, tintColor: GoodWorkAppColor.appAuroMetalSaurus)
         
-        
         self.autoOfferImageView.image = UIImage(named: "autoOffer")
         self.autoOfferLabel.addTitleColorAndFont(title: "Auto Offers", fontName: GoodWorkAppFontName.NeueKabelMedium, fontSize: 18, tintColor: GoodWorkAppColor.appEerieBlack)
         
@@ -222,6 +263,8 @@ class FilterVC: BaseVC {
         self.buttonActions()
         self.setUPDatePicker()
     }
+    
+    
 }
 
 //MARK:- Button Actions
@@ -235,7 +278,6 @@ extension FilterVC {
         self.specialtyDropButton.addTarget(self, action: #selector(self.specialitiesDropButtonPressed(_:)), for: .touchUpInside)
         self.locationDropButton.addTarget(self, action: #selector(self.locationDropButtonPressed(_:)), for: .touchUpInside)
         self.autoOffersButton.addTarget(self, action: #selector(self.autoOffersButtonPressed(_:)), for: .touchUpInside)
-        
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton){
@@ -269,14 +311,14 @@ extension FilterVC {
         self.mdl.job_type = self.selectedJobTypeID
         self.mdl.start_date = self.startDateLable.text ?? ""
         self.mdl.end_date = self.endDateLable.text ?? ""
-        self.mdl.weekly_pay_from = ""
-        self.mdl.weekly_pay_to = ""
-        self.mdl.hourly_pay_from = ""
-        self.mdl.hourly_pay_to = ""
+        self.mdl.weekly_pay_from = "\(self.weeklyPayMin)"
+        self.mdl.weekly_pay_to = "\(self.weeklyPayMax)"
+        self.mdl.hourly_pay_from = "\(self.hoursePerShiftMin)"
+        self.mdl.hourly_pay_to = "\(self.hoursePerShiftMax)"
         self.mdl.preferred_shift = self.selectedShiftTypeID
-        self.mdl.hours_per_week_from = ""
-        self.mdl.hours_per_week_to = ""
-        
+        self.mdl.hours_per_week_from = "\(self.hoursePerWeekMin)"
+        self.mdl.hours_per_week_to = "\(self.hoursePerWeekMax)"
+    
         if self.isAutoOfferSelected {
             self.mdl.auto_offers = "1"
         }else{
@@ -559,7 +601,7 @@ extension FilterVC {
             }
         }
     }
-   
+    
     func getNurseJobTypesAPI(){
         
         let mdl = JobTypesRequest()
@@ -768,5 +810,151 @@ extension FilterVC {
         
         self.endDateLable.text = formatter.string(from: sender.date)
     }
+}
+
+// MARK: - RangeSeekSliderDelegate
+extension FilterVC: RangeSeekSliderDelegate {
     
+    func setupWeeklyPaySliderFilterView(){
+        // custom number formatter range slider
+        self.weeklyPaySlider.delegate = self
+        self.weeklyPaySlider.minValue = 0.0
+        self.weeklyPaySlider.maxValue = 100.0
+        self.weeklyPaySlider.selectedMinValue = 40.0
+        self.weeklyPaySlider.selectedMaxValue = 60.0
+        self.weeklyPaySlider.handleImage = UIImage(named: "custom-handle")
+        self.weeklyPaySlider.selectedHandleDiameterMultiplier = 1.0
+        self.weeklyPaySlider.colorBetweenHandles = GoodWorkAppColor.appDarkPurple
+        self.weeklyPaySlider.tintColor = GoodWorkAppColor.appSliderBg
+
+        self.weeklyPaySlider.minLabelColor = GoodWorkAppColor.appAuroMetalSaurus
+        self.weeklyPaySlider.maxLabelColor = GoodWorkAppColor.appAuroMetalSaurus
+
+        self.weeklyPaySlider.minLabelFont =  GoodWorkApp.goodWorkAppFont(GoodWorkAppFontName.NeueKabelMedium, 16)
+        self.weeklyPaySlider.maxLabelFont =  GoodWorkApp.goodWorkAppFont(GoodWorkAppFontName.NeueKabelMedium, 16)
+
+        self.weeklyPaySlider.lineHeight = 6.0
+        self.weeklyPaySlider.numberFormatter.positivePrefix = "$"
+        self.weeklyPaySlider.numberFormatter.positiveSuffix = "/wk"
+        self.setupHoursePerShiftSliderFilterView()
+    }
+  
+    func setupHoursePerShiftSliderFilterView(){
+        // custom number formatter range slider
+        self.hoursePerShiftSlider.delegate = self
+        self.hoursePerShiftSlider.minValue = 0.0
+        self.hoursePerShiftSlider.maxValue = 100.0
+        self.hoursePerShiftSlider.selectedMinValue = 40.0
+        self.hoursePerShiftSlider.selectedMaxValue = 60.0
+        self.hoursePerShiftSlider.handleImage = UIImage(named: "custom-handle")
+        self.hoursePerShiftSlider.selectedHandleDiameterMultiplier = 1.0
+        self.hoursePerShiftSlider.colorBetweenHandles = GoodWorkAppColor.appDarkPurple
+        self.hoursePerShiftSlider.tintColor = GoodWorkAppColor.appSliderBg
+
+        self.hoursePerShiftSlider.minLabelColor = GoodWorkAppColor.appAuroMetalSaurus
+        self.hoursePerShiftSlider.maxLabelColor = GoodWorkAppColor.appAuroMetalSaurus
+
+        self.hoursePerShiftSlider.minLabelFont =  GoodWorkApp.goodWorkAppFont(GoodWorkAppFontName.NeueKabelMedium, 16)
+        self.hoursePerShiftSlider.maxLabelFont =  GoodWorkApp.goodWorkAppFont(GoodWorkAppFontName.NeueKabelMedium, 16)
+
+        self.hoursePerShiftSlider.lineHeight = 6.0
+        self.hoursePerShiftSlider.numberFormatter.positivePrefix = "$"
+        self.hoursePerShiftSlider.numberFormatter.positiveSuffix = "/wk"
+        self.setupHoursePerWeekSliderFilterView()
+    }
+    
+    func setupHoursePerWeekSliderFilterView(){
+        // custom number formatter range slider
+        self.hoursePerWeekSlider.delegate = self
+        self.hoursePerWeekSlider.minValue = 0.0
+        self.hoursePerWeekSlider.maxValue = 100.0
+        self.hoursePerWeekSlider.selectedMinValue = 40.0
+        self.hoursePerWeekSlider.selectedMaxValue = 60.0
+        self.hoursePerWeekSlider.handleImage = UIImage(named: "custom-handle")
+        self.hoursePerWeekSlider.selectedHandleDiameterMultiplier = 1.0
+        self.hoursePerWeekSlider.colorBetweenHandles = GoodWorkAppColor.appDarkPurple
+        self.hoursePerWeekSlider.tintColor = GoodWorkAppColor.appSliderBg
+
+        self.hoursePerWeekSlider.minLabelColor = GoodWorkAppColor.appAuroMetalSaurus
+        self.hoursePerWeekSlider.maxLabelColor = GoodWorkAppColor.appAuroMetalSaurus
+
+        self.hoursePerWeekSlider.minLabelFont =  GoodWorkApp.goodWorkAppFont(GoodWorkAppFontName.NeueKabelMedium, 16)
+        self.hoursePerWeekSlider.maxLabelFont =  GoodWorkApp.goodWorkAppFont(GoodWorkAppFontName.NeueKabelMedium, 16)
+
+        self.hoursePerWeekSlider.lineHeight = 6.0
+        self.hoursePerWeekSlider.numberFormatter.positivePrefix = "$"
+        self.hoursePerWeekSlider.numberFormatter.positiveSuffix = "/wk"
+        self.setupassignMentLenghtSliderFilterView()
+    }
+    
+    func setupassignMentLenghtSliderFilterView(){
+        // custom number formatter range slider
+        self.assignMentLenghtSlider.delegate = self
+        self.assignMentLenghtSlider.minValue = 0.0
+        self.assignMentLenghtSlider.maxValue = 100.0
+        self.assignMentLenghtSlider.selectedMinValue = 40.0
+        self.assignMentLenghtSlider.selectedMaxValue = 60.0
+        self.assignMentLenghtSlider.handleImage = UIImage(named: "custom-handle")
+        self.assignMentLenghtSlider.selectedHandleDiameterMultiplier = 1.0
+        self.assignMentLenghtSlider.colorBetweenHandles = GoodWorkAppColor.appDarkPurple
+        self.assignMentLenghtSlider.tintColor = GoodWorkAppColor.appSliderBg
+
+        self.assignMentLenghtSlider.minLabelColor = GoodWorkAppColor.appAuroMetalSaurus
+        self.assignMentLenghtSlider.maxLabelColor = GoodWorkAppColor.appAuroMetalSaurus
+
+        self.assignMentLenghtSlider.minLabelFont =  GoodWorkApp.goodWorkAppFont(GoodWorkAppFontName.NeueKabelMedium, 16)
+        self.assignMentLenghtSlider.maxLabelFont =  GoodWorkApp.goodWorkAppFont(GoodWorkAppFontName.NeueKabelMedium, 16)
+
+        self.assignMentLenghtSlider.lineHeight = 6.0
+        self.assignMentLenghtSlider.numberFormatter.positivePrefix = ""
+        self.assignMentLenghtSlider.numberFormatter.positiveSuffix = ""
+    }
+    
+    func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
+//        self.setupSliderFilterView(self.weeklyPaySlider)
+//        self.setupSliderFilterView(self.hoursePerShiftSlider)
+//        self.setupSliderFilterView(self.hoursePerWeekSlider)
+//        self.setupSliderFilterView(self.assignMentLenghtSlider)
+        
+        if slider === self.weeklyPaySlider {
+            print("Custom slider updated. Min Value: \(minValue) Max Value: \(maxValue)")
+            self.weeklyPayMin = minValue
+            self.weeklyPayMax = minValue
+//            print("self.weeklyPayMin \(self.weeklyPayMin)")
+//            print("self.weeklyPayMax \(self.weeklyPayMax)")
+            print("newww \(String(format: "%.0f",self.weeklyPayMin))")
+        }else if slider === self.hoursePerShiftSlider {
+            print("Custom slider updated. Min Value: \(minValue) Max Value: \(maxValue)")
+            self.hoursePerShiftMin = minValue
+            self.hoursePerShiftMax = minValue
+            print("hoursePerShiftMin \(self.hoursePerShiftMin)")
+            print("hoursePerShiftMax \(self.hoursePerShiftMax)")
+        }else if slider === self.hoursePerWeekSlider {
+            print("Custom slider updated. Min Value: \(minValue) Max Value: \(maxValue)")
+            self.hoursePerWeekMin = minValue
+            self.hoursePerWeekMax = minValue
+            print("hoursePerWeekMin \(self.hoursePerWeekMin)")
+            print("hoursePerWeekMax \(self.hoursePerWeekMax)")
+        }else if slider === self.assignMentLenghtSlider {
+            print("Custom slider updated. Min Value: \(minValue) Max Value: \(maxValue)")
+            self.assignMentLenghtMin = minValue
+            self.assignMentLenghtMax = minValue
+            print("assignMentLenghtMin \(self.assignMentLenghtMin)")
+            print("assignMentLenghtMax \(self.assignMentLenghtMax)")
+        }
+    }
+    
+    func didStartTouches(in slider: RangeSeekSlider) {
+        print("did start touches")
+    }
+    
+    func didEndTouches(in slider: RangeSeekSlider) {
+        print("did end touches")
+    }
+}
+
+extension Array {
+    func item(at index: Int) -> Element? {
+        return (index < self.count && index >= 0) ? self[index] : nil
+    }
 }

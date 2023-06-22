@@ -48,8 +48,7 @@ class AccountInfoVC: BaseVC {
         self.lastNameTextField.text = appDelegate.nurseProfile?.data?.last_name ?? ""
         self.emailTextField.text = appDelegate.nurseProfile?.data?.email ?? ""
         self.phoneTextField.text = appDelegate.nurseProfile?.data?.mobile ?? ""
-        
-    }
+     }
     
     func setUPUI(){
         
@@ -58,7 +57,6 @@ class AccountInfoVC: BaseVC {
         self.titleLabel.addTitleColorAndFont(title: "Account Info", fontName: GoodWorkAppFontName.NeueKabelMedium, fontSize: 18, tintColor: GoodWorkAppColor.appRaisin)
         
         self.backButtonImageview.image = UIImage(named: "backButton")
-        
         
         self.firstNameBGView.addBorderWidthColour(2, GoodWorkAppColor.appColour, 14)
         self.firstNameShadowView.shadowWithRadiusAndColour(14,GoodWorkAppColor.appArsenic)
@@ -129,11 +127,9 @@ class AccountInfoVC: BaseVC {
     @objc func textFieldDidChange(_ textField: UITextField) {
         print("textFieldDidChange")
         
-        
         if textField == self.phoneTextField {
             
             self.phoneTextField.text = self.phoneTextField.text!.applyPatternOnNumbers(pattern: "+# (###) ###-####", replacementCharacter: "#")
-            
         }
     }
 }

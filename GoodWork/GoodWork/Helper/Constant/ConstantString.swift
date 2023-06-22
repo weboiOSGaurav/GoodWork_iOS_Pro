@@ -11,6 +11,7 @@ import AVFoundation
 
 enum UserDefaultKeys : String {
     case isUserLogin = "isUserLogin"
+    case isRecruiterUserLogin = "isRecruiterUserLogin"
     case access_token = "access_token"
     case remind_token = "remind_token"
     case get_share_link = "get_share_link"
@@ -50,8 +51,14 @@ enum AlertMassage : String {
     case unit = "Please enter a unit"
     case jobTitle = "Please enter a job title"
     case startDate = "Please enter a start date"
-    case endDate = "Please enter a end date"
+    case endDate = "Please enter an end date"
     case helpIssue = "Please enter a issue"
+    case jobName = "Please enter a job name"
+    case weeklyPay = "Please enter a weekly pay"
+    case jobDescription = "Please enter a job description"
+    case speciality = "Please select speciality"
+    case jobLocation = "Please select job loation"
+    case workDuration = "Please select work duration"
 
     
     

@@ -343,6 +343,7 @@ extension ExperienceVC {
                                     if self.experienceTypeList?.data?[countNo].id ?? 0 == appDelegate.nurseProfile?.data?.experience?[0].type ?? 0 {
                                         
                                         self.experienceTypeTextField.text = self.experienceTypeList?.data?[countNo].name ?? ""
+                                        self.experienceTypeID = self.experienceTypeList?.data?[countNo].id ?? 0
                                     }
                                 }
                                 
@@ -351,7 +352,6 @@ extension ExperienceVC {
                          }else{
                             print("falsee")
                         }
-                        
                     }catch{
                         print("catch")
                     }

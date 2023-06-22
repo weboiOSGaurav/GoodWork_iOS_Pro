@@ -299,6 +299,7 @@ SWIFT_CLASS("_TtC8GoodWork11AboutMeRCVC")
 @end
 
 
+
 @interface AboutMeRCVC (SWIFT_EXTENSION(GoodWork))
 - (IBAction)backButtonPressed:(UIButton * _Nonnull)sender;
 @end
@@ -534,10 +535,9 @@ SWIFT_CLASS("_TtC8GoodWork17AppliedJobAlertVC")
 - (IBAction)okButtonPressed:(UIButton * _Nonnull)sender;
 @end
 
-@class ExpandableLabel;
 
 SWIFT_CLASS("_TtC8GoodWork19AppliedJobDetailsVC")
-@interface AppliedJobDetailsVC : BaseVC <ExpandableLabelDelegate>
+@interface AppliedJobDetailsVC : BaseVC
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified rightSideTopImageView;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified backButtonImageView;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified shareImageView;
@@ -563,7 +563,7 @@ SWIFT_CLASS("_TtC8GoodWork19AppliedJobDetailsVC")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified applyButton;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified bottomLeftImageView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified descriptionLable;
-@property (nonatomic, weak) IBOutlet ExpandableLabel * _Null_unspecified jobDetailsLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified jobDetailsLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified aboutJobLable;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified popularJobsLable;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified alreadyAppliedButton;
@@ -571,10 +571,6 @@ SWIFT_CLASS("_TtC8GoodWork19AppliedJobDetailsVC")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified saveunSaveJobButton;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
-- (void)didExpandLabel:(ExpandableLabel * _Nonnull)label;
-- (void)didCollapseLabel:(ExpandableLabel * _Nonnull)label;
-- (void)willExpandLabel:(ExpandableLabel * _Nonnull)label;
-- (void)willCollapseLabel:(ExpandableLabel * _Nonnull)label;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -658,12 +654,12 @@ SWIFT_CLASS("_TtC8GoodWork21ApplyJobWithProfileVC")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
 @class UIDatePicker;
 
 @interface ApplyJobWithProfileVC (SWIFT_EXTENSION(GoodWork))
 - (void)handleStartDatePickerWithSender:(UIDatePicker * _Nonnull)sender;
 @end
-
 
 
 @interface ApplyJobWithProfileVC (SWIFT_EXTENSION(GoodWork))
@@ -728,6 +724,7 @@ SWIFT_CLASS("_TtC8GoodWork10BookMarkVC")
 @interface BookMarkVC : BaseVC
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified rightSideTopImageView;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified profileButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified notificationButton;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profileImageView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified myWorkTitleLabel;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified notificationImageView;
@@ -756,6 +753,7 @@ SWIFT_CLASS("_TtC8GoodWork10BookMarkVC")
 - (IBAction)hiredButtonPressedWithSender:(UITapGestureRecognizer * _Nonnull)sender;
 - (IBAction)pastButtonPressedWithSender:(UITapGestureRecognizer * _Nonnull)sender;
 - (IBAction)profileButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)notificationButtonPressed:(UIButton * _Nonnull)sender;
 @end
 
 
@@ -765,6 +763,7 @@ SWIFT_CLASS("_TtC8GoodWork10BookMarkVC")
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)saveJobButtonActionWithSender:(UIButton * _Nonnull)sender;
 - (void)applyJobCellButtonActionWithSender:(UIButton * _Nonnull)sender;
+- (void)appliedJobCellButtonActionWithSender:(UIButton * _Nonnull)sender;
 - (void)chatCellButtonActionWithSender:(UIButton * _Nonnull)sender;
 - (void)acceptJobButtonActionWithSender:(UIButton * _Nonnull)sender;
 - (void)rejectJobButtonActionWithSender:(UIButton * _Nonnull)sender;
@@ -954,7 +953,7 @@ SWIFT_CLASS("_TtC8GoodWork8Constant")
 @class KMPlaceholderTextView;
 
 SWIFT_CLASS("_TtC8GoodWork19CreatJobRequestRCVC")
-@interface CreatJobRequestRCVC : UIViewController
+@interface CreatJobRequestRCVC : BaseVC
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified backButtonImageView;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified backButton;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified createRequestTitleLabel;
@@ -977,6 +976,12 @@ SWIFT_CLASS("_TtC8GoodWork19CreatJobRequestRCVC")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified weeklyPayTextField;
 @property (nonatomic, weak) IBOutlet KMPlaceholderTextView * _Null_unspecified jobDescriptionTextView;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified publishedNowButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified specialitiesDropButton;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified specialitiesDropImg;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified locationDropButton;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified locationDropImg;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified durationDropButton;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified durationDropImg;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -984,9 +989,15 @@ SWIFT_CLASS("_TtC8GoodWork19CreatJobRequestRCVC")
 @end
 
 
+
+
+
 @interface CreatJobRequestRCVC (SWIFT_EXTENSION(GoodWork))
 - (IBAction)backButtonPressed:(UIButton * _Nonnull)sender;
 - (IBAction)publishedNowButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)specialitiesDropButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)locationTypeDropButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)durationTypeDropButtonPressed:(UIButton * _Nonnull)sender;
 @end
 
 
@@ -1018,7 +1029,7 @@ SWIFT_CLASS("_TtC8GoodWork23CreatedJobTableViewCell")
 
 
 SWIFT_CLASS("_TtC8GoodWork19CreatingJobPostRCVC")
-@interface CreatingJobPostRCVC : UIViewController
+@interface CreatingJobPostRCVC : BaseVC
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified profileButton;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profileImageView;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified createPostButton;
@@ -1031,12 +1042,14 @@ SWIFT_CLASS("_TtC8GoodWork19CreatingJobPostRCVC")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified onClosedLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified noJobPostedLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified startPostedLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified noDataLabel;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified creatingJobPostTableview;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
@@ -1126,7 +1139,7 @@ SWIFT_CLASS("_TtC8GoodWork17DoneEmployeesRCVC")
 
 
 SWIFT_CLASS("_TtC8GoodWork23EditCreatJobRequestRCVC")
-@interface EditCreatJobRequestRCVC : UIViewController
+@interface EditCreatJobRequestRCVC : BaseVC
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified backButtonImageView;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified backButton;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified createRequestTitleLabel;
@@ -1145,13 +1158,19 @@ SWIFT_CLASS("_TtC8GoodWork23EditCreatJobRequestRCVC")
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified weeklyPayBgView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified jobDescriptionBgView;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified jobNameTextField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified jobTypeTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified specialityTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified jobLocationTextField;
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified jobLocation1TextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified workDurationTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified weeklyPayTextField;
 @property (nonatomic, weak) IBOutlet KMPlaceholderTextView * _Null_unspecified jobDescriptionTextView;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified publishedNowButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified specialitiesDropButton;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified specialitiesDropImg;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified locationDropButton;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified locationDropImg;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified durationDropButton;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified durationDropImg;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -1159,9 +1178,14 @@ SWIFT_CLASS("_TtC8GoodWork23EditCreatJobRequestRCVC")
 @end
 
 
+
+
 @interface EditCreatJobRequestRCVC (SWIFT_EXTENSION(GoodWork))
 - (IBAction)backButtonPressed:(UIButton * _Nonnull)sender;
 - (IBAction)publishedNowButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)specialitiesDropButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)locationTypeDropButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)durationTypeDropButtonPressed:(UIButton * _Nonnull)sender;
 @end
 
 
@@ -1253,17 +1277,19 @@ SWIFT_CLASS("_TtC8GoodWork11EducationVC")
 
 
 SWIFT_CLASS("_TtC8GoodWork13EmployersRCVC")
-@interface EmployersRCVC : UIViewController
+@interface EmployersRCVC : BaseVC
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified backButton;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified backButtonImageView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified empoloyerTitleLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified nameTitleLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified noDataLabel;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified employerListTableView;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 @interface EmployersRCVC (SWIFT_EXTENSION(GoodWork))
@@ -1417,9 +1443,11 @@ SWIFT_CLASS("_TtC8GoodWork8FilterVC")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified endDateTextField;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 @interface FilterVC (SWIFT_EXTENSION(GoodWork))
@@ -1429,13 +1457,13 @@ SWIFT_CLASS("_TtC8GoodWork8FilterVC")
 
 
 
-
 @interface FilterVC (SWIFT_EXTENSION(GoodWork)) <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
+
 
 
 @interface FilterVC (SWIFT_EXTENSION(GoodWork))
@@ -1599,11 +1627,14 @@ SWIFT_CLASS("_TtC8GoodWork16HelpAndSupportVC")
 
 
 
+
 @interface HelpAndSupportVC (SWIFT_EXTENSION(GoodWork))
 - (IBAction)backButtonPressed:(UIButton * _Nonnull)sender;
 - (IBAction)sendNowButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)selectIssueTypeButtonPressed:(UIButton * _Nonnull)sender;
 @end
 
+@class ExpandableLabel;
 
 SWIFT_CLASS("_TtC8GoodWork20HoldAndPublishedRCVC")
 @interface HoldAndPublishedRCVC : UIViewController <ExpandableLabelDelegate>
@@ -1675,8 +1706,12 @@ SWIFT_CLASS("_TtC8GoodWork8HomeRCVC")
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified jobStatusShadowView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified jobStatusTitleLabel;
 @property (nonatomic, strong) IBOutlet BarChartView * _Null_unspecified chartView;
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified latestNotiesBgViewHeightCons;
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified ShadowViewHeightCons;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified jobStatusBgViewHeightCons;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified jobStatusShadowViewHeightCons;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified createPostBgView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified postAnotherJob;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified createPostBgViewTopCons;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified createPostButton;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -1687,9 +1722,11 @@ SWIFT_CLASS("_TtC8GoodWork8HomeRCVC")
 
 
 
+
 @interface HomeRCVC (SWIFT_EXTENSION(GoodWork))
 - (IBAction)profileButtonPressed:(UIButton * _Nonnull)sender;
 - (IBAction)notificationButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)createPostButtonPressed:(UIButton * _Nonnull)sender;
 @end
 
 
@@ -1724,15 +1761,16 @@ SWIFT_CLASS("_TtC8GoodWork6HomeVC")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified latestJobTitle;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified popularJobsLable;
 @property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified popularJobsCollectionView;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified popularJobsTableView;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified recommendedForYouTableView;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified recommendedForYouTableViewHeight;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified noDataLabel;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
+- (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
-
 
 
 
@@ -1742,14 +1780,6 @@ SWIFT_CLASS("_TtC8GoodWork6HomeVC")
 @end
 
 
-@interface HomeVC (SWIFT_EXTENSION(GoodWork)) <UITableViewDataSource, UITableViewDelegate>
-- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-@end
-
 
 @interface HomeVC (SWIFT_EXTENSION(GoodWork)) <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
@@ -1758,6 +1788,21 @@ SWIFT_CLASS("_TtC8GoodWork6HomeVC")
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)learnMoreButtonPress:(UIButton * _Nonnull)sender;
 - (void)saveJobButtonPress:(UIButton * _Nonnull)sender;
+@end
+
+@class UISwipeActionsConfiguration;
+
+@interface HomeVC (SWIFT_EXTENSION(GoodWork)) <UITableViewDataSource, UITableViewDelegate>
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (UISwipeActionsConfiguration * _Nullable)tableView:(UITableView * _Nonnull)tableView leadingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (UISwipeActionsConfiguration * _Nullable)tableView:(UITableView * _Nonnull)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)saveJobRecentButtonPressWithSender:(UIButton * _Nonnull)sender;
+- (void)recentJobApplyButtonPressWithSender:(UIButton * _Nonnull)sender;
 @end
 
 @class UIImagePickerController;
@@ -1796,7 +1841,7 @@ SWIFT_CLASS("_TtC8GoodWork23JobAppliedTableViewCell")
 
 
 SWIFT_CLASS("_TtC8GoodWork12JobDetailsVC")
-@interface JobDetailsVC : BaseVC <ExpandableLabelDelegate>
+@interface JobDetailsVC : BaseVC
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified rightSideTopImageView;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified backButtonImageView;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified shareImageView;
@@ -1822,7 +1867,7 @@ SWIFT_CLASS("_TtC8GoodWork12JobDetailsVC")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified recentlyAddedLable;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified applyButton;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified descriptionTitleLabel;
-@property (nonatomic, weak) IBOutlet ExpandableLabel * _Null_unspecified jobDetailsLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified jobDetailsLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified aboutJobLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified preferredShiftTitleLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified preferredShiftLabel;
@@ -1841,10 +1886,6 @@ SWIFT_CLASS("_TtC8GoodWork12JobDetailsVC")
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified bottomLeftImageView;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
-- (void)didExpandLabel:(ExpandableLabel * _Nonnull)label;
-- (void)didCollapseLabel:(ExpandableLabel * _Nonnull)label;
-- (void)willExpandLabel:(ExpandableLabel * _Nonnull)label;
-- (void)willCollapseLabel:(ExpandableLabel * _Nonnull)label;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -2080,6 +2121,7 @@ SWIFT_CLASS("_TtC8GoodWork9MessageVC")
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified notificationImageView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified notificationBGView;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified messageListTableView;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified notificationButton;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -2089,6 +2131,7 @@ SWIFT_CLASS("_TtC8GoodWork9MessageVC")
 
 @interface MessageVC (SWIFT_EXTENSION(GoodWork))
 - (IBAction)profileButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)notificationButtonPressed:(UIButton * _Nonnull)sender;
 @end
 
 
@@ -2402,6 +2445,46 @@ SWIFT_CLASS("_TtC8GoodWork19NewApplicationsRCVC")
 @end
 
 
+SWIFT_CLASS("_TtC8GoodWork25NotificationTableViewCell")
+@interface NotificationTableViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified typeLable;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified timeLable;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified descriptionLable;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified bgView;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified shadowView;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8GoodWork15NotificationsVC")
+@interface NotificationsVC : BaseVC
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titleLabel;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified backButtonImageview;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified backButton;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified notificationListTableview;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface NotificationsVC (SWIFT_EXTENSION(GoodWork))
+- (IBAction)backButtonPressed:(UIButton * _Nonnull)sender;
+@end
+
+
+@interface NotificationsVC (SWIFT_EXTENSION(GoodWork)) <UITableViewDataSource, UITableViewDelegate>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
 SWIFT_CLASS("_TtC8GoodWork20NurseAppliedListRCVC")
 @interface NurseAppliedListRCVC : UIViewController
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified mainBGView;
@@ -2637,6 +2720,7 @@ SWIFT_CLASS("_TtC8GoodWork25PopularJobsCollectionCell")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified jobAmountLable;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified recentlyAddedLable;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified applyButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified moreButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified saveJobButton;
 - (void)awakeFromNib;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -2696,7 +2780,7 @@ SWIFT_CLASS("_TtC8GoodWork24ProfileInfoTableViewCell")
 
 
 SWIFT_CLASS("_TtC8GoodWork11ProfileRCVC")
-@interface ProfileRCVC : UIViewController
+@interface ProfileRCVC : BaseVC
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified backButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified notificationButton;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified rightSideTopImageView;
@@ -2718,11 +2802,13 @@ SWIFT_CLASS("_TtC8GoodWork11ProfileRCVC")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified closeLogOutButton;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified logOutFromAppLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified areYouSureLabel;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified clickOnProfileButton;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
@@ -2738,6 +2824,7 @@ SWIFT_CLASS("_TtC8GoodWork11ProfileRCVC")
 - (IBAction)notificationButtonPressed:(UIButton * _Nonnull)sender;
 - (IBAction)closeLogOutButtonPressed:(UIButton * _Nonnull)sender;
 - (IBAction)yesLogOutButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)clickOnProfileButtonPressed:(UIButton * _Nonnull)sender;
 @end
 
 
@@ -2760,7 +2847,9 @@ SWIFT_CLASS("_TtC8GoodWork24RecommendedTableViewCell")
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified dollarImageView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified jobAmountLable;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified recentlyAddedLable;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified applyButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified applyNewButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified learnMoreButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified appliedButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified saveJobButton;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified offeredMainBgView;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified acceptImageview;
@@ -2938,7 +3027,7 @@ SWIFT_CLASS("_TtC8GoodWork13ScreeningRCVC")
 
 
 SWIFT_CLASS("_TtC8GoodWork10SearchRCVC")
-@interface SearchRCVC : UIViewController
+@interface SearchRCVC : BaseVC
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified profileButton;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profileImageView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified appJourneyLabel;
@@ -2953,6 +3042,7 @@ SWIFT_CLASS("_TtC8GoodWork10SearchRCVC")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 @interface SearchRCVC (SWIFT_EXTENSION(GoodWork))

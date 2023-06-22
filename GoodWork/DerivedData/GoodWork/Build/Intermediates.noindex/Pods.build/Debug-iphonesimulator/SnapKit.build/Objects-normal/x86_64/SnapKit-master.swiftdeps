@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
 options: "5f61cda49e72f663cf4e702f71f6cb1dc485b68293fbb29ff571766efec760fa"
-build_start_time: [1686397530, 397732019]
-build_end_time: [1686397545, 612100124]
+build_start_time: [1687349073, 138311862]
+build_end_time: [1687349073, 337841987]
 inputs:
   "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/SnapKit/Source/Constraint.swift": [1679987264, 0]
   "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/SnapKit/Source/ConstraintAttributes.swift": [1679987264, 0]

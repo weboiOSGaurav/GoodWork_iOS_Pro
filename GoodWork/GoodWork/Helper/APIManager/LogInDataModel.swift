@@ -68,11 +68,14 @@ struct SignInRequest {
 struct SendOTPRequest {
     var id = ""
     var api_key = "goodwork@123"
+    var role = ""
     
     func jsonObject()-> [String:AnyObject]{
         var obj = [String:AnyObject]()
         obj["id"] = self.id as AnyObject
         obj["api_key"] = self.api_key as AnyObject
+        obj["role"] = self.role as AnyObject
+        
         return obj
     }
 }
@@ -94,12 +97,16 @@ struct ConfirmOTPRequest {
 struct NurseProfileRequest {
     var user_id = ""
     var role = ""
+    var nurse_id = ""
     var api_key = "goodwork@123"
     
     func jsonObject()-> [String:AnyObject]{
         var obj = [String:AnyObject]()
         obj["user_id"] = self.user_id as AnyObject
         obj["api_key"] = self.api_key as AnyObject
+        obj["nurse_id"] = self.nurse_id as AnyObject
+        obj["role"] = self.role as AnyObject
+        
         return obj
     }
 }
@@ -457,6 +464,19 @@ struct HelpSupportRequest {
     }
 }
 
+struct SubjectTypesRequest {
+    
+    var api_key = "goodwork@123"
+    
+    
+    func jsonObject()-> [String:AnyObject]{
+        var obj = [String:AnyObject]()
+        obj["api_key"] = self.api_key as AnyObject
+        
+        return obj
+    }
+}
+
 
 struct LicenseStatusRequest {
     
@@ -494,6 +514,20 @@ struct NurseSpecialitiesRequest {
     }
 }
 
+struct CreateJobPostRequest {
+    
+    var api_key = "goodwork@123"
+    
+    func jsonObject()-> [String:AnyObject]{
+        var obj = [String:AnyObject]()
+        obj["api_key"] = self.api_key as AnyObject
+        
+        return obj
+    }
+}
+
+
+
 struct WorkLocationRequest {
     
     var api_key = "goodwork@123"
@@ -505,6 +539,7 @@ struct WorkLocationRequest {
         return obj
     }
 }
+
 
 struct JobTypesRequest {
     
@@ -737,6 +772,39 @@ struct HomeInfoRequestRC{
     }
 }
 
+struct AboutMeRequestRC{
+    
+    var api_key = "goodwork@123"
+    var user_id = "user_id"
+    
+    
+    func jsonObject()-> [String:AnyObject]{
+        var obj = [String:AnyObject]()
+        obj["api_key"] = self.api_key as AnyObject
+        obj["user_id"] = self.user_id as AnyObject
+        
+        return obj
+    }
+}
+
+struct GetEmployersRequestRC{
+    
+    var api_key = "goodwork@123"
+    var user_id = "user_id"
+    
+    
+    func jsonObject()-> [String:AnyObject]{
+        var obj = [String:AnyObject]()
+        obj["api_key"] = self.api_key as AnyObject
+        obj["user_id"] = self.user_id as AnyObject
+        
+        return obj
+    }
+}
+
+
+
+
 struct GetNewApplicationsRequestRC{
     
     var api_key = "goodwork@123"
@@ -752,6 +820,78 @@ struct GetNewApplicationsRequestRC{
     }
 }
 
+struct CreateJobPostRequestRC{
+    
+    var api_key = "goodwork@123"
+    var user_id = "user_id"
+    var job_name = "job_name"
+    var preferred_specialty = "preferred_specialty"
+    var preferred_work_location = "preferred_work_location"
+    var preferred_assignment_duration = "preferred_assignment_duration"
+    var preferred_hourly_pay_rate = "preferred_hourly_pay_rate"
+    var description = "description"
+    var job_type = "job_type"
+    
+    func jsonObject()-> [String:AnyObject]{
+        var obj = [String:AnyObject]()
+        obj["api_key"] = self.api_key as AnyObject
+        obj["user_id"] = self.user_id as AnyObject
+        obj["job_name"] = self.job_name as AnyObject
+        obj["preferred_specialty"] = self.preferred_specialty as AnyObject
+        obj["preferred_work_location"] = self.preferred_work_location as AnyObject
+        obj["preferred_assignment_duration"] = self.preferred_assignment_duration as AnyObject
+        obj["preferred_hourly_pay_rate"] = self.preferred_hourly_pay_rate as AnyObject
+        obj["description"] = self.description as AnyObject
+        obj["job_type"] = self.job_type as AnyObject
+        
+        return obj
+    }
+}
+
+struct UpdateJobPostRequestRC{
+    
+    var api_key = "goodwork@123"
+    var user_id = "user_id"
+    var job_name = "job_name"
+    var preferred_specialty = "preferred_specialty"
+    var preferred_work_location = "preferred_work_location"
+    var preferred_assignment_duration = "preferred_assignment_duration"
+    var preferred_hourly_pay_rate = "preferred_hourly_pay_rate"
+    var description = "description"
+    var job_type = "job_type"
+    var job_id = "job_id"
+    
+    func jsonObject()-> [String:AnyObject]{
+        var obj = [String:AnyObject]()
+        obj["api_key"] = self.api_key as AnyObject
+        obj["user_id"] = self.user_id as AnyObject
+        obj["job_name"] = self.job_name as AnyObject
+        obj["preferred_specialty"] = self.preferred_specialty as AnyObject
+        obj["preferred_work_location"] = self.preferred_work_location as AnyObject
+        obj["preferred_assignment_duration"] = self.preferred_assignment_duration as AnyObject
+        obj["preferred_hourly_pay_rate"] = self.preferred_hourly_pay_rate as AnyObject
+        obj["description"] = self.description as AnyObject
+        obj["job_type"] = self.job_type as AnyObject
+        obj["job_id"] = self.job_id as AnyObject
+        
+        return obj
+    }
+}
+
+
+
+struct GetDraftJobPostRequestRC{
+    
+    var api_key = "goodwork@123"
+    var user_id = "user_id"
+    
+    func jsonObject()-> [String:AnyObject]{
+        var obj = [String:AnyObject]()
+        obj["api_key"] = self.api_key as AnyObject
+        obj["user_id"] = self.user_id as AnyObject
+        return obj
+    }
+}
 
 class LoginDataManager{
     
@@ -782,6 +922,7 @@ class LoginDataManager{
     let kPrivacyPolicies = "privacy-policy"
     let kAboutUS = "about-app"
     let kHelpSupport = "help-support"
+    let kSubjectTypes = "get-subject-types"
     let KGetSpecialities = "get-specialities"
     let KWorkLocation = "get-work-location"
     let KNurseJobTypes = "get-job-types"
@@ -808,7 +949,20 @@ class LoginDataManager{
     let KAccountInfoRC = "account-info"
     let KHomeInfoRC = "home-screen"
     let KGetNewApplicationsRC = "get-new-applications"
-
+    let KAssignmentDurationRC = "assignment-duration"
+    let KjobCreateRC = "job-create"
+    let kUpdateJobPostRC = "job-update"
+    
+    let aboutMeRC = "user-recruiter"
+    let getEmployersRC = "get-employers"
+    let applicationTypeListRC = "get-applications"
+    let kAddJobOnDraftRC = "draft-job"
+    let kGetDraftApplicationRC = "get-draft-applications"
+    let kPublishedJobListRC = "get-published-applications"
+    let kHiddenPostListRC = "get-hidden-applications"
+    let kClosedPostListRC = "get-closed-applications"
+    
+    
     // Can't init is singleton
     private init() { }
     
@@ -857,7 +1011,7 @@ class LoginDataManager{
             }
         }
     }
-  
+    
     func rcRegisterNewUser(rqst:RCSignUpRequest, completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
         let kUrl = "\(self.kBaseURL)\(self.KRegisterRC)"
         
@@ -994,7 +1148,7 @@ class LoginDataManager{
         }
     }
     
-
+    
     func updateAccountInfo(rqst: UpdateAccountInfoRequest, completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
         let kUrl = "\(self.kBaseURL)\(self.KUpdateAccountInfo)"
         
@@ -1048,7 +1202,6 @@ class LoginDataManager{
             }
         }
     }
-    
     
     func popularJob(rqst: PopularJobRequest, completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
         let kUrl = "\(self.kBaseURL)\(self.KPopularJob)"
@@ -1683,6 +1836,35 @@ class LoginDataManager{
         }
     }
     
+    func getSubjectTypesAPI(rqst: SubjectTypesRequest, completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
+        
+        let kUrl = "\(self.kBaseURL)\(self.kSubjectTypes)"
+        
+        print("saveJob URL :: \(kUrl)")
+        print( rqst.jsonObject())
+        
+        APIDataHandler.shared.PostDataOfType(type: .signup, url: kUrl, withPostDataIn: rqst.jsonObject()) { (JSONData, error) in
+            
+            print( "PrintJsonData",JSONData ?? "")
+            if JSONData != nil{
+                let resultDict = JSONData as! Dictionary<String, AnyObject>
+                if let result = resultDict["result"] as? Dictionary<String, AnyObject> {
+                    if resultDict["statusCode"] as! Int == 200 {
+                        
+                        completionHandler(resultDict as NSDictionary, error)
+                    }else{
+                        completionHandler(resultDict as NSDictionary,error)
+                    }
+                }else{
+                    completionHandler(resultDict as NSDictionary,error)
+                }
+            }else{
+                completionHandler(nil, error ?? "")
+            }
+        }
+    }
+    
+    
     func getLicenseStatusAPI(rqst: LicenseStatusRequest, completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
         
         let kUrl = "\(self.kBaseURL)\(self.kGetLicenseStatus)"
@@ -2052,6 +2234,91 @@ class LoginDataManager{
         }
     }
     
+    func aboutMeRCAPI(rqst: AboutMeRequestRC, completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
+        
+        let kUrl = "\(self.kBaseURL)\(self.aboutMeRC)"
+        
+        print("saveJob URL :: \(kUrl)")
+        print( rqst.jsonObject())
+        
+        APIDataHandler.shared.PostDataOfType(type: .signup, url: kUrl, withPostDataIn: rqst.jsonObject()) { (JSONData, error) in
+            
+            print( "PrintJsonData",JSONData ?? "")
+            if JSONData != nil{
+                let resultDict = JSONData as! Dictionary<String, AnyObject>
+                if let result = resultDict["result"] as? Dictionary<String, AnyObject> {
+                    if resultDict["statusCode"] as! Int == 200 {
+                        
+                        completionHandler(resultDict as NSDictionary, error)
+                    }else{
+                        completionHandler(resultDict as NSDictionary,error)
+                    }
+                }else{
+                    completionHandler(resultDict as NSDictionary,error)
+                }
+            }else{
+                completionHandler(nil, error ?? "")
+            }
+        }
+    }
+    
+    func applicationTypeListRCAPI(rqst: AboutMeRequestRC, completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
+        
+        let kUrl = "\(self.kBaseURL)\(self.applicationTypeListRC)"
+        
+        print("saveJob URL :: \(kUrl)")
+        print( rqst.jsonObject())
+        
+        APIDataHandler.shared.PostDataOfType(type: .signup, url: kUrl, withPostDataIn: rqst.jsonObject()) { (JSONData, error) in
+            
+            print( "PrintJsonData",JSONData ?? "")
+            if JSONData != nil{
+                let resultDict = JSONData as! Dictionary<String, AnyObject>
+                if let result = resultDict["result"] as? Dictionary<String, AnyObject> {
+                    if resultDict["statusCode"] as! Int == 200 {
+                        
+                        completionHandler(resultDict as NSDictionary, error)
+                    }else{
+                        completionHandler(resultDict as NSDictionary,error)
+                    }
+                }else{
+                    completionHandler(resultDict as NSDictionary,error)
+                }
+            }else{
+                completionHandler(nil, error ?? "")
+            }
+        }
+    }
+    
+    func getEmployersRCAPI(rqst: GetEmployersRequestRC, completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
+        
+        let kUrl = "\(self.kBaseURL)\(self.getEmployersRC)"
+        
+        print("saveJob URL :: \(kUrl)")
+        print( rqst.jsonObject())
+        
+        APIDataHandler.shared.PostDataOfType(type: .signup, url: kUrl, withPostDataIn: rqst.jsonObject()) { (JSONData, error) in
+            
+            print( "PrintJsonData",JSONData ?? "")
+            if JSONData != nil{
+                let resultDict = JSONData as! Dictionary<String, AnyObject>
+                if let result = resultDict["result"] as? Dictionary<String, AnyObject> {
+                    if resultDict["statusCode"] as! Int == 200 {
+                        
+                        completionHandler(resultDict as NSDictionary, error)
+                    }else{
+                        completionHandler(resultDict as NSDictionary,error)
+                    }
+                }else{
+                    completionHandler(resultDict as NSDictionary,error)
+                }
+            }else{
+                completionHandler(nil, error ?? "")
+            }
+        }
+    }
+    
+    
     func getNewApplicationsRCAPI(rqst: GetNewApplicationsRequestRC, completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
         
         let kUrl = "\(self.kBaseURL)\(self.KGetNewApplicationsRC)"
@@ -2081,6 +2348,228 @@ class LoginDataManager{
     }
     
     
+    func getAssignmentDurationRCAPI(completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
+        
+        let kUrl = "\(self.kBaseURL)\(self.KAssignmentDurationRC)"
+        
+        print("saveJob URL :: \(kUrl)")
+        
+        
+        APIDataHandler.shared.PostDataOfType(type: .signup, url: kUrl, withPostDataIn: nil) { (JSONData, error) in
+            
+            print( "PrintJsonData",JSONData ?? "")
+            if JSONData != nil{
+                let resultDict = JSONData as! Dictionary<String, AnyObject>
+                if let result = resultDict["result"] as? Dictionary<String, AnyObject> {
+                    if resultDict["statusCode"] as! Int == 200 {
+                        
+                        completionHandler(resultDict as NSDictionary, error)
+                    }else{
+                        completionHandler(resultDict as NSDictionary,error)
+                    }
+                }else{
+                    completionHandler(resultDict as NSDictionary,error)
+                }
+            }else{
+                completionHandler(nil, error ?? "")
+            }
+        }
+    }
+    
+    func creatNewjobPostRCAPI(rqst: CreateJobPostRequestRC,completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
+        
+        let kUrl = "\(self.kBaseURL)\(self.KjobCreateRC)"
+        
+        print("saveJob URL :: \(kUrl)")
+        
+        
+        APIDataHandler.shared.PostDataOfType(type: .signup, url: kUrl, withPostDataIn: rqst.jsonObject()) { (JSONData, error) in
+            
+            print( "PrintJsonData",JSONData ?? "")
+            if JSONData != nil{
+                let resultDict = JSONData as! Dictionary<String, AnyObject>
+                if let result = resultDict["result"] as? Dictionary<String, AnyObject> {
+                    if resultDict["statusCode"] as! Int == 200 {
+                        
+                        completionHandler(resultDict as NSDictionary, error)
+                    }else{
+                        completionHandler(resultDict as NSDictionary,error)
+                    }
+                }else{
+                    completionHandler(resultDict as NSDictionary,error)
+                }
+            }else{
+                completionHandler(nil, error ?? "")
+            }
+        }
+    }
+   
+    func updateJobPostRCAPI(rqst: UpdateJobPostRequestRC,completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
+        
+        let kUrl = "\(self.kBaseURL)\(self.kUpdateJobPostRC)"
+        
+        print("saveJob URL :: \(kUrl)")
+        
+        
+        APIDataHandler.shared.PostDataOfType(type: .signup, url: kUrl, withPostDataIn: rqst.jsonObject()) { (JSONData, error) in
+            
+            print( "PrintJsonData",JSONData ?? "")
+            if JSONData != nil{
+                let resultDict = JSONData as! Dictionary<String, AnyObject>
+                if let result = resultDict["result"] as? Dictionary<String, AnyObject> {
+                    if resultDict["statusCode"] as! Int == 200 {
+                        
+                        completionHandler(resultDict as NSDictionary, error)
+                    }else{
+                        completionHandler(resultDict as NSDictionary,error)
+                    }
+                }else{
+                    completionHandler(resultDict as NSDictionary,error)
+                }
+            }else{
+                completionHandler(nil, error ?? "")
+            }
+        }
+    }
+    
+    func addJobOnDraftRCAPI(rqst: CreateJobPostRequestRC,completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
+        
+        let kUrl = "\(self.kBaseURL)\(self.kAddJobOnDraftRC)"
+        
+        print("saveJob URL :: \(kUrl)")
+        
+        
+        APIDataHandler.shared.PostDataOfType(type: .signup, url: kUrl, withPostDataIn: rqst.jsonObject()) { (JSONData, error) in
+            
+            print( "PrintJsonData",JSONData ?? "")
+            if JSONData != nil{
+                let resultDict = JSONData as! Dictionary<String, AnyObject>
+                if let result = resultDict["result"] as? Dictionary<String, AnyObject> {
+                    if resultDict["statusCode"] as! Int == 200 {
+                        
+                        completionHandler(resultDict as NSDictionary, error)
+                    }else{
+                        completionHandler(resultDict as NSDictionary,error)
+                    }
+                }else{
+                    completionHandler(resultDict as NSDictionary,error)
+                }
+            }else{
+                completionHandler(nil, error ?? "")
+            }
+        }
+    }
+    
+    func getDraftApplicationRCAPI(rqst: GetDraftJobPostRequestRC,completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
+        
+        let kUrl = "\(self.kBaseURL)\(self.kGetDraftApplicationRC)"
+        
+        print("saveJob URL :: \(kUrl)")
+        
+        
+        APIDataHandler.shared.PostDataOfType(type: .signup, url: kUrl, withPostDataIn: rqst.jsonObject()) { (JSONData, error) in
+            
+            print( "PrintJsonData",JSONData ?? "")
+            if JSONData != nil{
+                let resultDict = JSONData as! Dictionary<String, AnyObject>
+                if let result = resultDict["result"] as? Dictionary<String, AnyObject> {
+                    if resultDict["statusCode"] as! Int == 200 {
+                        
+                        completionHandler(resultDict as NSDictionary, error)
+                    }else{
+                        completionHandler(resultDict as NSDictionary,error)
+                    }
+                }else{
+                    completionHandler(resultDict as NSDictionary,error)
+                }
+            }else{
+                completionHandler(nil, error ?? "")
+            }
+        }
+    }
+    
+    func getPublishedRCAPI(rqst: GetDraftJobPostRequestRC,completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
+        
+        let kUrl = "\(self.kBaseURL)\(self.kPublishedJobListRC)"
+        
+        print("saveJob URL :: \(kUrl)")
+        
+        
+        APIDataHandler.shared.PostDataOfType(type: .signup, url: kUrl, withPostDataIn: rqst.jsonObject()) { (JSONData, error) in
+            
+            print( "PrintJsonData",JSONData ?? "")
+            if JSONData != nil{
+                let resultDict = JSONData as! Dictionary<String, AnyObject>
+                if let result = resultDict["result"] as? Dictionary<String, AnyObject> {
+                    if resultDict["statusCode"] as! Int == 200 {
+                        
+                        completionHandler(resultDict as NSDictionary, error)
+                    }else{
+                        completionHandler(resultDict as NSDictionary,error)
+                    }
+                }else{
+                    completionHandler(resultDict as NSDictionary,error)
+                }
+            }else{
+                completionHandler(nil, error ?? "")
+            }
+        }
+    }
+    
+    func getHiddenRCAPI(rqst: GetDraftJobPostRequestRC,completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
+        
+        let kUrl = "\(self.kBaseURL)\(self.kHiddenPostListRC)"
+        
+        print("saveJob URL :: \(kUrl)")
+        
+        
+        APIDataHandler.shared.PostDataOfType(type: .signup, url: kUrl, withPostDataIn: rqst.jsonObject()) { (JSONData, error) in
+            
+            print( "PrintJsonData",JSONData ?? "")
+            if JSONData != nil{
+                let resultDict = JSONData as! Dictionary<String, AnyObject>
+                if let result = resultDict["result"] as? Dictionary<String, AnyObject> {
+                    if resultDict["statusCode"] as! Int == 200 {
+                        
+                        completionHandler(resultDict as NSDictionary, error)
+                    }else{
+                        completionHandler(resultDict as NSDictionary,error)
+                    }
+                }else{
+                    completionHandler(resultDict as NSDictionary,error)
+                }
+            }else{
+                completionHandler(nil, error ?? "")
+            }
+        }
+    }
+    
+    func getClosePostListRCAPI(rqst: GetDraftJobPostRequestRC,completionHandler: @escaping (_ dict:NSDictionary?, _ error: String?) -> Void){
+        
+        let kUrl = "\(self.kBaseURL)\(self.kClosedPostListRC)"
+        
+        print("saveJob URL :: \(kUrl)")
+        
+        
+        APIDataHandler.shared.PostDataOfType(type: .signup, url: kUrl, withPostDataIn: rqst.jsonObject()) { (JSONData, error) in
+            
+            print( "PrintJsonData",JSONData ?? "")
+            if JSONData != nil{
+                let resultDict = JSONData as! Dictionary<String, AnyObject>
+                if let result = resultDict["result"] as? Dictionary<String, AnyObject> {
+                    if resultDict["statusCode"] as! Int == 200 {
+                        
+                        completionHandler(resultDict as NSDictionary, error)
+                    }else{
+                        completionHandler(resultDict as NSDictionary,error)
+                    }
+                }else{
+                    completionHandler(resultDict as NSDictionary,error)
+                }
+            }else{
+                completionHandler(nil, error ?? "")
+            }
+        }
+    }
     
 }
-

@@ -35,6 +35,7 @@ class PopularJobsCollectionCell: UICollectionViewCell {
     @IBOutlet weak var recentlyAddedLable: UILabel!
     
     @IBOutlet weak var applyButton: UIButton!
+    @IBOutlet weak var moreButton: UIButton!
     
     @IBOutlet weak var saveJobButton: UIButton!
    
@@ -80,6 +81,9 @@ class PopularJobsCollectionCell: UICollectionViewCell {
         self.recentlyAddedLable.addTitleColorAndFont(title: "Recently Added", fontName: GoodWorkAppFontName.NeueKabelItalic, fontSize: 10, tintColor: GoodWorkAppColor.appDarkPurple)
         
         self.applyButton.addRadiusAndBGColour(21,  GoodWorkAppColor.appColour)
+        self.moreButton.addRadiusAndBGColour(21,  GoodWorkAppColor.appColour)
+        self.moreButton.isHidden = true
+        self.applyButton.isHidden = true
     }
     
     func updateCellData(_ objNEW : Popular_jobs?){
@@ -94,8 +98,13 @@ class PopularJobsCollectionCell: UICollectionViewCell {
         }
         
 //        self.jobTypeLable.text = objNEW?.job_title ?? "Travel"
-        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+//        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
         
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
         self.jobTitleLable.text = objNEW?.job_name ?? ""
         self.jobDescriptionLable.text = objNEW?.name ?? ""
         
@@ -112,9 +121,9 @@ class PopularJobsCollectionCell: UICollectionViewCell {
         print("1 \(objNEW?.created_at_definition ?? "")")
         print("2 \(objNEW?.job_id ?? "")")
         
-        print("objNEW?.is_saved:: \(objNEW?.is_saved ?? 1)")
+      //  print("objNEW?.is_saved:: \(objNEW?.is_saved ?? 1)")
         
-        if objNEW?.is_saved ?? 0 == 1{
+        if objNEW?.is_saved ?? "0" == "1"{
             self.saveJobImageView.image = UIImage(named: "saveJob")
             print("saveJob image")
         }else{
@@ -126,7 +135,13 @@ class PopularJobsCollectionCell: UICollectionViewCell {
     func updateAppliedJobCellData(_ objNEW : PopularJobListData?){
         
         self.jobTypeLable.text = "Travel"
-        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+//        self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        if objNEW?.applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text = "\(objNEW?.applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text = "+\(objNEW?.applied_nurses ?? "") Applied"
+        }
+        
         self.jobTitleLable.text = objNEW?.job_name ?? ""
         self.jobDescriptionLable.text = objNEW?.name ?? ""
 
@@ -137,8 +152,6 @@ class PopularJobsCollectionCell: UICollectionViewCell {
         self.jobAmountLable.text = "\(objNEW?.weekly_pay ?? 0) wks"
 
         self.recentlyAddedLable.text = objNEW?.created_at_definition ?? ""
-
-      
 
         if objNEW?.is_saved ?? "0" == "1"{
             self.saveJobImageView.image = UIImage(named: "saveJob")

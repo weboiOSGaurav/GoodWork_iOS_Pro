@@ -187,6 +187,7 @@ extension LoginVC {
         self.view.endEditing(true)
         var mdl = SendOTPRequest()
         mdl.id = self.loginTextField.text ?? ""
+        mdl.role = "nurse"
         
         self.startLoading()
         
@@ -211,7 +212,7 @@ extension LoginVC {
                     guard let vc = self.storyboard?.instantiateViewController(withIdentifier: VerificationVC.storyBoardIdentifier) as? VerificationVC else { return }
                     vc.loginUserID = loginUserID
                     vc.registerMobileNo = self.loginTextField.text ?? ""
-                                
+                    
                     self.navigationController?.pushViewController(vc, animated: true)
                     
                     self.notificationBanner(response["message"] as? String ?? "")
@@ -234,7 +235,7 @@ extension LoginVC : UITextFieldDelegate {
         
         
         let numbersRange = self.loginTextField.text?.rangeOfCharacter(from: .letters)
-     
+        
         
         if textField == self.loginTextField {
             if self.loginTextField.text?.count ?? 0 > 1{
@@ -362,5 +363,3 @@ extension String {
         return pureNumber
     }
 }
-
-

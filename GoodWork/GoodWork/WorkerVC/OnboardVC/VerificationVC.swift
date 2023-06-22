@@ -293,7 +293,8 @@ extension VerificationVC {
 
         var mdl = SendOTPRequest()
         mdl.id = self.registerMobileNo
-
+        mdl.role = "nurse"
+        
         self.startLoading()
 
         LoginDataManager.shared.sendOTP(rqst: mdl) { (dict, error) in
@@ -350,7 +351,9 @@ extension VerificationVC {
                    
                     print("api_status True")
                     _userDefault.set(true, forKey: UserDefaultKeys.isUserLogin.rawValue)
+                    _userDefault.set(false, forKey: UserDefaultKeys.isRecruiterUserLogin.rawValue)
                     
+                    _userDefault.synchronize()
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: TabBarCV.storyBoardIdentifier) as! TabBarCV
                     self.navigationController?.pushViewController(vc, animated: true)
                 }else{

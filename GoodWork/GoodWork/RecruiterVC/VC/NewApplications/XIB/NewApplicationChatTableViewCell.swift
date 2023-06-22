@@ -93,8 +93,6 @@ class NewApplicationChatTableViewCell: UITableViewCell {
     
     func updateNewApplicationData(_ obj : Data11){
         
-        
-        
         if obj.image ?? "" != ""{
             
             self.userImageView.sd_setImage(with: URL(string: obj.image ?? ""), placeholderImage: UIImage(named: ""))
@@ -111,5 +109,8 @@ class NewApplicationChatTableViewCell: UITableViewCell {
         self.jobIDLabel.text = obj.nurse_id ?? ""
         
         self.expLabel.text = "8+ Exp"
+        
+        self.amountLabel.text = "$" + (obj.hourly_pay_rate ?? "") + "/wk"
+        
     }
 }

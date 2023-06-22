@@ -23,7 +23,7 @@ target 'GoodWork' do
   pod 'KMPlaceholderTextView', '~> 1.4.0'
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftLoader'
-  pod 'DoubleSlider'
+  pod 'RangeSeekSlider'
   pod 'SDWebImage'
   pod 'DropDown'
   pod 'Charts'

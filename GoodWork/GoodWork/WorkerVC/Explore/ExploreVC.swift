@@ -96,8 +96,6 @@ extension ExploreVC : UITableViewDelegate, UITableViewDataSource {
         
         
         self.jobListTableView.reloadData()
-        
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -110,16 +108,15 @@ extension ExploreVC : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: RecommendedTableViewCell.reuseCellIdentifier, for: indexPath) as! RecommendedTableViewCell
         
         cell.jobDescriptionLable.addTitleColorAndFont(title: "Medical Solutions Recruiter", fontName: GoodWorkAppFontName.NeueKabelRegular, fontSize: 12, tintColor: GoodWorkAppColor.appEerieBlack)
-        
+        cell.selectedJobType(0)
         cell.updateCellData(self.exploreJobs?.data?[indexPath.row])
         
-        cell.applyButton.tag = indexPath.row
-        cell.applyButton.addTarget(self, action: #selector(self.applyJobCellButtonAction(sender:)), for: .touchUpInside)
+        cell.applyNewButton.tag = indexPath.row
+        cell.applyNewButton.addTarget(self, action: #selector(self.applyJobCellButtonAction(sender:)), for: .touchUpInside)
         
         cell.saveJobButton.tag = indexPath.row
         cell.saveJobButton.addTarget(self, action: #selector(self.saveJobButtonPress(sender:)), for: .touchUpInside)
-        
-        
+        cell.applyNewButton.isHidden = false
         return  cell
     }
     
@@ -208,6 +205,9 @@ extension ExploreVC{
         
         self.clasMDL.user_id = _userDefault.string(forKey: UserDefaultKeys.user_id.rawValue) ?? ""
         
+        print("\(self.clasMDL)")
+        
+        
         LoginDataManager.shared.browseJobAPI(rqst: self.clasMDL) { (dict, error) in
             
             DispatchQueue.main.async {
@@ -237,12 +237,10 @@ extension ExploreVC{
                             print("falsee")
                         }
                     }catch{
-                        
                         print("catch")
                         print("error \(error.localizedDescription)")
                     }
-                    
-                }else{
+                 }else{
                     print("False")
                     self.notificationBanner(response["message"] as? String ?? "")
                 }

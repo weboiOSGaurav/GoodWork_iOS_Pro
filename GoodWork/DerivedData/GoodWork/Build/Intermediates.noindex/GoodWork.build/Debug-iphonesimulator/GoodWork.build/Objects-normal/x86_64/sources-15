@@ -1,4 +1,5 @@
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/NewApplications/Model/Role_interest11.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/CreatingJobPost/Model/DraftApplication/DraftApplication.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/AppDetailll/MessageRCVC/ChatRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/OfferedEmploy/OfferedEmployeesRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/CreatingJobPost/CreatingJobPostRCVC.swift
@@ -11,18 +12,25 @@
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/JobDetailsVC/JobDetailsVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Setting/SettingsTableViewCell.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/BookMarked/Model/PastJob/PastJobs.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/HomeRC/Model/Home.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Notifications/XIBCell/NotificationTableViewCell.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/PersonalInfo/PersonalInfoDetailsTableViewCell.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/ApplyJob/ApplyJobWithoutProfileUpdateVC.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Notifications/NotificationsVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/ProfileRC/ProfileRCVC.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/SearchRCVC/Model/ApplicantTypeList.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/Screening/ScreeningRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/MoveTo/MoveToSubmitRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Filter/Model/SpecialitiesModal/NurseSpecialities.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Explore/Model/BrowseJobs.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/CreatingJobPost/Model/DraftApplication/DraftApplicationData.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/Screening/UpdateJobStatus/UpdateJobStatusViewController.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/Working/WorkingRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/TabBarRC/TabBarRCVCViewController.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/AccountInfo/AccountInfoRCVC.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/HomeRC/Model/HomeNotification.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/PrivacyPolicy/PrivacyPolicyRCVC.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/AboutMe/Model/AboutMeData.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/BookMarked/Model/SavedJobList/MySavedJobListData.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/OnboardVC/SignUpVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Filter/Model/WorkLocation/NurseLocationData.swift
@@ -33,12 +41,16 @@
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/AppDetailll/ApplicationDetailsRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/AboutUsRC/AboutUSRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/NuseDetails/NuseDetailsRCVC.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/HelpAndSupport/Model/SubjectTypesListData.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Filter/Model/WorkLocation/NurseWorkLocation.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/NurseApplied/NurseAppliedListRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/BookMarked/Model/MyHiredJobs/MyHiredJobsData.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/FullDetailsNurse/XIB/CertListTableViewCell.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Home/Explore_Model/Json4Swift_Base.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/Helper/Constant/ConstantString.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Home/Explore_Model/Recommended_jobs.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/HelpAndSupport/Model/SubjectTypesList.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/HomeRC/Model/HomeData.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/MyProfile/ProfileInfoTableViewCell.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/Employers/EmployersRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/SearchRCVC/TableXIB/ApplicationAdvanceTableViewCell.swift
@@ -52,11 +64,13 @@
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/Helper/APIManager/LogInDataModel.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/HomeRC/XIB/JobTypeCollectionViewCell.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/PersonalInfo/PersonalInfomationVC.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Home/Explore_Model/Recently_added.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/BookMarked/Model/MyAppliedJobList/MyAppliedPopularJob.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/AppDetailll/MessageRCVC/MessageRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/CreatJobReques/EditCreatJobRequestRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Home/Explore_Model/Popular_jobs.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Resume/ResumeVC.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/Employers/Model/Employers.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/OnboardVC/LoginVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Experience/ExperienceVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/SearchRCVC/XIB/ApplicationAdvanceCollectionViewCell.swift
@@ -74,8 +88,10 @@
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/Submitted/SubmittedRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Filter/Model/JobType/NurseJobTypes.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/LoginFLOWRC/LoginRCVC.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/CreatJobReques/Model/AssignMentDuration/AssignmentDurationData.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Certification/Model/Certification.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/ViewController.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/AboutMe/Model/AboutMe.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/LoginFLOWRC/VerificationRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/BookMarked/Model/SavedJobList/MySavedJobList.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Experience/Model/ExperienceTypeList Data.swift
@@ -83,6 +99,7 @@
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Explore/ExploreVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/BookMarked/BookMarkVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Explore/Model/BrowseJobsData.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/CreatingJobPost/Model/Published/PublishedListData.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Message/ChatXIB/UserTableViewCell.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/NewApplications/Model/Data11.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/OnboardVC/VerificationVC.swift
@@ -106,6 +123,7 @@
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Education/EducationVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/HoldPublished/HoldAndPublishedRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/Done/MoveToDoneRCVC.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/SearchRCVC/Model/ApplicantTypeData.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/Screening/UpdateJobStatus/UpdateJobStatusTableViewCell.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/Helper/FontDesign/APIDataHandler.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Home/NurseProfile_Model/NurseProfiRoleinte.swift
@@ -132,6 +150,7 @@
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Licenses/Model/LicenseTypesData.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Message/ChatXIB/LoginUserTableViewCell.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Home/TableViewXIB/RecommendedTableViewCell.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/CreatJobReques/Model/AssignMentDuration/AssignmentDuration.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Licenses/Model/LicenseStatusData.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/HomeRC/HomeRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Filter/Model/SpecialitiesModal/NurseSpecialitiesData.swift
@@ -149,4 +168,5 @@
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/Setting/SettingsVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/DoneEmployees/DoneEmployeesRCVC.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/WorkerVC/AppliedJobDetails/AppliedJobDetailsVC.swift
+/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/CreatingJobPost/Model/Published/PublishedList.swift
 /Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/GoodWork/RecruiterVC/VC/MoveToOffered/MoveToOfferedRCVC.swift

@@ -147,13 +147,7 @@ extension LoginRCVC {
 //            vc.registerMobileNo = self.loginTextField.text ?? ""
 //            self.navigationController?.pushViewController(vc, animated: true)
          
-//            self.sendOtpAPI()
-            
-//            _userDefault.set("62964b94-35f8-4487-971a-ec105f2bb7b5", forKey: UserDefaultKeys.user_id.rawValue)
-//            _userDefault.synchronize()
-//            
-//            let vc = recruiterStoryboard.instantiateViewController(withIdentifier: TabBarRCVCViewController.storyBoardIdentifier) as! TabBarRCVCViewController
-//            self.navigationController?.pushViewController(vc, animated: true)
+            self.sendOtpAPI()
         }
     }
     
@@ -236,7 +230,7 @@ extension LoginRCVC {
         self.view.endEditing(true)
         var mdl = SendOTPRequest()
         mdl.id = self.loginTextField.text ?? ""
-        
+        mdl.role = "recruiter"
         self.startLoading()
         
         LoginDataManager.shared.sendOTP(rqst: mdl) { (dict, error) in
@@ -257,10 +251,9 @@ extension LoginRCVC {
                     _userDefault.set(loginUserID, forKey: UserDefaultKeys.user_id.rawValue)
                     _userDefault.synchronize()
                     
-                    guard let vc = self.storyboard?.instantiateViewController(withIdentifier: VerificationRCVC.storyBoardIdentifier) as? VerificationRCVC else { return }
-                    vc.loginUserID = loginUserID
+                    guard let vc = recruiterStoryboard.instantiateViewController(withIdentifier: VerificationRCVC.storyBoardIdentifier) as? VerificationRCVC else { return }
                     vc.registerMobileNo = self.loginTextField.text ?? ""
-                                
+                    vc.loginUserID = loginUserID
                     self.navigationController?.pushViewController(vc, animated: true)
                     
                     self.notificationBanner(response["message"] as? String ?? "")

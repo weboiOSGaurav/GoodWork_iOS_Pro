@@ -27,7 +27,7 @@ struct Popular_jobs : Codable {
 	let preferred_specialty_definition : String?
 	let preferred_assignment_duration : Int?
 	let preferred_assignment_duration_definition : String?
-	let preferred_shift_duration : Int?
+	var preferred_shift_duration : Int?
 	let preferred_shift_duration_definition : String?
 	let preferred_work_location : Int?
 	let preferred_work_location_definition : String?
@@ -105,8 +105,8 @@ struct Popular_jobs : Codable {
 	let start_date : String?
 	let applied_nurses : String?
 	let nurses_applied : [String]?
-	var is_saved : Int?
-    var popular_jobs : [Popular_jobs]?
+	var is_saved : String?
+   // var popular_jobs : [Popular_jobs]?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -203,7 +203,7 @@ struct Popular_jobs : Codable {
 		case applied_nurses = "applied_nurses"
 		case nurses_applied = "nurses_applied"
 		case is_saved = "is_saved"
-		case popular_jobs = "popular_jobs"
+	//	case popular_jobs = "popular_jobs"
 	}
 
 	init(from decoder: Decoder) throws {
@@ -252,7 +252,16 @@ struct Popular_jobs : Codable {
 		preferred_specialty_definition = try values.decodeIfPresent(String.self, forKey: .preferred_specialty_definition)
 		preferred_assignment_duration = try values.decodeIfPresent(Int.self, forKey: .preferred_assignment_duration)
 		preferred_assignment_duration_definition = try values.decodeIfPresent(String.self, forKey: .preferred_assignment_duration_definition)
-		preferred_shift_duration = try values.decodeIfPresent(Int.self, forKey: .preferred_shift_duration)
+        
+		//preferred_shift_duration = try values.decodeIfPresent(Int.self, forKey: .preferred_shift_duration)
+        
+        if let preferred_shift_test = try? values.decodeIfPresent(String.self, forKey: .preferred_shift_duration){
+            preferred_shift_duration = Int(preferred_shift_test)
+        }else{
+            preferred_shift_duration = try values.decodeIfPresent(Int.self, forKey: .preferred_shift_duration)
+        }
+        
+        
 		preferred_shift_duration_definition = try values.decodeIfPresent(String.self, forKey: .preferred_shift_duration_definition)
 		preferred_work_location = try values.decodeIfPresent(Int.self, forKey: .preferred_work_location)
 		preferred_work_location_definition = try values.decodeIfPresent(String.self, forKey: .preferred_work_location_definition)
@@ -270,17 +279,57 @@ struct Popular_jobs : Codable {
 		active = try values.decodeIfPresent(Int.self, forKey: .active)
 		facility_id = try values.decodeIfPresent(String.self, forKey: .facility_id)
 		job_video = try values.decodeIfPresent(String.self, forKey: .job_video)
-		seniority_level = try values.decodeIfPresent(Int.self, forKey: .seniority_level)
+		
+        
+        if let seniority_level_test = try? values.decodeIfPresent(String.self, forKey: .seniority_level){
+            seniority_level = Int(seniority_level_test)
+        }else{
+            seniority_level = try values.decodeIfPresent(Int.self, forKey: .seniority_level)
+        }
+        
+        //seniority_level = try values.decodeIfPresent(Int.self, forKey: .seniority_level)
+        
 		seniority_level_definition = try values.decodeIfPresent(String.self, forKey: .seniority_level_definition)
-		job_function = try values.decodeIfPresent(Int.self, forKey: .job_function)
+        
+//		job_function = try values.decodeIfPresent(Int.self, forKey: .job_function)
+        
+        if let job_function_test = try? values.decodeIfPresent(String.self, forKey: .seniority_level){
+            job_function = Int(job_function_test)
+        }else{
+            job_function = try values.decodeIfPresent(Int.self, forKey: .job_function)
+        }
+        
 		job_function_definition = try values.decodeIfPresent(String.self, forKey: .job_function_definition)
 		responsibilities = try values.decodeIfPresent(String.self, forKey: .responsibilities)
 		qualifications = try values.decodeIfPresent(String.self, forKey: .qualifications)
-		job_cerner_exp = try values.decodeIfPresent(Int.self, forKey: .job_cerner_exp)
+//		job_cerner_exp = try values.decodeIfPresent(Int.self, forKey: .job_cerner_exp)
+    
+        if let job_cerner_exp_test = try? values.decodeIfPresent(String.self, forKey: .job_cerner_exp){
+            job_cerner_exp = Int(job_cerner_exp_test)
+        }else{
+            job_cerner_exp = try values.decodeIfPresent(Int.self, forKey: .job_cerner_exp)
+        }
+        
 		job_cerner_exp_definition = try values.decodeIfPresent(String.self, forKey: .job_cerner_exp_definition)
-		job_meditech_exp = try values.decodeIfPresent(Int.self, forKey: .job_meditech_exp)
+	//	job_meditech_exp = try values.decodeIfPresent(Int.self, forKey: .job_meditech_exp)
+        
+        if let job_meditech_exp_test = try? values.decodeIfPresent(String.self, forKey: .job_meditech_exp){
+            job_meditech_exp = Int(job_meditech_exp_test)
+        }else{
+            job_meditech_exp = try values.decodeIfPresent(Int.self, forKey: .job_meditech_exp)
+        }
+        
 		job_meditech_exp_definition = try values.decodeIfPresent(String.self, forKey: .job_meditech_exp_definition)
-		job_epic_exp = try values.decodeIfPresent(Int.self, forKey: .job_epic_exp)
+		
+     //   job_epic_exp = try values.decodeIfPresent(Int.self, forKey: .job_epic_exp)
+        
+        
+        if let job_epic_exp_test = try? values.decodeIfPresent(String.self, forKey: .job_epic_exp){
+            job_epic_exp = Int(job_epic_exp_test)
+        }else{
+            job_epic_exp = try values.decodeIfPresent(Int.self, forKey: .job_epic_exp)
+        }
+        
 		job_epic_exp_definition = try values.decodeIfPresent(String.self, forKey: .job_epic_exp_definition)
 		job_other_exp = try values.decodeIfPresent(String.self, forKey: .job_other_exp)
 		video_embed_url = try values.decodeIfPresent(String.self, forKey: .video_embed_url)
@@ -339,8 +388,13 @@ struct Popular_jobs : Codable {
 		start_date = try values.decodeIfPresent(String.self, forKey: .start_date)
 		applied_nurses = try values.decodeIfPresent(String.self, forKey: .applied_nurses)
 		nurses_applied = try values.decodeIfPresent([String].self, forKey: .nurses_applied)
-		is_saved = try values.decodeIfPresent(Int.self, forKey: .is_saved)
-		popular_jobs = try values.decodeIfPresent([Popular_jobs].self, forKey: .popular_jobs)
+		//is_saved = try values.decodeIfPresent(String.self, forKey: .is_saved)
+		//popular_jobs = try values.decodeIfPresent([Popular_jobs].self, forKey: .popular_jobs)
+        
+        if let type_test = try? values.decodeIfPresent(Int.self, forKey: .is_saved){
+            is_saved = String(type_test)
+        }else{
+            is_saved = try values.decodeIfPresent(String.self, forKey: .is_saved)
+        }
 	}
-
 }

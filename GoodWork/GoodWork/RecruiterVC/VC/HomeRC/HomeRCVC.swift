@@ -40,12 +40,21 @@ class HomeRCVC: DemoBaseViewController {
     
     @IBOutlet var chartView: BarChartView!
     
-    @IBOutlet weak var latestNotiesBgViewHeightCons: NSLayoutConstraint!
-    @IBOutlet weak var ShadowViewHeightCons: NSLayoutConstraint!
+    @IBOutlet weak var jobStatusBgViewHeightCons: NSLayoutConstraint!
+    @IBOutlet weak var jobStatusShadowViewHeightCons: NSLayoutConstraint!
     
-    let jobTypeArray = ["Permanent", "Travel", "Per Diem", "Local"]
+    @IBOutlet weak var createPostBgView: UIView!
+    @IBOutlet weak var postAnotherJob: UILabel!
+    @IBOutlet weak var createPostBgViewTopCons: NSLayoutConstraint!
+    
+    @IBOutlet weak var createPostButton: UIButton!
+    
+    var jobTypeArray = [String]()
+    var jobTypeCountArray = [Int]()
     
     var isNewUserLogin = false
+    
+    var homeJobDetails : Home?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,15 +67,30 @@ class HomeRCVC: DemoBaseViewController {
         self.graphInit()
         self.homeScreenAPI()
         self.isNewUserLogin = true
+        
+        if self.isNewUserLogin == false {
+            self.createPostBgViewTopCons.constant = -20
+            self.jobStatusBgViewHeightCons.constant = 0
+            self.jobStatusShadowViewHeightCons.constant = 0
+        }else{
+            self.createPostBgViewTopCons.constant = 10
+            self.jobStatusBgViewHeightCons.constant = 300
+            self.jobStatusShadowViewHeightCons.constant = 300
+        }
+        self.aboutMeAPI()
     }
     
     func setUPUI(){
         
         self.view.backgroundColor =  GoodWorkAppColor.appBGPink
+      
+        self.profileImageView.image = UIImage(named: "profileDemo")
+        self.profileImageView.addBorderCornerRadius(Int(self.profileImageView.frame.height) / 2, 0, .clear)
         
-        self.profileImageView.image = UIImage(named: "profile")
         
-        self.userNameLabel.addTitleColorAndFont(title: "Emma Watson", fontName: GoodWorkAppFontName.NeueKabelMedium, fontSize: 18, tintColor: GoodWorkAppColor.appDarkPurple)
+        self.postAnotherJob.addTitleColorAndFont(title: "Post Another Job +", fontName: GoodWorkAppFontName.PoppinsSemiBold, fontSize: 16, tintColor: GoodWorkAppColor.appOffWhite)
+        
+        self.userNameLabel.addTitleColorAndFont(title: "", fontName: GoodWorkAppFontName.NeueKabelMedium, fontSize: 18, tintColor: GoodWorkAppColor.appDarkPurple)
         
         self.notificationImageView.image = UIImage(named: "notification")
         self.notificationBGView.addRadiusAndBGColour((self.notificationBGView.frame.height / 2), GoodWorkAppColor.appDarkPurple)
@@ -88,22 +112,46 @@ class HomeRCVC: DemoBaseViewController {
         
         self.notiesShadowView.shadowWithRadiusAndColour(6, GoodWorkAppColor.appDavysGrey)
         
+        
+        self.createPostBgView.addRadiusAndBGColour(30,GoodWorkAppColor.appDarkPurple)
+        
         self.jobStatusBgView.addBorderWidthColour(1, GoodWorkAppColor.appDarkPurple, 6)
         
         self.jobStatusShadowView.shadowWithRadiusAndColour(6, GoodWorkAppColor.appDavysGrey)
         
         self.jobStatusTitleLabel.addTitleColorAndFont(title: "Job Status", fontName: GoodWorkAppFontName.NeueKabelBold, fontSize: 20, tintColor: GoodWorkAppColor.appLightPink)
         
-        
         self.loadCollectionview()
         self.loadTableView()
         self.buttonActions()
     }
     
+    func updateProfileData(){
+        if appDelegate.recruiterProfile?.data?.count != 0 {
+            
+            
+            self.userNameLabel.text = (appDelegate.recruiterProfile?.data?[0].first_name?.capitalized ?? "") + " " + (appDelegate.recruiterProfile?.data?[0].last_name?.capitalized ?? "")
+            
+            guard let imgUrlString = appDelegate.recruiterProfile?.data?[0].image ?? "".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
+            
+            self.profileImageView.sd_setImage(with: URL(string: imgUrlString), placeholderImage: UIImage(named: "profileDemo"))
+        }
+    }
+    
+    func updateHomeData(){
+        self.jobTypeArray = ["Permanent", "Travel", "Per Diem", "Local"]
+        self.jobTypeCountArray.append(self.homeJobDetails?.data?.permanent_jobs ?? 0)
+        self.jobTypeCountArray.append(self.homeJobDetails?.data?.travel_jobs ?? 0)
+        self.jobTypeCountArray.append(self.homeJobDetails?.data?.perdiem_jobs ?? 0)
+        self.jobTypeCountArray.append(self.homeJobDetails?.data?.local_jobs ?? 0)
+        
+        self.jobTypeCollectionView.reloadData()
+        self.latestNotiesTableView.reloadData()
+        self.graphInit()
+    }
 }
 
 extension HomeRCVC : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
-    
     
     func loadCollectionview(){
         self.jobTypeCollectionView.register(UINib(nibName: JobTypeCollectionViewCell.reuseCellIdentifier, bundle: nil), forCellWithReuseIdentifier: JobTypeCollectionViewCell.reuseCellIdentifier)
@@ -119,8 +167,9 @@ extension HomeRCVC : UICollectionViewDataSource, UICollectionViewDelegate, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: JobTypeCollectionViewCell.reuseCellIdentifier, for: indexPath) as! JobTypeCollectionViewCell
-        
+       
         cell.jobTypeLable.text = self.jobTypeArray[indexPath.row]
+        cell.jobTypeDescriptionLable.text = "\(self.jobTypeCountArray[indexPath.row])+ Workers Available"
         
         return cell
     }
@@ -143,17 +192,27 @@ extension HomeRCVC {
         self.profileButton.addTarget(self, action: #selector(self.profileButtonPressed(_:)), for: .touchUpInside)
         
         self.notificationButton.addTarget(self, action: #selector(self.notificationButtonPressed(_:)), for: .touchUpInside)
+        self.createPostButton.addTarget(self, action: #selector(self.createPostButtonPressed(_:)), for: .touchUpInside)
     }
     
     @IBAction func profileButtonPressed(_ sender: UIButton){
         print("profileButtonPressed")
         guard let vc = recruiterStoryboard.instantiateViewController(withIdentifier: ProfileRCVC.storyBoardIdentifier) as? ProfileRCVC else { return }
+        vc.obj = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func notificationButtonPressed(_ sender: UIButton){
         print("notificationButtonPressed")
-        self.notificationBanner(AlertMassage.comingSoon.rawValue)
+        guard let vc = mainStoryboard.instantiateViewController(withIdentifier: NotificationsVC.storyBoardIdentifier) as? NotificationsVC else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func createPostButtonPressed(_ sender: UIButton){
+        print("createPostButtonPressed")
+        
+        guard let vc = recruiterStoryboard.instantiateViewController(withIdentifier: CreatJobRequestRCVC.storyBoardIdentifier) as? CreatJobRequestRCVC else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -184,33 +243,36 @@ extension HomeRCVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        return self.homeJobDetails?.data?.notification?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: LatestNotiesTableViewCell.reuseCellIdentifier, for: indexPath) as! LatestNotiesTableViewCell
         cell.dotLineView.isHidden = false
-        if indexPath.row == 0{
-            cell.dateLable.text = "Monday, 6th April 2023"
-            cell.descriptionLable.text = "Alex Beth has successfully accepted job request"
+        
+        
+        
+        if self.homeJobDetails?.data?.notification?[indexPath.row].status == 4{
+            cell.dateLable.text = self.homeJobDetails?.data?.notification?[indexPath.row].created_at_definition ?? ""
+            cell.descriptionLable.text = self.homeJobDetails?.data?.notification?[indexPath.row].text ?? ""
             cell.statusBGView.backgroundColor = GoodWorkAppColor.appDeYork
             cell.statusLable.text = "Accepted"
             
             cell.alertImageView.image = UIImage(named: "Approval")
             cell.alertImgHeightConstrain.constant = 24
             cell.statusLable.addTitleColorAndFont(title: "Accepted", fontName: GoodWorkAppFontName.PoppinsSemiBold, fontSize: 11, tintColor: GoodWorkAppColor.appDarkPurple)
-        }else if indexPath.row == 1{
-            cell.dateLable.text = "Thursday, 24th April 2023"
-            cell.descriptionLable.text = "Update your Profile"
+        }else if self.homeJobDetails?.data?.notification?[indexPath.row].status == 2{
+            cell.dateLable.text = self.homeJobDetails?.data?.notification?[indexPath.row].created_at_definition ?? ""
+            cell.descriptionLable.text = self.homeJobDetails?.data?.notification?[indexPath.row].text ?? ""
             cell.statusBGView.backgroundColor =  GoodWorkAppColor.appRed
             cell.statusLable.addTitleColorAndFont(title: "Pending", fontName: GoodWorkAppFontName.PoppinsSemiBold, fontSize: 11, tintColor: GoodWorkAppColor.appWhite)
             
             cell.alertImageView.image = UIImage(named: "redAlert")
             cell.alertImgHeightConstrain.constant = 17
-        }else if indexPath.row == 2{
-            cell.dateLable.text = "Monday, 13th April  2013"
-            cell.descriptionLable.text = "13+ Applicants applied to your  posted job"
+        }else if self.homeJobDetails?.data?.notification?[indexPath.row].status == 1{
+            cell.dateLable.text = self.homeJobDetails?.data?.notification?[indexPath.row].created_at_definition ?? ""
+            cell.descriptionLable.text = self.homeJobDetails?.data?.notification?[indexPath.row].text ?? ""
             cell.statusBGView.backgroundColor = GoodWorkAppColor.appPorcelain
             cell.dotLineView.isHidden = true
             cell.statusLable.addTitleColorAndFont(title: "New Application", fontName: GoodWorkAppFontName.PoppinsSemiBold, fontSize: 11, tintColor: GoodWorkAppColor.appCharade)
@@ -288,7 +350,14 @@ extension HomeRCVC {
     func setDataCount(_ count: Int, range: UInt32) {
         let start = 0
         
-        let vly = [12.0,8.0,24.0,15.0,21.0]
+        var vly = [Int]()
+        
+        
+        vly.append(self.homeJobDetails?.data?.new ?? 0)
+        vly.append(self.homeJobDetails?.data?.offered ?? 0)
+        vly.append(self.homeJobDetails?.data?.onboard ?? 0)
+        vly.append(self.homeJobDetails?.data?.working ?? 0)
+        vly.append(self.homeJobDetails?.data?.done ?? 0)
         
         let yVals = (start..<start+count+1).map { (i) -> BarChartDataEntry in
             
@@ -297,13 +366,14 @@ extension HomeRCVC {
             //            let val = Double(arc4random_uniform(mult))
             
             if arc4random_uniform(100) < 25 {
-                return BarChartDataEntry(x: Double(i), y: vly[Int(i)], icon: UIImage(named: "icon"))
+                return BarChartDataEntry(x: Double(i), y: Double(vly[Int(i)]), icon: UIImage(named: "icon"))
             } else {
-                return BarChartDataEntry(x: Double(i), y: vly[Int(i)])
+                return BarChartDataEntry(x: Double(i), y: Double(vly[Int(i)]))
             }
         }
         
         var set1: BarChartDataSet! = nil
+        
         if let set = chartView.data?.first as? BarChartDataSet {
             set1 = set
             set1.replaceEntries(yVals)
@@ -334,7 +404,7 @@ extension HomeRCVC{
         
         var mdl = HomeInfoRequestRC()
         mdl.user_id = _userDefault.string(forKey: UserDefaultKeys.user_id.rawValue) ?? ""
-        
+        mdl.user_id = "f5a1104e-e2ae-4440-a7ad-01ecbf48af43"
         print("mdl: \(mdl)")
         
         self.startLoading()
@@ -348,6 +418,23 @@ extension HomeRCVC{
                 if response["api_status"] as? String ?? "" == "1" {
                     print("response:: \(response)")
                     
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+                        
+                        let homeResp = try JSONDecoder().decode(Home.self, from: jsonData)
+                        
+                        self.homeJobDetails = homeResp
+                        
+                        if self.homeJobDetails?.api_status == "1"{
+                            self.updateHomeData()
+                        }else{
+                            print("falsee")
+                            self.notificationBanner(response["message"] as? String ?? "")
+                        }
+                    }catch{
+                        print("catch:: \(error)")
+                        
+                    }
                 }else{
                     print("False")
                     self.notificationBanner(response["message"] as? String ?? "")
@@ -355,5 +442,50 @@ extension HomeRCVC{
                 self.stopLoading()
             }
         }
+    }
+    
+    func aboutMeAPI(){
+        
+        var mdl = AboutMeRequestRC()
+        mdl.user_id = _userDefault.string(forKey: UserDefaultKeys.user_id.rawValue) ?? ""
+      //  mdl.user_id = "f5a1104e-e2ae-4440-a7ad-01ecbf48af43"
+        print("mdl: \(mdl)")
+        
+        LoginDataManager.shared.aboutMeRCAPI(rqst: mdl) { (dict, error) in
+            
+            DispatchQueue.main.async {
+                
+                let response = dict as? [String : Any] ??  [String : Any]()
+                
+                if response["api_status"] as? String ?? "" == "1" {
+                    print("response:: \(response)")
+                    
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+                        
+                        let homeResp = try JSONDecoder().decode(AboutMe.self, from: jsonData)
+                        
+                        appDelegate.recruiterProfile = homeResp
+                        self.updateProfileData()
+                    }catch{
+                        print("catch:: \(error)")
+                        
+                       // self.notificationBanner(response["message"] as? String ?? "")
+                    }
+                }else{
+                    print("False")
+                   // self.notificationBanner(response["message"] as? String ?? "")
+                }
+              //  self.stopLoading()
+            }
+        }
+    }
+}
+
+extension HomeRCVC : updateProfilePhotoPro{
+    
+    func updateProfilePhotoPro(){
+        //self.nurseProfileAPI()
+        print("HomeRCVC  updateProfilePhotoPro")
     }
 }

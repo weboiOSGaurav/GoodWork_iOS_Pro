@@ -22,7 +22,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		/JuZ6b25z7y9Bx7Y+OcCVjkk3fQ=
+		dWckaoKzOXkR3eoCDanuLLNHNQY=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -36,13 +36,17 @@
 		<data>
 		U0x8EM0781fCPb62BbZIXKeDlZ4=
 		</data>
+		<key>Base.lproj/Main.storyboardc/0HH-yB-UQD-view-p2k-ca-O9e.nib</key>
+		<data>
+		bfCpmDXUK7ciGJ7fIgRIbtFPo9w=
+		</data>
 		<key>Base.lproj/Main.storyboardc/4Jm-cU-byU-view-9lD-Rj-i5o.nib</key>
 		<data>
 		O1MO1krdU8Ps9dJIOVSOXLVgwkg=
 		</data>
 		<key>Base.lproj/Main.storyboardc/8YA-c6-8HI-view-IaI-yU-3pI.nib</key>
 		<data>
-		N2K/jjZB/fy8UlV69Zjsyemu3kc=
+		vAXxlddI6fdfPALY0Mw2lwezpOU=
 		</data>
 		<key>Base.lproj/Main.storyboardc/9HP-EV-t1w-view-Jcm-eK-azu.nib</key>
 		<data>
@@ -74,7 +78,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		UAljntpssGWicSrkD7vL4Y//09c=
+		jv4AbZfjjxCyTDJwzyNv8wqt4+A=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BookMarkVC.nib</key>
 		<data>
@@ -118,7 +122,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/HUK-5S-Zml-view-fZU-u9-rwP.nib</key>
 		<data>
-		s9kE+8ZvC1iu18n02qladQjdzD0=
+		wRD/mN+9QR4q1fAMqCadOZz4Rj8=
 		</data>
 		<key>Base.lproj/Main.storyboardc/HelpAndSupportVC.nib</key>
 		<data>
@@ -130,7 +134,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		vIBnN/8LyXB3qZPEruaU1c0s1n8=
+		NDbOy8AaKRzrH97tTzPDsLbFxM0=
 		</data>
 		<key>Base.lproj/Main.storyboardc/IvS-5N-9za-view-odM-fB-ekU.nib</key>
 		<data>
@@ -146,7 +150,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/KiJ-SJ-jIl-view-MX6-86-12n.nib</key>
 		<data>
-		EWEg44E6+JqmbRKQpZ8LnG66P0Y=
+		KnuzswVcQZ1aeWYO94xScflQdm4=
 		</data>
 		<key>Base.lproj/Main.storyboardc/LicensesVC.nib</key>
 		<data>
@@ -163,6 +167,10 @@
 		<key>Base.lproj/Main.storyboardc/MyProfileVC.nib</key>
 		<data>
 		le999gpVlTLSf5uIq09oBMvRIeM=
+		</data>
+		<key>Base.lproj/Main.storyboardc/NotificationsVC.nib</key>
+		<data>
+		f7EXyboin5jCdDepxOGjPV8ZjNo=
 		</data>
 		<key>Base.lproj/Main.storyboardc/OnboardingVC.nib</key>
 		<data>
@@ -198,7 +206,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UVa-7P-MIm-view-vzh-Vz-xmq.nib</key>
 		<data>
-		1apn0NAqnhGZMm9K+br62PUNdtI=
+		VKkDvIrS8bymzyWgRftmmzXKoUw=
 		</data>
 		<key>Base.lproj/Main.storyboardc/VerificationVC.nib</key>
 		<data>
@@ -214,7 +222,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/gFa-DQ-F1b-view-f1J-1K-zYr.nib</key>
 		<data>
-		Mnta8AtXDtufBMK9T7oRoZSrmsM=
+		XHFOf9iL1/+pCf5H9PuTsk3zYKw=
 		</data>
 		<key>Base.lproj/Main.storyboardc/hXE-ow-Knu-view-Hdh-hQ-Ul5.nib</key>
 		<data>
@@ -222,11 +230,11 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/hYR-Oh-dTw-view-H7z-Vf-ivZ.nib</key>
 		<data>
-		Fd56L2zQFZ4jNkUU1qoZ7hWZLSk=
+		oFZvp6xiE/4poBnjIU2b73dgxLo=
 		</data>
 		<key>Base.lproj/Main.storyboardc/iWj-Ua-e5V-view-tGn-m9-BRq.nib</key>
 		<data>
-		yOtFceZCta90Nwbo/DmT6eARXEs=
+		fuxGQOq1wfLR6YQa0yzWoxBO9aE=
 		</data>
 		<key>Base.lproj/Main.storyboardc/iet-lI-2AJ-view-Kkp-UH-bNt.nib</key>
 		<data>
@@ -234,7 +242,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/k2C-8w-DF0-view-N4p-bE-lLI.nib</key>
 		<data>
-		pM0CQMfavYZCOCnQsxg53S2B2/M=
+		YW/sEu+N3eYK+dKftVoAi92jUpQ=
 		</data>
 		<key>Base.lproj/Main.storyboardc/kYk-ny-FVx-view-A2w-Se-ukM.nib</key>
 		<data>
@@ -258,11 +266,11 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/ymG-qk-NKP-view-I6Q-5j-dwM.nib</key>
 		<data>
-		dWj9Al0fgogoQCRghgVoGDQlzPE=
+		39yVQw7AfDWq8dVSG6TUA226HsU=
 		</data>
 		<key>Base.lproj/Main.storyboardc/zVn-lE-sJd-view-Mzp-jr-ucA.nib</key>
 		<data>
-		Wa0FtYGqhtGzjL/0CO8CQ/7sGPc=
+		uGly9iqxaTBneI3p4oe2x522jKw=
 		</data>
 		<key>CertListTableViewCell.nib</key>
 		<data>
@@ -286,7 +294,7 @@
 		</data>
 		<key>Frameworks/Alamofire.framework/Alamofire</key>
 		<data>
-		IYg38regiaVikAxyA5NfcfzNp8g=
+		17zTnq9B7U39WFfUHqOnsf+R55Y=
 		</data>
 		<key>Frameworks/Alamofire.framework/Info.plist</key>
 		<data>
@@ -298,7 +306,7 @@
 		</data>
 		<key>Frameworks/Algorithms.framework/Algorithms</key>
 		<data>
-		FD4oqtY+5V8nQqq7cTev+Bujh4I=
+		ApIGtU8Owl7QdV2LwSGgziqF/H4=
 		</data>
 		<key>Frameworks/Algorithms.framework/Info.plist</key>
 		<data>
@@ -310,7 +318,7 @@
 		</data>
 		<key>Frameworks/Charts.framework/Charts</key>
 		<data>
-		/ifwg+fx/rxbxYbDPBU8rIMjKn0=
+		AHB151BlVoLo9ul/4QaXHK5ucrg=
 		</data>
 		<key>Frameworks/Charts.framework/Info.plist</key>
 		<data>
@@ -320,21 +328,9 @@
 		<data>
 		ZmO1paoRSHywhDIKEmxuVo3j4cQ=
 		</data>
-		<key>Frameworks/DoubleSlider.framework/DoubleSlider</key>
-		<data>
-		IMdGRoXTzvHA9URiZgrYlsOCGm0=
-		</data>
-		<key>Frameworks/DoubleSlider.framework/Info.plist</key>
-		<data>
-		sC6oJBrYHalqL38YoD9KjmwnOwY=
-		</data>
-		<key>Frameworks/DoubleSlider.framework/_CodeSignature/CodeResources</key>
-		<data>
-		h8tKKPWmLBhpjUTddt+G2yARSyM=
-		</data>
 		<key>Frameworks/DropDown.framework/DropDown</key>
 		<data>
-		j67Rjv/E7kLN0rsfhlPyjT0BP8M=
+		XoiXAsasNtab/ahG6x1/FQR7n7k=
 		</data>
 		<key>Frameworks/DropDown.framework/DropDownCell.nib</key>
 		<data>
@@ -350,7 +346,7 @@
 		</data>
 		<key>Frameworks/ExpandableLabel.framework/ExpandableLabel</key>
 		<data>
-		CSdjSqSndovymJ1J6eeDcjL87ZA=
+		60JSdnNcYxV/XaZTLYJyptipOKg=
 		</data>
 		<key>Frameworks/ExpandableLabel.framework/Info.plist</key>
 		<data>
@@ -362,7 +358,7 @@
 		</data>
 		<key>Frameworks/IQKeyboardManagerSwift.framework/IQKeyboardManagerSwift</key>
 		<data>
-		AwbEKeU01oQKKz0hdLE/S1Tw8rk=
+		cw3s73sD0U7e1IwKB9mS8SL7Yz4=
 		</data>
 		<key>Frameworks/IQKeyboardManagerSwift.framework/Info.plist</key>
 		<data>
@@ -378,7 +374,7 @@
 		</data>
 		<key>Frameworks/KMPlaceholderTextView.framework/KMPlaceholderTextView</key>
 		<data>
-		GfWsg45mYRMsTF8DwDbhrYow4ZI=
+		Mpc7sLZoy0WwmFDtTOO/gAhLOyQ=
 		</data>
 		<key>Frameworks/KMPlaceholderTextView.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -390,7 +386,7 @@
 		</data>
 		<key>Frameworks/MarqueeLabel.framework/MarqueeLabel</key>
 		<data>
-		tSJ98EqIRR14mN7fcFqYViZsI3M=
+		7tKrzPTbS7w6tL81w06wmbCJ7tE=
 		</data>
 		<key>Frameworks/MarqueeLabel.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -402,11 +398,23 @@
 		</data>
 		<key>Frameworks/NotificationBannerSwift.framework/NotificationBannerSwift</key>
 		<data>
-		X+DzEi2GhEHPqFxpMdu0SRZKAaU=
+		ZktMzn0z1O6mK1HqNEEYjsQn2Hw=
 		</data>
 		<key>Frameworks/NotificationBannerSwift.framework/_CodeSignature/CodeResources</key>
 		<data>
 		Hli2+3UOeFOimgAM/bvJc8R1Nrg=
+		</data>
+		<key>Frameworks/RangeSeekSlider.framework/Info.plist</key>
+		<data>
+		dmj+uq1JeIF7yCxTPprv28+PGzs=
+		</data>
+		<key>Frameworks/RangeSeekSlider.framework/RangeSeekSlider</key>
+		<data>
+		DqY6IjusXQn5x0usAYlg55YWcoc=
+		</data>
+		<key>Frameworks/RangeSeekSlider.framework/_CodeSignature/CodeResources</key>
+		<data>
+		1COvCyCDIc1uXsmy4q0DzrCH+ak=
 		</data>
 		<key>Frameworks/SDWebImage.framework/Info.plist</key>
 		<data>
@@ -414,7 +422,7 @@
 		</data>
 		<key>Frameworks/SDWebImage.framework/SDWebImage</key>
 		<data>
-		7mubEZTzHDeqjN3yZDeh6Vh+zeI=
+		RTUKd1AzMp2SoZWIutVsCr6hIok=
 		</data>
 		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -426,7 +434,7 @@
 		</data>
 		<key>Frameworks/SnapKit.framework/SnapKit</key>
 		<data>
-		b61+XT1aL7Rf8aMiVSskpnZ21KI=
+		MiGqMWVjjyD3TbB+mO6tnh0vZYM=
 		</data>
 		<key>Frameworks/SnapKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -438,7 +446,7 @@
 		</data>
 		<key>Frameworks/SwiftLoader.framework/SwiftLoader</key>
 		<data>
-		Ql8dxkE7jAbV9sbf7TSP4iccdVE=
+		Rup74hkeFkWeVz/Tm61Lt7t2eP0=
 		</data>
 		<key>Frameworks/SwiftLoader.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -450,7 +458,7 @@
 		</data>
 		<key>Frameworks/SwiftyAttributes.framework/SwiftyAttributes</key>
 		<data>
-		VFqbgrZoQvza9SoA95s7iUxKUVA=
+		/0cmmq5vGdV8bzgdOw5fGvLZ+wY=
 		</data>
 		<key>Frameworks/SwiftyAttributes.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -470,7 +478,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0znsULK7Vv24bZzkqVmQg5nkUgw=
+		ezScZR3z2J0bpcB1klume6zw/l8=
 		</data>
 		<key>JobAppliedTableViewCell.nib</key>
 		<data>
@@ -512,6 +520,10 @@
 		<data>
 		gZO0Aa1TpviCwBR02xWjDSTfZVo=
 		</data>
+		<key>NotificationTableViewCell.nib</key>
+		<data>
+		/DLc6oj3ogPBu0/tc8LBah+7o9s=
+		</data>
 		<key>PersonalInfoDetailsTableViewCell.nib</key>
 		<data>
 		KonEo6UoZK2sTFfSPUnaG4LAzhQ=
@@ -530,7 +542,7 @@
 		</data>
 		<key>PopularJobsCollectionCell.nib</key>
 		<data>
-		+ehY7EEwmVw/NpTa/E67tIiIGp4=
+		LQVlcQbELvhIPXAQ+Q3jei6A12E=
 		</data>
 		<key>ProfileInfoTableViewCell.nib</key>
 		<data>
@@ -558,11 +570,11 @@
 		</data>
 		<key>RecommendedTableViewCell.nib</key>
 		<data>
-		gPvV81mJJ69LsXEglmShp9Y/ZZE=
+		jE8x4KDWMgVMQta6J+uPz/hMV6U=
 		</data>
 		<key>RecruitersStoryboard.storyboardc/3Td-5j-Uu8-view-DBa-AI-pe6.nib</key>
 		<data>
-		uCrxdKn+gxCZsEU9B/PsVBY8Z94=
+		c3FwvajNCNiCY/aWDhFchbB/hZA=
 		</data>
 		<key>RecruitersStoryboard.storyboardc/3xK-Lv-LfT-view-gaK-X3-gcZ.nib</key>
 		<data>
@@ -590,7 +602,7 @@
 		</data>
 		<key>RecruitersStoryboard.storyboardc/Aka-IJ-cQI-view-Fbr-i8-Jsd.nib</key>
 		<data>
-		2w8r13k/3d4xfv84czxu8pAXCb0=
+		Hg6R8IVpDrQHhO8PEgNBtPtQGHo=
 		</data>
 		<key>RecruitersStoryboard.storyboardc/ApplicationDetailsRCVC.nib</key>
 		<data>
@@ -638,7 +650,7 @@
 		</data>
 		<key>RecruitersStoryboard.storyboardc/F8n-UK-aTd-view-UBO-we-H3q.nib</key>
 		<data>
-		/qShHqqtSIcpBtiqS1dMw+bi22s=
+		JctmvuE+CAZOk70roErBTCHH07M=
 		</data>
 		<key>RecruitersStoryboard.storyboardc/FCk-ES-86f-view-b2q-vP-JEs.nib</key>
 		<data>
@@ -758,11 +770,11 @@
 		</data>
 		<key>RecruitersStoryboard.storyboardc/T6V-u9-kQV-view-0Ol-NY-j97.nib</key>
 		<data>
-		eisrCY8fOCBa+aMUKeIwvNu1lNo=
+		mWiXlcS5S/HbThixuatcymvws1s=
 		</data>
 		<key>RecruitersStoryboard.storyboardc/TabBarRCVCViewController.nib</key>
 		<data>
-		dSomB5O8lb5zH1mvFuvKrVqURes=
+		7qcCZJqzcvdPyxQIwqx7PDvysJA=
 		</data>
 		<key>RecruitersStoryboard.storyboardc/UINavigationController-57b-GJ-GUB.nib</key>
 		<data>
@@ -790,7 +802,7 @@
 		</data>
 		<key>RecruitersStoryboard.storyboardc/WFl-S5-okn-view-dXr-2k-QUX.nib</key>
 		<data>
-		zLR5B/M5bfz8bofwtWJC19+A9MQ=
+		lNATEv2LZwmUF4TrDLLC9mq44ww=
 		</data>
 		<key>RecruitersStoryboard.storyboardc/WMR-yU-GFI-view-1US-YI-oVv.nib</key>
 		<data>
@@ -798,7 +810,7 @@
 		</data>
 		<key>RecruitersStoryboard.storyboardc/WoO-Q2-Wje-view-qGZ-fB-4bi.nib</key>
 		<data>
-		DlGiaLQVUSWXfj3LixtTDmR8uiQ=
+		YDMH/k4Yy/L4b6t1DbMSG7oD430=
 		</data>
 		<key>RecruitersStoryboard.storyboardc/WorkingEmployeesRCVC.nib</key>
 		<data>
@@ -810,7 +822,7 @@
 		</data>
 		<key>RecruitersStoryboard.storyboardc/YqI-R4-lam-view-knT-Hf-O1q.nib</key>
 		<data>
-		Y39Uo8gsUTYVtwJ1atd4ViHvqFE=
+		20QQv7pBP0Ca4NF1BIMqBVbNs0A=
 		</data>
 		<key>RecruitersStoryboard.storyboardc/ZaK-Av-05r-view-fwZ-wA-MaF.nib</key>
 		<data>
@@ -826,7 +838,7 @@
 		</data>
 		<key>RecruitersStoryboard.storyboardc/eIy-S5-5a9-view-eDS-v1-5NT.nib</key>
 		<data>
-		kXi1AnCLUGoK7Vdp77OQjoEEDHU=
+		Q98Cr0RPC1x9EtfufTDJCzzhWKk=
 		</data>
 		<key>RecruitersStoryboard.storyboardc/hPU-Uz-8Kb-view-QOB-k3-fHH.nib</key>
 		<data>
@@ -834,7 +846,7 @@
 		</data>
 		<key>RecruitersStoryboard.storyboardc/ieM-DP-bqs-view-est-gX-drP.nib</key>
 		<data>
-		9CZzh9m/9RwRkAzJGZck0aNYDN0=
+		AHCKNV7ugpkr7VSGbk0vDyduQTA=
 		</data>
 		<key>RecruitersStoryboard.storyboardc/jgB-G5-A3M-view-KHb-bX-C6n.nib</key>
 		<data>
@@ -860,6 +872,10 @@
 		<data>
 		z1C3FeWS3Qsk9gIM0tx0ScMRd/M=
 		</data>
+		<key>RecruitersStoryboard.storyboardc/v6d-eX-38e-view-L9P-DA-zWm.nib</key>
+		<data>
+		OlRzPEcGdRVI+46yZrbCifb9k4M=
+		</data>
 		<key>RecruitersStoryboard.storyboardc/wXx-3H-ZKM-view-ZS4-EJ-hqa.nib</key>
 		<data>
 		nBDWUe80YjfDZHCyPswYQObmqjA=
@@ -870,11 +886,11 @@
 		</data>
 		<key>RecruitersStoryboard.storyboardc/xHY-NA-nAn-view-8VL-67-qDP.nib</key>
 		<data>
-		jNxcBjOGbuDYSlnJxGRi2KNbfg4=
+		9hJsM237HOmzjJmXP7OmeAd6KZc=
 		</data>
 		<key>RecruitersStoryboard.storyboardc/zSf-Zb-AT0-view-oQb-p9-wvy.nib</key>
 		<data>
-		hb+ob8xRBUOU0PUOdsvKa7N6/hg=
+		CUYgSk3c4ETf4BmuX7pKWYJYeF8=
 		</data>
 		<key>ScreeningRCTableViewCell.nib</key>
 		<data>
@@ -935,7 +951,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GXKdATCOcBRO2rb75NgmQ3cxi8jlMvos4eyFtrjBi9E=
+			6/0vaiv5ySwwcXmLaQqah6FCW63rq3Rv3CCqQjo8oxg=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -959,6 +975,13 @@
 			cWq7q+iQcmpSoaFGecnyPdKFEPFwRD3slgUmxFADkVs=
 			</data>
 		</dict>
+		<key>Base.lproj/Main.storyboardc/0HH-yB-UQD-view-p2k-ca-O9e.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6QP29we932XGK+HUk5JVxsaYS6+Ccspfpkjn6J1r+BA=
+			</data>
+		</dict>
 		<key>Base.lproj/Main.storyboardc/4Jm-cU-byU-view-9lD-Rj-i5o.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -970,7 +993,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NCT2zuniqHZoAt3qHqngfUDuvtuug3QpvwHXUInGFAQ=
+			y/qhCShWX8TtHfRXp4HvFyNcd69Kfvqb0FAowok4z4k=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/9HP-EV-t1w-view-Jcm-eK-azu.nib</key>
@@ -1026,7 +1049,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1xqcWhE5tvERLaVzE4CaGGeOQlmIXkNFfBh2m89UNL0=
+			dKxNgc++bMcgFATqYyMHZSV0dLEEK8F92VsrpbjxSiw=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BookMarkVC.nib</key>
@@ -1103,7 +1126,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+YVwxs1FxUBcmHtChl2Nqke42zWUPp+Btm3ys2Cu32k=
+			1uePIUvU2Zl0hWqNqyKVraH+zKG0Cd/18vN86XTV4f4=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/HelpAndSupportVC.nib</key>
@@ -1124,7 +1147,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zeXZAmpraTCg6+kF3Df4CcniLM2WHV4JA/k5nZuRjfA=
+			LmcLaqUh7AMrSQWPUtqSOwIgoVxe5EQcyAqYb5zc4gU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/IvS-5N-9za-view-odM-fB-ekU.nib</key>
@@ -1152,7 +1175,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nK/USw0o3TExj3jec8XTcRlslZ/lnNsimJg3l6VKE4k=
+			ri3ISasj1XFEqkBONfxeqtT2uq4ny/I1Mau39vTI2+U=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/LicensesVC.nib</key>
@@ -1181,6 +1204,13 @@
 			<key>hash2</key>
 			<data>
 			rkEsGNW63Q1/lOF/MyVopCMEmJqSsszGtzctrQboKt0=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/NotificationsVC.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MjcXQDwC7zSRxxalbjvCSNWtUCSxjlkU3kSaXdSPEQA=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/OnboardingVC.nib</key>
@@ -1243,7 +1273,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			b7LNHk3E8PQZi2UHmFgYbga6dldrbmma++hVRp7E0SE=
+			PzSmf0ob6pSnT2aFNUpkfrS5wOh4fSOmGk7jM/xV4ik=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/VerificationVC.nib</key>
@@ -1271,7 +1301,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OPvuxqe5Jd/YsKF8mzj+Hj37IDEqowSoA+nTBxCb0+Y=
+			efAyV3UzRqmEJTvubqWKby3wWYhFXD0q/snd9oZ20/8=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/hXE-ow-Knu-view-Hdh-hQ-Ul5.nib</key>
@@ -1285,14 +1315,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ukMUbaoj4+dId8s6TF9NTNVoqHHFiqjrLigpW1HHnB0=
+			LQLXwhttxx5d08FctoXe4EBn/lSzS+HNG4qIbEAbDys=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/iWj-Ua-e5V-view-tGn-m9-BRq.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QYgj2ObA6fz+rKqTGj2dUEcLBWru3lpWOTV93EyjMQk=
+			ZOEC+6uUvNWAAmPcC36qa1k60ciDUSmx/OO0WzPkk1s=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/iet-lI-2AJ-view-Kkp-UH-bNt.nib</key>
@@ -1306,7 +1336,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3YtQdIBM30zFde7ePQXUE1oQUIUf8a7oeWOnErUC1GA=
+			6SxVrJ1Rlag/2TvOSmSfZflnK95/tqb2/4Q2Sma3ClM=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/kYk-ny-FVx-view-A2w-Se-ukM.nib</key>
@@ -1348,14 +1378,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wdAx+C6QVRFYD/rABMCtcMapjuJVUe59Jmy8gWVoQcQ=
+			JbvdVB26wwcLgNBptg4aBUBqSsyD6d5D3RW+YWczlg4=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/zVn-lE-sJd-view-Mzp-jr-ucA.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VSnnNp5NkCswNoQlscF3VyhYvi5Htqs8Tllxg1K5D+Y=
+			m8rhV6qnAmlO3jR43PKErYoPTuMdxfBMTjW2F8CGgYU=
 			</data>
 		</dict>
 		<key>CertListTableViewCell.nib</key>
@@ -1397,7 +1427,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			d4e+RJ68Vf8etEfqVh8TDQG+sXv2sRfHY1tqkaPavHE=
+			AnhS/E2ELKtt93v2EQsb/5IY5TUdYwLWAgXOzIgSNq8=
 			</data>
 		</dict>
 		<key>Frameworks/Alamofire.framework/Info.plist</key>
@@ -1418,7 +1448,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wCXrl025CCW72EJE6D/3vVtmwC6m9myXjTfY+73z8o4=
+			kBCSn1EF9qufYiFamMK8cVjPtkYDdqYViY6iwadUuvc=
 			</data>
 		</dict>
 		<key>Frameworks/Algorithms.framework/Info.plist</key>
@@ -1439,7 +1469,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vqP0JgV0TPbaLqIh8FbmRkIJWVX9SqgW2d6bx+fKb/k=
+			xWVVwTYxl7pbkNTqcPlMOj7yMpzezAg/sFRAroHr0fU=
 			</data>
 		</dict>
 		<key>Frameworks/Charts.framework/Info.plist</key>
@@ -1456,32 +1486,11 @@
 			B7oPd2OA8VfhZSTXnJYUGv2gsVW6Swk6itn3ifQtewg=
 			</data>
 		</dict>
-		<key>Frameworks/DoubleSlider.framework/DoubleSlider</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			FyO2c+CU6xjGd8IyGZ8lkCbupgNISIbutDYWYaDfPXw=
-			</data>
-		</dict>
-		<key>Frameworks/DoubleSlider.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			udSRWHhB2aYBB1qWhEnUfwjn+7cSGlQZsV2gI48Xs0M=
-			</data>
-		</dict>
-		<key>Frameworks/DoubleSlider.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Z3/0s/X3J1OmpsPAMnyAm0tQRM+q19sK3+/8I7IRSSk=
-			</data>
-		</dict>
 		<key>Frameworks/DropDown.framework/DropDown</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3to1H75ltvSyHxr1LakOQ61a3RFxSapRm3RvaDmpGcs=
+			of8ptBZc78DGSUncHZxWZ1R2XF0O8Ojs9MWold8WI70=
 			</data>
 		</dict>
 		<key>Frameworks/DropDown.framework/DropDownCell.nib</key>
@@ -1509,7 +1518,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0O300c329DZZ8baSCpeFk7T4t8P1SfZD1P+jmnvRXb4=
+			K5GJ+opI82Bm1sPIs5scICnGvQFHy60nho7pCenzKSw=
 			</data>
 		</dict>
 		<key>Frameworks/ExpandableLabel.framework/Info.plist</key>
@@ -1530,7 +1539,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i94sDH0wlEP6VwQWhxQks2R+YV57hnSK5CdLD9dWTR4=
+			UXGayoXEb4ASO+ode7A40epGTavrCZzgrXjQtM19BCY=
 			</data>
 		</dict>
 		<key>Frameworks/IQKeyboardManagerSwift.framework/Info.plist</key>
@@ -1558,7 +1567,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0EXJvFGfLtqgZmB7NShBDVfmAD0PeZvgnU+A/pyLG7M=
+			0jL8JzIxD1Rj7EjdDk1Mc5LrduyiWCy3XC1Hjwbh4QY=
 			</data>
 		</dict>
 		<key>Frameworks/KMPlaceholderTextView.framework/_CodeSignature/CodeResources</key>
@@ -1579,7 +1588,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ggt5/de9g6hTomsWJO438AQMSSW+iY3xGVOVCoknYSE=
+			jA+oxJA+rDeZ56ESVCuT3v1Rn7ePGXfjV4RAs7Eu89c=
 			</data>
 		</dict>
 		<key>Frameworks/MarqueeLabel.framework/_CodeSignature/CodeResources</key>
@@ -1600,7 +1609,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FiLH3YCbJ7oE3snQpdnuHU4qV2KAN+rGJ8Sy/Ap4amE=
+			NZEyY9ArXYJ8KOJfz63bSuBQLyTPk8+hnHs79KZj4ao=
 			</data>
 		</dict>
 		<key>Frameworks/NotificationBannerSwift.framework/_CodeSignature/CodeResources</key>
@@ -1608,6 +1617,27 @@
 			<key>hash2</key>
 			<data>
 			vBz/Rn+JaCUvXm36ofFfmZxI3it4FFqshvX2/e0FXQA=
+			</data>
+		</dict>
+		<key>Frameworks/RangeSeekSlider.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wIjXch9R7pbV/OKvN3bo5fvc7PnwYYT9muhE3FKxR2s=
+			</data>
+		</dict>
+		<key>Frameworks/RangeSeekSlider.framework/RangeSeekSlider</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5UC0nCZUZ75OopsH5nzMNGUoGqi0Y37jI5vJbyKabDY=
+			</data>
+		</dict>
+		<key>Frameworks/RangeSeekSlider.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			D9JW99MFGh+1ns73hqKtxs/AdUr8HJPzlQPhLtI25t0=
 			</data>
 		</dict>
 		<key>Frameworks/SDWebImage.framework/Info.plist</key>
@@ -1621,7 +1651,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			klcIAzAPPRX5FRz9aQHgnx8f5v1qUAXRSpORHWoE1VI=
+			fob0jbv6gwVMIQPbsBP5tDVOnMWTjP5ZVLR2zAl8Qzw=
 			</data>
 		</dict>
 		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
@@ -1642,7 +1672,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yQLXYxtgZyp5fXKJEpzU8SHnUOn5WffGm1Rcw4DjWW0=
+			F6hV8vV98Oal2xK7M90i8lvK9WROQoEAR01fBfh0NKk=
 			</data>
 		</dict>
 		<key>Frameworks/SnapKit.framework/_CodeSignature/CodeResources</key>
@@ -1663,7 +1693,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8AuxsYtndW891bTMj9HiVvBigazmSHQsKBfQTWLQU1U=
+			u5ssoX6Ujs3Rg2LI5nl/JIerf0Vl0B2xJhAVvm2lH/0=
 			</data>
 		</dict>
 		<key>Frameworks/SwiftLoader.framework/_CodeSignature/CodeResources</key>
@@ -1684,7 +1714,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6JVOn+ezogG7FPx7BoOjYXWeXPl8uZkarGut701dPFo=
+			FAVJFYpZWNfzAk16bBiGcqZeJewe/aSm30jWZKgXnpM=
 			</data>
 		</dict>
 		<key>Frameworks/SwiftyAttributes.framework/_CodeSignature/CodeResources</key>
@@ -1785,6 +1815,13 @@
 			wPnTOMstd4M/2wGHRAkDhzPRkgoKdifugJ96kpx5Pp0=
 			</data>
 		</dict>
+		<key>NotificationTableViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gCLY2WjUmHwRrDJdgACh5XPRURAYCj97abfGCdaEz+M=
+			</data>
+		</dict>
 		<key>PersonalInfoDetailsTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -1810,7 +1847,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wbp7ZCYZixSKuU0aB8XoSy9zqN076/gG9qu+TzXCRhc=
+			KgZXjLfDmKqrcmMto/HXw0mgx60pPKdOocY0W5iXZrM=
 			</data>
 		</dict>
 		<key>ProfileInfoTableViewCell.nib</key>
@@ -1859,14 +1896,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Rjdw4zXK7GYSJaXy98IRsONtt34kQoj+5alKusHb+x4=
+			hhOQCXUtwWWurAwFjkwK3pF2OdSHykM/1xA7BTTclOA=
 			</data>
 		</dict>
 		<key>RecruitersStoryboard.storyboardc/3Td-5j-Uu8-view-DBa-AI-pe6.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			C9cJ3kXOmjvxMRmgpaucTK1qwid5rSKPybL+p73p+3A=
+			MWkoJCwQ2P4uQKYnO8MCTN1CEqYK0UDG9wV7qiLLDwQ=
 			</data>
 		</dict>
 		<key>RecruitersStoryboard.storyboardc/3xK-Lv-LfT-view-gaK-X3-gcZ.nib</key>
@@ -1915,7 +1952,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X/LVjOd2kGghGC5blUPzIv+D36+gNCCm/A1QP++6Wus=
+			nIx27MICNoumpySrVdqT5azuwigqBT3h7JinjUsGeVI=
 			</data>
 		</dict>
 		<key>RecruitersStoryboard.storyboardc/ApplicationDetailsRCVC.nib</key>
@@ -1999,7 +2036,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eZkI1poxPR1FccR63bxP8s/wUnGKFtC7IIs/2GC4c3s=
+			YreKLz6AC5LS/LcwlsgXcXMuur2ztql55MvEQGlvMq4=
 			</data>
 		</dict>
 		<key>RecruitersStoryboard.storyboardc/FCk-ES-86f-view-b2q-vP-JEs.nib</key>
@@ -2209,14 +2246,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ajFiPrMDSQMYm4MPDXgllTdm5zpTpRbuT0zA17NFm3A=
+			sQbRwEUlyUmv9c77v9l1aJOUhAwdL52sMaGbDM/B3Y4=
 			</data>
 		</dict>
 		<key>RecruitersStoryboard.storyboardc/TabBarRCVCViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wYF9pO9iVP+C0uvKYTNImMuHqBZuFKIbtao4cUQ5300=
+			dRirTA94iXeNjPT/onlhV/NxgwZTjOdttIIZJmBmcuw=
 			</data>
 		</dict>
 		<key>RecruitersStoryboard.storyboardc/UINavigationController-57b-GJ-GUB.nib</key>
@@ -2265,7 +2302,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			T5TY6uiHB5Nzt7nxGGZ5y3zlHf/TpGCl3zBO1O1ghFc=
+			Br1Wz/oifq5bNG1etjVBfXSoAsDEsbJTExHvk48vdp0=
 			</data>
 		</dict>
 		<key>RecruitersStoryboard.storyboardc/WMR-yU-GFI-view-1US-YI-oVv.nib</key>
@@ -2279,7 +2316,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/uaiTAKOcwNKuGlPj0TfOdVFlKzj+kdKoV0ufeKhufY=
+			1bYWVqzDICJ6Y/2r/M1OPPii3GQ6yTLldrLDG60mBbw=
 			</data>
 		</dict>
 		<key>RecruitersStoryboard.storyboardc/WorkingEmployeesRCVC.nib</key>
@@ -2300,7 +2337,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eTJW/fxEm2W+y7yWOH+mIQm8Nlgm7C5NNABsoNtUMds=
+			LZ4wH/EhGAIjqQQag+R9ajw/7lwG6cU25pcBnJKAFvw=
 			</data>
 		</dict>
 		<key>RecruitersStoryboard.storyboardc/ZaK-Av-05r-view-fwZ-wA-MaF.nib</key>
@@ -2328,7 +2365,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SX0Dffb0XZWLPiaJMAivQaLFfCuGB0jpVZcRRvULajA=
+			aKPY2MJT1lTHOJl3eQfM84altJ2JaKVRa5ubD4mQe30=
 			</data>
 		</dict>
 		<key>RecruitersStoryboard.storyboardc/hPU-Uz-8Kb-view-QOB-k3-fHH.nib</key>
@@ -2342,7 +2379,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DV/eQMXPdXDlSWzvCUP0caUWMYB7p/MAdSG4DO6RBp4=
+			qjrqUF1Cc+vQH4fQCHFOQHjSgCwxhqltj54jaflPxQ4=
 			</data>
 		</dict>
 		<key>RecruitersStoryboard.storyboardc/jgB-G5-A3M-view-KHb-bX-C6n.nib</key>
@@ -2387,6 +2424,13 @@
 			Wjatx0B/4Z9ULFZFud3wMm5t9WKiHAjp6r88sqQ+rqk=
 			</data>
 		</dict>
+		<key>RecruitersStoryboard.storyboardc/v6d-eX-38e-view-L9P-DA-zWm.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wdTcQodppeuhzJlSYmJVAZYAu8I7ba4DcVRdPH8HmZE=
+			</data>
+		</dict>
 		<key>RecruitersStoryboard.storyboardc/wXx-3H-ZKM-view-ZS4-EJ-hqa.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -2405,14 +2449,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8PCAXj2NS+8b+x1GseUU8PYqQrNlytkQSwdeA0nAwEQ=
+			E+1bg9okyVKv5YALEQigsXL8GgaDtnX73RUus09Gj2g=
 			</data>
 		</dict>
 		<key>RecruitersStoryboard.storyboardc/zSf-Zb-AT0-view-oQb-p9-wvy.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+b+fr4t8jwCCXu9rJUlAscf0utKOmoFmK2FARjy8AyQ=
+			vYbMBI/DmNlEiY8gNaFm7rbnKnZqdS3BGHpwMS4XI/Y=
 			</data>
 		</dict>
 		<key>ScreeningRCTableViewCell.nib</key>

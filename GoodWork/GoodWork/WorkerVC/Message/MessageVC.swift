@@ -22,7 +22,7 @@ class MessageVC: UIViewController {
     @IBOutlet weak var notificationBGView: UIView!
     
     @IBOutlet weak var messageListTableView: UITableView!
-    
+    @IBOutlet weak var notificationButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUPUI()
@@ -81,8 +81,6 @@ extension MessageVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        
             let cell = tableView.dequeueReusableCell(withIdentifier: messageListTableViewCell.reuseCellIdentifier, for: indexPath) as! messageListTableViewCell
             return  cell
         
@@ -99,6 +97,8 @@ extension MessageVC {
     
     func buttonActions(){
         self.profileButton.addTarget(self, action: #selector(self.profileButtonPressed(_:)), for: .touchUpInside)
+        self.notificationButton.addTarget(self, action: #selector(self.notificationButtonPressed(_:)), for: .touchUpInside)
+      
     }
     
     @IBAction func profileButtonPressed(_ sender: UIButton){
@@ -107,4 +107,10 @@ extension MessageVC {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func notificationButtonPressed(_ sender: UIButton){
+        print("notificationButtonPressed")
+//        self.notificationBanner(AlertMassage.comingSoon.rawValue)
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: NotificationsVC.storyBoardIdentifier) as? NotificationsVC else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

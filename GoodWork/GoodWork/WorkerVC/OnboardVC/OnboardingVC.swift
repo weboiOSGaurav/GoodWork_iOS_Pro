@@ -18,20 +18,20 @@ class OnboardingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if _userDefault.bool(forKey: UserDefaultKeys.isUserLogin.rawValue){
-//            let navigationBar = navigationController?.navigationBar
-//            navigationBar?.isHidden = true
-//            let tabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarCV") as! TabBarCV
-//            tabBarVC.selectedIndex = 0
-//            self.navigationController?.pushViewController(tabBarVC, animated: true)
-//            return
-//        }
+        //        if _userDefault.bool(forKey: UserDefaultKeys.isUserLogin.rawValue){
+        //            let navigationBar = navigationController?.navigationBar
+        //            navigationBar?.isHidden = true
+        //            let tabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarCV") as! TabBarCV
+        //            tabBarVC.selectedIndex = 0
+        //            self.navigationController?.pushViewController(tabBarVC, animated: true)
+        //            return
+        //        }
         
-//        let navigationBar = navigationController?.navigationBar
-//        navigationBar?.isHidden = true
-//        let tabBarVC = UIStoryboard(name: "RecruitersStoryboard", bundle: nil).instantiateViewController(withIdentifier: "TabBarRCVCViewController") as! TabBarRCVCViewController
-//        tabBarVC.selectedIndex = 0
-//        self.navigationController?.pushViewController(tabBarVC, animated: true)
+        //        let navigationBar = navigationController?.navigationBar
+        //        navigationBar?.isHidden = true
+        //        let tabBarVC = UIStoryboard(name: "RecruitersStoryboard", bundle: nil).instantiateViewController(withIdentifier: "TabBarRCVCViewController") as! TabBarRCVCViewController
+        //        tabBarVC.selectedIndex = 0
+        //        self.navigationController?.pushViewController(tabBarVC, animated: true)
         
         self.uiSetUP()
     }
@@ -70,17 +70,16 @@ extension OnboardingVC{
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: LoginVC.storyBoardIdentifier) as? LoginVC else { return }
                 self.navigationController?.pushViewController(vc, animated: true)
             }
-
-        case 1:
-            //            print("Recruiter")
-//            guard let vc = recruiterStoryboard.instantiateViewController(withIdentifier: LoginRCVC.storyBoardIdentifier) as? LoginRCVC else { return }
-//            self.navigationController?.pushViewController(vc, animated: true)
             
-            _userDefault.set("62964b94-35f8-4487-971a-ec105f2bb7b5", forKey: UserDefaultKeys.user_id.rawValue)
-            //            _userDefault.synchronize()
-            //
-            let vc = recruiterStoryboard.instantiateViewController(withIdentifier: TabBarRCVCViewController.storyBoardIdentifier) as! TabBarRCVCViewController
-            self.navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            
+            if _userDefault.bool(forKey: UserDefaultKeys.isRecruiterUserLogin.rawValue){
+                let vc = recruiterStoryboard.instantiateViewController(withIdentifier: TabBarRCVCViewController.storyBoardIdentifier) as! TabBarRCVCViewController
+                self.navigationController?.pushViewController(vc, animated: true)
+            }else{
+                guard let vc = recruiterStoryboard.instantiateViewController(withIdentifier: LoginRCVC.storyBoardIdentifier) as? LoginRCVC else { return }
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         case 2:
             print("Employer")
         case 3:
@@ -92,9 +91,6 @@ extension OnboardingVC{
     
     @IBAction func nextButtonPressed(_ sender: UIButton){
         print("nextButtonPressed")
-        
-        
-        
     }
 }
 
@@ -198,4 +194,3 @@ extension OnboardingVC{
 
 let recruiterStoryboard = UIStoryboard(name: "RecruitersStoryboard", bundle: nil)
 let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-

@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
 options: "a99093b021cb6610da2127167cdf6f11cf348ab107ea11f543b48e893dd852c2"
-build_start_time: [1686397570, 111454010]
-build_end_time: [1686397598, 568953990]
+build_start_time: [1687339849, 677417039]
+build_end_time: [1687339881, 863927841]
 inputs:
   "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Animation/Animator.swift": [1684489687, 888698339]
   "/Users/gauravjani/Desktop/WebOConnect/GoodWorkApp/GoodWork/Pods/Charts/Source/Charts/Animation/ChartAnimationEasing.swift": [1684489687, 887991428]

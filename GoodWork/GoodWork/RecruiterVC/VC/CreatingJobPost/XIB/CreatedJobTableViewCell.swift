@@ -59,7 +59,6 @@ class CreatedJobTableViewCell: UITableViewCell {
         self.mainBgView.addBorderWidthColour(2, GoodWorkAppColor.appDarkPurple, 14)
         self.shadowBgView.shadowWithRadiusAndColour(14, GoodWorkAppColor.appDavysGrey)
       
-        
         self.jobSaveImageView.image = UIImage(named: "unSave")
         
         self.jobYye.addTitleColorAndFont(title: "Local", fontName: GoodWorkAppFontName.NeueKabelRegular, fontSize: 14, tintColor: GoodWorkAppColor.appLightPink)
@@ -86,8 +85,34 @@ class CreatedJobTableViewCell: UITableViewCell {
         self.startDate.addTitleColorAndFont(title: "Start Date : 03 March 2023", fontName: GoodWorkAppFontName.NeueKabelItalic, fontSize: 11, tintColor: GoodWorkAppColor.appDateLightGray)
         
         self.endDate.addTitleColorAndFont(title: "End Date : 23 March 2023", fontName: GoodWorkAppFontName.NeueKabelItalic, fontSize: 11, tintColor: GoodWorkAppColor.appDateLightGray)
+    }
+    
+    func updateDraftApplicationData(_ obj : DraftApplicationListData){
+        self.appliedCount.isHidden = true
         
+        self.jobYye.text = obj.job_title ?? ""
+        self.jobTitleDetails.text = obj.job_name ?? ""
+        self.jobDescription.text = obj.preferred_specialty_definition ?? ""
+        self.locationLabel.text = obj.job_location ?? ""
+        self.amountLabel.text = "$\(obj.preferred_hourly_pay_rate ?? "")/wk"
+        self.timeLabel.text = obj.assignment_duration_definition ?? ""
+    }
+    
+    func updatePublishedListData(_ obj : PublishedListData){
         
+        if obj.workers_applied ?? 0 == 0 {
+            self.appliedCount.text = "\(obj.workers_applied ?? 0) Workers Applied"
+        }else{
+            self.appliedCount.text = "\(obj.workers_applied ?? 0)+ Workers Applied"
+        }
         
+        self.appliedCount.isHidden = false
+        
+        self.jobYye.text = obj.job_title ?? "Local"
+        self.jobTitleDetails.text = obj.job_name ?? ""
+        self.jobDescription.text = obj.preferred_specialty_definition ?? ""
+        self.locationLabel.text = obj.job_location ?? ""
+        self.amountLabel.text = "$\(obj.preferred_hourly_pay_rate ?? "")/wk"
+        self.timeLabel.text = obj.assignment_duration_definition ?? ""
     }
 }

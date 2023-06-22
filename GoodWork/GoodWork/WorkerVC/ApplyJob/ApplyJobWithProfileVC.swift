@@ -204,7 +204,13 @@ class ApplyJobWithProfileVC: BaseVC {
     
     func jobDetail(){
         self.jobTypeLable.text = "Travel"
-        self.appliedNumberLable.text =  "+\(self.jobDetails?.data?[0].applied_nurses ?? "") Applied"
+//        self.appliedNumberLable.text =  "+\(self.jobDetails?.data?[0].applied_nurses ?? "") Applied"
+        
+        if self.jobDetails?.data?[0].applied_nurses ?? "" == "0"{
+            self.appliedNumberLable.text =  "\(self.jobDetails?.data?[0].applied_nurses ?? "") Applied"
+        }else{
+            self.appliedNumberLable.text =  "+\(self.jobDetails?.data?[0].applied_nurses ?? "") Applied"
+        }
         
         self.jobTitleLable.text = self.jobDetails?.data?[0].job_name ?? ""
         

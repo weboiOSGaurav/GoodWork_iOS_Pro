@@ -82,7 +82,7 @@
                                                     <constraint firstAttribute="width" constant="14" id="Wnd-Vc-dhe"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lable labl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCV-zl-Qgc">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lable labl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCV-zl-Qgc">
                                                 <rect key="frame" x="26" y="4.6666666666666714" width="67.333333333333329" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -195,6 +195,18 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="0.93333333333333335" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Apply Now">
+                                    <fontDescription key="titleFontDescription" name="NeueKabel-Medium" family="Neue Kabel" pointSize="14"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbf-lu-Eml">
+                                <rect key="frame" x="195" y="134" width="110" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="los-I2-gpg"/>
+                                    <constraint firstAttribute="height" constant="40" id="z5L-Sj-hFc"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.93333333330000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Learn More">
                                     <fontDescription key="titleFontDescription" name="NeueKabel-Medium" family="Neue Kabel" pointSize="14"/>
                                 </buttonConfiguration>
@@ -203,13 +215,17 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tUg-RH-7UJ" secondAttribute="trailing" constant="10" id="0kT-cr-6RW"/>
+                            <constraint firstItem="Nbf-lu-Eml" firstAttribute="top" secondItem="Ana-Km-8YX" secondAttribute="top" id="7Ny-NG-ymO"/>
                             <constraint firstItem="Qcf-Fy-9jH" firstAttribute="leading" secondItem="0fN-d5-2nv" secondAttribute="leading" id="9uL-V4-3LM"/>
                             <constraint firstItem="tUg-RH-7UJ" firstAttribute="leading" secondItem="Qcf-Fy-9jH" secondAttribute="leading" constant="10" id="L4M-oX-bSM"/>
                             <constraint firstAttribute="bottom" secondItem="tUg-RH-7UJ" secondAttribute="bottom" id="LDD-03-7MA"/>
                             <constraint firstAttribute="trailing" secondItem="Qcf-Fy-9jH" secondAttribute="trailing" constant="20" symbolic="YES" id="M5U-Wd-GZb"/>
                             <constraint firstItem="Qcf-Fy-9jH" firstAttribute="top" secondItem="0fN-d5-2nv" secondAttribute="top" constant="4" id="Z26-yl-Llq"/>
+                            <constraint firstItem="Nbf-lu-Eml" firstAttribute="leading" secondItem="Ana-Km-8YX" secondAttribute="leading" id="ard-TT-4UE"/>
+                            <constraint firstItem="Nbf-lu-Eml" firstAttribute="trailing" secondItem="Ana-Km-8YX" secondAttribute="trailing" id="bod-0p-GCX"/>
                             <constraint firstItem="Ana-Km-8YX" firstAttribute="trailing" secondItem="Qcf-Fy-9jH" secondAttribute="trailing" constant="-16" id="cFq-dV-cr3"/>
                             <constraint firstItem="tUg-RH-7UJ" firstAttribute="top" secondItem="Qcf-Fy-9jH" secondAttribute="top" constant="10" id="qxJ-ZA-DUZ"/>
+                            <constraint firstItem="Nbf-lu-Eml" firstAttribute="bottom" secondItem="Ana-Km-8YX" secondAttribute="bottom" id="z0m-v7-sdE"/>
                             <constraint firstItem="Ana-Km-8YX" firstAttribute="bottom" secondItem="Qcf-Fy-9jH" secondAttribute="bottom" constant="24" id="zQw-Tg-kCD"/>
                         </constraints>
                     </view>
@@ -238,6 +254,7 @@
                 <outlet property="jobTitleLable" destination="iJj-IJ-yr6" id="1iU-Me-i8X"/>
                 <outlet property="jobTypeLable" destination="PJa-04-of4" id="TL4-QK-3nc"/>
                 <outlet property="locationImageView" destination="ezc-1O-S9M" id="yXW-em-t6A"/>
+                <outlet property="moreButton" destination="Nbf-lu-Eml" id="lSj-zH-C7e"/>
                 <outlet property="popularJobMainBgView" destination="Qcf-Fy-9jH" id="r0G-hu-yv8"/>
                 <outlet property="recentlyAddedLable" destination="lSY-OU-vwW" id="17b-oh-3Zd"/>
                 <outlet property="saveJobButton" destination="gd3-A9-FBG" id="VLs-G4-aIF"/>
